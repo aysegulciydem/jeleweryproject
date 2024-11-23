@@ -1,0 +1,24 @@
+
+[{
+    "products": [
+        {"id":1, "name":"Kore Tarzı Çiçek Küpe", "price":450, "imageUrl":"koretarzı1.jpg", "description":"En yenisi"},
+        {"id":2," name":"Kore Tarzı Yeşil Küpe", "price":470,"imageUrl":"koretarzi2.jpg", "description":"Yeşil taşlı küpe modeli"},
+        {"id":3, "name":"Siyah Mineli Küpe", "price":760,"imageUrl":"siyahmineli3.jpg", "description":"Siyah Mineli Altın Küpe"},
+        {"id":4, "name":"Metal Taşlı Küpe", "price":800,"imageUrl":"metaltaşlı4.jpg", "description":"Gri Taşlı Salkım Küpe"},
+        {"id":5, "name":"Etnik Tarzlı Yaprak Küpe", "price":620,"imageUrl":"etnikTarzi5.jpg", "description":"Etnik Modelli Salkım Yaprak Küpe"},
+        {"id":6," name":"Etnik Tarzlı Retro Küpe", "price":960,"imageUrl":"retroetnik6.jpg", "description":"Retro Kırmızı Taşlı Küpe"},
+        {"id":7, "name":"Kore Tarzı Salkım İnci Küpe", "price":840,"imageUrl":"inciküpe7.jpg", "description":"Kore Tarzo Altın Rengi Salkım İnci Küpe" },
+        {"id":8, "name":"Yuvarlak İnci Küpe", "price":1200, "imageUrl":"yuvarlakinci8.jpeg", "description":"Yuvarlak Altın Rengi İnci Küpe" },
+        {"id":9, "name":"Mavi Taşlı Damla Küpe", "price":1600,"imageUrl":"damlaküpe9.jpeg", "description":"Etnik Desenli Mavi Taşlı Damla Küpe"},
+        {"id":10, "name":"Gümüş Yelpaze Küpe", "price":1420 , "imageUrl":"yelpazeküpe10.jpg", "description":"Metalik Gümüş Renkte Yelpaze Şeklinde Küpe"},
+        {"id":11, "name":"Vintage Modelli İnci Küpe", "price":1950, "imageUrl":"vintageinci11.jpg", "description":"Vintage Modelli İnci Küpe"},
+        {"id":12, "name":"Tül Halka Küpe", "price":720, "imageUrl":"tülküpe12.jpeg", "description":"Halka Tül Küpe"}
+    ],
+    "categories": [
+        {"id": 1, "name": "Küpe"},
+        {"id": 2, "name": "Bileklik"},
+        {"id": 3, "name": "Kolye"}   
+    ],
+    "orders": []  
+    
+}]

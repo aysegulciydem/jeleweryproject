@@ -1,0 +1,173 @@
+body {
+  font-size: 16px !important;
+}
+
+/* Tabletler için stil */
+@media (min-width: 600px) {
+  body {
+      font-size: 18px !important;
+  }
+}
+
+/* Masaüstü bilgisayarlar için stil */
+@media (min-width: 900px) {
+  body {
+      font-size: 20px !important;
+  }
+}
+
+.first-img-card{
+  display: flex;
+  flex-direction: row;
+  width: 50rem;
+  height: 35rem;
+  margin-left: 2.7rem;
+}
+
+.example-card {
+  width: 63%;
+  height: 16rem !important;
+  margin-left: 5rem;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  padding-top: 1.5rem;
+  box-shadow: none;
+  background-color: transparent;
+  position: relative; /* Düğme pozisyonlaması için */
+  transition: all 0.3s; /* Geçiş efektleri için */
+  border-radius: 6rem;
+  
+}
+.example-card:hover {
+  transform: translateY(-10px); /* Kartı yukarı taşı */
+  box-shadow: 0px 0px 20px 0px rgba(119, 119, 119, 0.6); /* Gölgeyi artır */
+  background-color:#EDBB99;
+}
+
+.example-card img{
+  margin-right: 5rem;
+  width: 16rem;
+  height: 13rem;
+  margin-left: 4rem;
+  object-fit: cover; /* Resimlerin kapsayıcıyı doldurmasını sağlamak için */
+  border-radius: 7rem;
+}
+.img-card{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem; /* Resimler arasında boşluk bırakmak için */
+}
+.example-card .card__button {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  background-color:#EDBB99;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  font-size: 2rem;
+  color: #252424;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateY(100%); /* Başlangıçta gizle */
+  transition: all 0.3s; /* Geçiş efektleri için */
+  border-radius: 1rem;
+  text-decoration: none;
+
+}
+.example-card:hover .card__button {
+  transform: translateY(0%); /* Hover olduğunda görünüme getir */
+  color: #027090; /* Düğme rengini değiştir */
+}
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+  height: 25rem !important;
+}
+mat-divider{
+  margin-top: -8rem;
+  border-color: #EDBB99;
+  height: 50rem !important;
+}
+.example-card1{
+  display: flex;
+  flex-direction: row;
+  margin-left: 6rem;
+  margin-top: -38rem;
+  height: 500px;
+  
+  
+}
+.example-card1 img{
+  height: 15.4rem !important;
+  width: 20rem !important;
+}
+.first{
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 22rem;
+  border: none;
+  
+}
+.first img{
+  height: 25rem;
+  width: 15rem;
+  margin-bottom: 0.5rem;
+}
+mat-card-content{
+  width: 550px;
+  height: 725px;
+  margin-top: 0;
+  
+}
+.example-card1{
+  box-shadow: none;
+  background-color: transparent;
+}
+.example-card1 .gif{
+  height: 31.2rem !important;
+  width: 28rem !important;
+}
+.discount{
+  margin-left: -2rem;
+  height: 500px !important;
+  width: 1000px !important;   
+}
+.discount img{
+  height: 500px !important; 
+  width: 1000px !important;
+}
+ 
+.img-card img:hover {
+	color: var(--def);
+	font-size: larger;
+	transition-delay: .5s;
+  border-radius: 2rem;
+  
+}
+.img-card img:hover:after {
+  content: "";
+  width: 50%;
+  height: 150%;
+  background: #ffffff;
+  transform: rotate(22deg);
+  position: absolute;
+  top:0.2rem;
+  margin-top: 15rem ;
+  margin-left: 25rem;
+  transform: scale(1.5);
+  transition: all 0.5s;
+  
+}
+.container {
+  display: block;
+  height: 500px;
+  width: 500px;
+  padding: 2em;
+}
+
+

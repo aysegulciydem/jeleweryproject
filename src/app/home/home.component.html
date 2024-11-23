@@ -1,0 +1,66 @@
+<app-navbar></app-navbar>
+
+
+<div class="first-img-card">
+  <mat-card class="example-card">
+    <div class="img-card1">
+      <img mat-card-image src="https://i.pinimg.com/564x/88/db/c4/88dbc486e94aac81de18cbf49228be8f.jpg">
+    </div>
+    <a href="#" class="card__button" (click)="onRings($event)">RİNGS</a>
+  </mat-card>
+  <mat-card class="example-card">
+    <div class="img-card2">
+      <img mat-card-image src="https://i.pinimg.com/564x/c3/fc/54/c3fc54ffcd9a6b65007c083b47108c0c.jpg">
+    </div>
+    <a href="#" class="card__button" (click)="onNecklaces($event)">Necklaces</a>
+  </mat-card>
+  <mat-card class="example-card">
+    <div class="img-card3">
+      <img mat-card-image src="https://i.pinimg.com/564x/0e/b5/80/0eb580be7461b0cf8e5b336c466ffa9e.jpg">
+    </div>
+    <a href="#" class="card__button" (click)="onEarrings($event)">EARRİNGS</a>
+  </mat-card>
+  <mat-card class="example-card">
+    <div class="img-card4">
+      <img mat-card-image src="https://i.pinimg.com/564x/88/1f/6f/881f6fb4c9d4bae6366175ee5fffe5a2.jpg" (click)="onBracelet($event)">
+    </div>
+    <a href="#" class="card__button">BRACELET</a>
+  </mat-card> 
+</div>
+<mat-divider></mat-divider>
+<mat-card class="example-card1">
+    <mat-card class="first" style="box-shadow: none; background-color: transparent;">
+        <img mat-card-image src="https://www.nevjewellery.com/Data/BlockUploadData/banner/img1/351/9-tektas-yuzukler-3-tr.jpg?1699342969">
+        <img mat-card-image src="https://www.nevjewellery.com/curio-073-ct-baget-pirlanta-tasli-ve-elmas-tasli-beyaz-altin-bileklik-baget-pirlanta-bileklik-ve-bilezik-nev-jewellery-19961-37-O.webp">
+    </mat-card>
+    <mat-card-content>
+        <img class="gif" src="https://swarovskistorage.blob.core.windows.net/swarovski-live/Content/Images/Uploaded/SS24_Bottom_Matrix.gif" alt="neckless">
+      </mat-card-content >
+      <mat-card class="discount">
+        <img mat-card-image  src="https://www.toljewellery.com/wp-content/uploads/2022/11/tol-the-4-cs-100.webp">
+      </mat-card>  
+</mat-card>
+
+<app-carousel [slides]="images"></app-carousel>
+
+<div class="ex-info">
+  <div class="total-info">
+    <div class="info-card">
+      <img src="https://www.nevjewellery.com/theme/v5-nevjewellery/assets/icon/f-icons-1.svg" alt="">
+      <p>Gift Package  </p>
+    </div>
+   <div class="info-card">
+     <img src="https://www.nevjewellery.com/theme/v5-nevjewellery/assets/icon/f-icons-2.svg" alt="">
+     <p>Free & Insured Shipping</p>
+   </div>
+   <div class="info-card">
+     <img src="https://www.nevjewellery.com/theme/v5-nevjewellery/assets/icon/f-icons-3.svg" alt="">
+     <p>Name-Specific Certificates</p>
+   </div>
+   <div class="info-card">
+     <img src="	https://www.nevjewellery.com/theme/v5-nevjewellery/assets/icon/f-icons-4.svg" alt="">
+     <p>14 Days Unconditional Return</p>
+   </div>
+  </div>
+  
+</div>
