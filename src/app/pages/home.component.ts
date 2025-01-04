@@ -6,7 +6,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { CarouselComponent } from '../carousel/carousel.component';
+import { CarouselComponent } from '../component/carousel/carousel.component';
 
 @Component({
    schemas: [NO_ERRORS_SCHEMA],
@@ -41,7 +41,7 @@ export class HomeComponent {
       alt: 'picture5'
     }
   ]
- 
+
   constructor(private router: Router){}
   onRings(event: Event): void{
     event.preventDefault();
@@ -53,7 +53,7 @@ export class HomeComponent {
   }
   onEarrings(event:Event){
     event.preventDefault();
-    this.router.navigate(['/earrings']); 
+    this.router.navigate(['/earrings']);
   }
   onBracelet(event:Event){
     event.preventDefault();
