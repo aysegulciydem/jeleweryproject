@@ -1,0 +1,56 @@
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+</head>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <mat-card class="example-card" appearance="outlined">  
+    <img mat-card-image src="https://www.nevjewellery.com/053-ct-baguette-cut-diamond-rose-gold-necklace-diamond-pendants-nev-jewellery-14318-11-O.jpg" alt="modal">
+    <mat-card-content class="user-form">
+      <p><i class="fa-duotone fa-solid fa-user"></i>&nbsp;Account</p>
+      <div class="example-container">
+        <mat-form-field>
+          <mat-label>Enter your email</mat-label>
+          <input
+            matInput
+            type="email"
+            formControlName="email"
+
+            (blur)="errorMessage()"
+            required
+          />
+          @if (email.invalid) {
+            <mat-error>
+              {{errorMessage()}}
+            </mat-error>
+            
+          }
+        </mat-form-field>
+        
+      </div>
+      <div class="example-container-password">
+        <mat-form-field>
+          <mat-label>Enter your password</mat-label>
+          <input 
+          type="password"
+          formControlName="password"
+          matInput [type]="hide() ? '
+          password' : 'text'" />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="clickEvent($event)"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide()"
+          >
+            <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <section>
+        <div class="example-button-row">
+          <button mat-raised-button>Sign in</button>
+        </div>
+      </section>
+    </mat-card-content>
+  </mat-card>
+</form>
+  

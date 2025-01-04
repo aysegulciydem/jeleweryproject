@@ -1,0 +1,32 @@
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+</head>
+<div class="carousel">
+  <ng-container *ngFor="let slide of slides; let i = index">
+    <img
+      *ngIf="i === currentSlide"
+      [src]="slide.src"
+      [alt]="slide.alt"
+      class="slide"
+    />
+  </ng-container>
+
+  <div class="slider-button">
+    <button class="control prev" (click)="onPreviousClick()">
+      <i class="fa-solid fa-caret-left"></i>
+    </button>
+    <button class="control next" (click)="onNextClick()">
+      <i class="fa-solid fa-caret-right"></i>
+    </button>
+  </div>
+  <div class="discover">
+    <p>Start to feel the power the diamond with the sparkle of the Blow Jewellery!</p>
+    <section>
+      <div class="example-button-row">
+        <button mat-raised-button>Discover</button>
+      </div>
+    </section>
+  </div>
+  
+</div>
+
