@@ -18,7 +18,7 @@ export const  products: Product[] = [
         currentImage: undefined
     },
     {
-        id: 2, name: '0.96 CT Baguette Cut Dİamond Rose Gold Ring', price: 500,
+        id: 2, name: '0.96 CT Baguette Cut Diamond Rose Gold Ring', price: 500,
         imageUrl: [
             'https://www.nevjewellery.com/106-ct-baguette-cut-d…e-cut-diamond-rings-nev-jewellery-21439-26-O.webp',
             'https://www.nevjewellery.com/106-ct-baget-pirlanta…-baget-pirlanta-yuzuk-nev-jewellery-9387-26-O.jpg'
@@ -29,7 +29,7 @@ export const  products: Product[] = [
         id: 3, name: 'Solid 0.04 CT Baguette Cut Diamond Rose Gold Ring', price: 270, imageUrl: [
             'https://www.nevjewellery.com/solid-004-ct-baguette-cut-diamond-rose-gold-ring-diamond-rings-nev-jewellery-11313-23-O.jpg',
             'https://www.nevjewellery.com/solid-004-ct-baget-pi…yuzuk-pirlanta-yuzuk-nev-jewellery-11312-23-O.jpg'
-        
+
         ],
         currentImage: undefined
     },

@@ -1,119 +1,43 @@
-.example-spacer {
-    flex: 1 1 auto;
-}
+.main-container {
 
-.example-spacer{
-    margin-left: 80rem;
-}
+  background-color: whitesmoke;
 
-.rings-navbar{
-padding-top: 3rem;
-padding-bottom: 2rem;
-padding-left: 5rem;
-display: flex;
-flex-direction: column;
-height: 10rem;
-
-}
-.navbar-second-menu{
+  .sub-title{
     display: flex;
     flex-direction: row;
-    margin-top: 3rem;
-    
-}
-.navbar-menu mat-toolbar{
-    display: flex;
-    flex-direction: row;
-    margin-left: -20rem;
-}
+    justify-content: center;
+    margin: 1rem;
 
-
-.navbar-second-menu h4{
-    margin-left: 30rem;
-}
-
-.navbar-second-menu mat-paginator{
-    margin-left: 35rem;
-    font-size: x-large;
-}
-
-mat-slider {
-    width: 300px;
+    .categories-name{
+      margin-bottom: 0!important;
+    }
   }
 
-.example-card {
-max-width: 400px;
-}
-
-.example-header-image {
-background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-background-size: cover;
-}
-
-.product-bar{
-    margin-top: 10rem;
+  .card-container{
     display: flex;
-    flex-direction: column;
-    margin-left: 3rem;
-    
-   
-}
-.product-bar-1{
-    display: flex;
-    flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
-    margin-left: 15rem;
-}
-.each-card{
-    width: 25rem;
-    height: 30rem;
-    padding: 1rem;
-    border: none;
-    
-    
-}
+    gap: 20px;
 
-section {
-    display: table;
-}
+    .product-card{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 20%;
+      height: auto;
+      gap: 15px;
+      padding: 1rem;
 
-.add-button{
-display: flex;
-flex-direction: column;
-margin-left: 4rem;
-}
-.mat-mdc-extended-fab{
-margin: 0;
-padding: 0;
-margin-left: 2rem;
-}
-.example-card{
-padding: 2rem !important;
-border: none;
-}
-.total-info{
-    width: 100%;
-    height: 5rem;
-    background-color: #e5e7e9;
-    display: flex;
-    flex-direction: row;
-    padding-left: 10rem;
-    margin-top: 5rem;
-}
-.info-card{
-    display: flex;
-    flex-direction: row;
-    margin-right: 12rem;
-    padding: 0.9rem;
+      & img {
+        width: 50%;
+        border-radius: 15px;
+      }
     }
-.info-card img{
-    margin-right: 2rem;
-}
-
-.mat-elevation-z8{
-    width: 70%;
+  }
 }
 
 
-  
-  
+
+
+
+

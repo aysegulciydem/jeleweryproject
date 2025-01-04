@@ -1,6 +1,5 @@
 import { Routes } from "@angular/router";
 import { CarouselComponent } from "./component/carousel/carousel.component";
-import {HomeComponent} from "./pages/home.component";
 
 export const routes: Routes = [
     {
@@ -15,7 +14,7 @@ export const routes: Routes = [
     },
     {
         'path': 'login',
-        loadComponent: () => import ('./pages/login/login.component').then(c => c.LoginComponent),
+        loadComponent: () => import ('./component/login/login.component').then(c => c.LoginComponent),
     },
     {
         'path' : 'carousel',
@@ -39,7 +38,7 @@ export const routes: Routes = [
     },
     {
         'path': 'productList',
-        loadComponent: () => import ('./pages/rings/productlist/productlist.component').then (c => c.ProductlistComponent),
+        loadComponent: () => import ('./pages/rings/productList/productList.component').then (c => c.ProductListComponent),
     }
 ]
 

@@ -1,12 +1,12 @@
 import { Component, ViewChild, ElementRef, NO_ERRORS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NavbarComponent } from "../navbar/navbar.component";
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { CarouselComponent } from '../component/carousel/carousel.component';
+import {NavbarComponent} from "../component/navbar/navbar.component";
 
 @Component({
    schemas: [NO_ERRORS_SCHEMA],

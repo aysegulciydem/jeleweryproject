@@ -11,13 +11,12 @@ import {MatSliderModule} from '@angular/material/slider';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
 import { CommonModule, NgIfContext } from '@angular/common';
-import { BasketcardService } from '../../services/basketcard.service';
 import {MatToolbar} from "@angular/material/toolbar";
-import {Constant} from "../../contants";
 import {Router} from "@angular/router";
 import {RingService} from "./ring.service";
 import {Product} from "../../model/product";
 import {products} from "../../products";
+import {Constant} from "../../constants/contants";
 
 @Component({
   schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
@@ -42,38 +41,26 @@ import {products} from "../../products";
   templateUrl: './rings.component.html',
   styleUrl: './rings.component.css'
 })
-export class RingsComponent  implements OnInit{
+export class RingsComponent{
 
   protected readonly Constant = Constant;
 
   products: any = products;
-  @Output() itemClicked = new EventEmitter<Product>();
-  max: any;
-  disabled: any;
-  min: any;
-  step: any;
-  thumbLabel: any;
-  showTicks: any;
   value: any;
   cartItemCount: number = 0;
   noProducts: TemplateRef<NgIfContext<boolean>>;
-   onItemClicked: any;
 
-  constructor(private basketCardService: BasketcardService, private readonly router: Router, private readonly ringService: RingService) {
+  constructor(
+    private readonly router: Router,
+    private readonly ringService: RingService)
+  {
     this.products.forEach(product => {
       product.currentImage = product.imageUrl[0];
     });
   }
 
-  ngOnInit(): void {
-    this.basketCardService.card$.subscribe(items => {
-      this.cartItemCount = items.length;
-    });
-  }
-
   addToCard(product: Product): void {
-    console.log(product);
-    this.router.navigate(['productList', product])
+    this.router.navigate(['productList'])
     this.ringService.setData(product);
   }
 

@@ -7,20 +7,30 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 import {Router} from '@angular/router';
 import { CommonModule } from '@angular/common';
+import {MatToolbar} from "@angular/material/toolbar";
+import {Constant} from "../../constants/contants";
 
 @Component({
   schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
   selector: 'app-navbar',
   standalone: true,
-  imports: [MatButtonModule, MatDividerModule, MatIconModule, FormsModule, MatFormFieldModule, MatInputModule, CommonModule],
+  imports: [MatButtonModule, MatDividerModule, MatIconModule, FormsModule, MatFormFieldModule, MatInputModule, CommonModule, MatToolbar],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+
+  protected readonly Constant = Constant;
+
   constructor(
     private router:Router,
   ){}
-  onLogin(){
+
+  goToLoginPage(){
     this.router.navigate(['/login']);
+  }
+
+  public goToHomePage(): void {
+    this.router.navigate([''])
   }
 }

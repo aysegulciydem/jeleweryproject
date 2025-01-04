@@ -1,79 +1,21 @@
-<head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<div class="rings-navbar">
-    <div class="navbar-menu">
-        <mat-toolbar>
-            <button mat-icon-button class="example-icon"  style="margin-left: 16rem;" aria-label="Example icon-button with menu icon">
-              <mat-icon>menu</mat-icon>
-            </button>
-            <span>{{Constant.titles.categories}}</span>
-            <span class="example-spacer"></span>
-            <div class="total-icon">
-              <i class="fas fa-shopping-cart" style="font-size: x-large;"></i>
-              <span id="sepet-sayisi" style="font-size: x-large;">{{cartItemCount}}</span>
-              <button mat-icon-button class="example-icon favorite-icon" style="margin-right: 6rem; margin-left: 1rem;" aria-label="Example icon-button with heart icon">
-                <mat-icon>favorite</mat-icon>
-              </button>
-            </div>
+<div class="main-container">
+  <div class="sub-title">
+    <h5 class="categories-name">{{Constant.titles.rings}}</h5>
+  </div>
 
-          </mat-toolbar>
-    </div>
-    <div class="navbar-second-menu">
-        <mat-accordion>
-            <mat-expansion-panel hideToggle>
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  Range of Price
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-              <mat-card class="example-result-card">
-                <mat-card-content>
-                  <div class="example-label-container">
-                    <label id="example-name-label" class="example-name-label">Value</label>
-                    <label class="example-value-label">{{slider.value}}</label>
-                  </div>
-                  <mat-slider
-                      class="example-margin"
-                      [disabled]="disabled"
-                      [max]="max"
-                      [min]="min"
-                      [step]="step"
-                      [discrete]="thumbLabel"
-                      [showTickMarks]="showTicks">
-                    <input matSliderThumb [(ngModel)]="value" #slider>
-                  </mat-slider>
-                </mat-card-content>
-              </mat-card>
-
-            </mat-expansion-panel>
-
-          </mat-accordion>
-
-        <h4>{{Constant.titles.rings}}</h4>
-    </div>
-</div>
-
-<div class="product-bar" >
-  <div class="product-bar-1" *ngIf="products && products.length > 0; else noProducts">
-    <mat-card class="each-card"
-              (click)="addToCard(product)" *ngFor="let product of products">
+  <div class="card-container" *ngIf="products && products.length > 0; else noProducts">
+    <mat-card class="product-card" *ngFor="let product of products">
       <img src="{{product.currentImage}}" alt="{{product.name}}">
-      <mat-card-content>
-        <p style="font-size: large; margin-top: 1rem;">{{product.name}}</p>
-        <div class="add-button">
-          <p style="font-size: large; margin-left: 8rem; ">{{product.price}}$</p>
-          <section style="margin-left: 13rem; margin-top: -29.6rem;">
-            <button mat-fab extended>
-              <mat-icon style="margin-left: 0.6rem;">favorite</mat-icon>
-            </button>
-          </section>
-        </div>
-      </mat-card-content>
+      <p style="text-align: center">{{product.name}}</p>
+      <div style="display: flex; align-items: center; justify-content: space-between">
+        <p style="margin: 0!important;">{{product.price}}$</p>
+        <button (click)="addToCard(product)" mat-button>{{Constant.ADD_TO_CARD}}</button>
+      </div>
     </mat-card>
-</div>
-<div *ngIf="!products || products.length === 0">
-  <p>Ürün yok.</p>
-</div>
+  </div>
 
+  <div *ngIf="!products || products.length === 0">
+    <p>{{Constant.errorMessage.NO_PRODUCT}}</p>
+  </div>
+</div>
 
