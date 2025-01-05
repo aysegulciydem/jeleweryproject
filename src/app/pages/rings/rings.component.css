@@ -1,7 +1,7 @@
 .main-container {
 
   background-color: whitesmoke;
-
+  
   .sub-title{
     display: flex;
     flex-direction: row;
