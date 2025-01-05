@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { CarouselComponent } from '../component/carousel/carousel.component';
 import {NavbarComponent} from "../component/navbar/navbar.component";
+import {Constant} from "../constants/contants";
 
 @Component({
    schemas: [NO_ERRORS_SCHEMA],
@@ -60,4 +61,5 @@ export class HomeComponent {
     this.router.navigate(['/bracelet']);
   }
 
+    protected readonly Constant = Constant;
 }
