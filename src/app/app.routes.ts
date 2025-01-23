@@ -1,6 +1,5 @@
 import { Routes } from "@angular/router";
 import { CarouselComponent } from "./component/carousel/carousel.component";
-import { ProductListComponent } from "./pages/rings/productList/productList.component";
 
 export const routes: Routes = [
     {

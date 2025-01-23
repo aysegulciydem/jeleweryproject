@@ -14,7 +14,6 @@ import { CommonModule, NgIfContext } from '@angular/common';
 import {MatToolbar} from "@angular/material/toolbar";
 import {Router} from "@angular/router";
 import {RingService} from "./ring.service";
-
 import {Product, products} from "../../model/products";
 import {Constant} from "../../constants/contants";
 
@@ -62,6 +61,10 @@ export class RingsComponent{
   addToCard(product: Product): void {
     this.router.navigate(['/productList'])
     this.ringService.setData(product);
+    
+  
   }
+  
+  
 
 }

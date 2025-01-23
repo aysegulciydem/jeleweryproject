@@ -16,5 +16,36 @@
     width: 50%;
   }
 }
-
+.example-card1{
+  display: flex; 
+  flex-direction: row;
+  justify-content: start;
+  padding: 3%;
+  padding-left: 9%;
+  gap: 2rem;
+  box-shadow: none;
+    & img{
+      border-radius: 0.75rem;
+    } 
+}
+.first{
+  width: 10%;
+  gap: 2px;
+  box-shadow: none;
+}
+.second{
+  width: 27%;
+  box-shadow: none;
+}
+.middle{
+  padding: 1%;
+}
+.discount{
+  width: 27%;
+  box-shadow: none; 
+   & img{
+    width: 1060px;
+    height: 77%;
+   }
+}
 
