@@ -1,19 +1,22 @@
-<div class="main-container" style="display: flex; flex-direction: column">
-  <mat-card class="card-container" *ngFor="let item of products" style="display: flex!important; width: 50%">
-    <div>
-      <p>{{item.name}}</p>
-      <p>Price: {{price !== 0 ? price : item.price}}</p>
+<div class="main-container">
+  <mat-card class="card-container" *ngFor="let item of products">
+    <div class="info-container">
+      <p style="font-weight: 500">{{item.name}}</p>
+      <p style="color: #333;font-size: 14px;line-height: 18px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">
+        {{item.description}}
+      </p>
     </div>
     <div class="counter-container">
-      <button mat-icon-button (click)="decrease(item)" aria-label="Decrease count" [disabled]="count === 1">
+      <button mat-icon-button (click)="decrease(item)" [disabled]="count === 1">
         <mat-icon>remove</mat-icon>
       </button>
-      <mat-form-field appearance="outline">
-        <input matInput type="number" [(ngModel)]="count" min="1">
-      </mat-form-field>
-      <button mat-icon-button (click)="increase(item)" aria-label="Increase count">
+      <input type="text" [(ngModel)]="count" min="1" style="width: 30px; text-align: center">
+      <button mat-icon-button (click)="increase(item)">
         <mat-icon>add</mat-icon>
       </button>
+    </div>
+    <div>
+      <p style="color: #005cbb; font-weight: 500">{{price !== 0 ? price : item.price}} TL</p>
     </div>
   </mat-card>
 </div>

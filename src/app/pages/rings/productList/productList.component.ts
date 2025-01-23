@@ -37,6 +37,7 @@ export class ProductListComponent {
 
   public increase(item: Product): void {
     this.count++;
+    console.log(this.count)
     this.calculatePriceOfProduct(item, 'increase')
   }
 

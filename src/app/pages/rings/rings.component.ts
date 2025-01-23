@@ -1,4 +1,8 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, EventEmitter, Injectable, Input, OnInit, Output, TemplateRef } from '@angular/core';
+import {
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  TemplateRef
+} from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import {MatPaginatorIntl, MatPaginatorModule} from '@angular/material/paginator';
@@ -16,6 +20,8 @@ import {Router} from "@angular/router";
 import {RingService} from "./ring.service";
 import {Product, products} from "../../model/products";
 import {Constant} from "../../constants/contants";
+import {MatDialog} from "@angular/material/dialog";
+import {ProductDetailDialogComponent} from "./product-detail-dialog/product-detail-dialog.component";
 
 @Component({
   schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
@@ -46,10 +52,10 @@ export class RingsComponent{
 
   products: any = products;
   value: any;
-  cartItemCount: number = 0;
   noProducts: TemplateRef<NgIfContext<boolean>>;
 
   constructor(
+    private readonly matDialog: MatDialog,
     private readonly router: Router,
     private readonly ringService: RingService)
   {
@@ -61,10 +67,14 @@ export class RingsComponent{
   addToCard(product: Product): void {
     this.router.navigate(['/productList'])
     this.ringService.setData(product);
-    
-  
   }
-  
-  
 
+  openProductDetailDialogComponent(product: Product): void {
+    this.matDialog.open(ProductDetailDialogComponent,
+      {
+        data: product,
+        disableClose: true
+      }
+    );
+  }
 }

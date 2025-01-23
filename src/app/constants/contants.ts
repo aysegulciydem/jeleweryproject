@@ -9,6 +9,7 @@ export const Constant = {
   },
 
   ADD_TO_CARD: 'Add to Card',
+  DETAIL: 'Detail',
 
   errorMessage: {
     NO_PRODUCT: 'There is no available product of the categories'
