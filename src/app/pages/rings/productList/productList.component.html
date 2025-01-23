@@ -2,14 +2,14 @@
   <mat-card class="card-container" *ngFor="let item of products" style="display: flex!important; width: 50%">
     <div>
       <p>{{item.name}}</p>
-      <p>Price: {{item.price}}</p>
+      <p>Price: {{price !== 0 ? price : item.price}}</p>
     </div>
     <div class="counter-container">
-      <button mat-icon-button (click)="decrease(item)" aria-label="Decrease count">
+      <button mat-icon-button (click)="decrease(item)" aria-label="Decrease count" [disabled]="count === 1">
         <mat-icon>remove</mat-icon>
       </button>
       <mat-form-field appearance="outline">
-        <input matInput type="number" [(ngModel)]="count" min="0">
+        <input matInput type="number" [(ngModel)]="count" min="1">
       </mat-form-field>
       <button mat-icon-button (click)="increase(item)" aria-label="Increase count">
         <mat-icon>add</mat-icon>
