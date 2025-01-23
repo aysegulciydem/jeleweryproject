@@ -1,28 +1,19 @@
-<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-  <!-- Position Column -->
-  <ng-container matColumnDef="id">
-    <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-    <mat-cell *matCellDef="let products"> {{products.id}} </mat-cell>
-  </ng-container>
-
-  <!-- Name Column -->
-  <ng-container matColumnDef="name">
-    <mat-header-cell *matHeaderCellDef> name </mat-header-cell>
-    <mat-cell *matCellDef="let products"> {{products.name}} </mat-cell>
-  </ng-container>
-
-  <!-- price Column -->
-  <ng-container matColumnDef="price">
-    <mat-header-cell *matHeaderCellDef> PRİCE </mat-header-cell>
-    <mat-cell *matCellDef="let products"> {{products.price}} </mat-cell>
-  </ng-container>
-
-  <!-- Symbol Column -->
-  <ng-container matColumnDef="imageUrl">
-    <mat-header-cell *matHeaderCellDef> IMAGE </mat-header-cell>
-    <mat-cell *matCellDef="let products"> {{products.imageUrl}} </mat-cell>
-  </ng-container>
-
-  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-</mat-table>
+<div class="main-container" style="display: flex; flex-direction: column">
+  <mat-card class="card-container" *ngFor="let item of products" style="display: flex!important; width: 50%">
+    <div>
+      <p>{{item.name}}</p>
+      <p>Price: {{item.price}}</p>
+    </div>
+    <div class="counter-container">
+      <button mat-icon-button (click)="decrease(item)" aria-label="Decrease count">
+        <mat-icon>remove</mat-icon>
+      </button>
+      <mat-form-field appearance="outline">
+        <input matInput type="number" [(ngModel)]="count" min="0">
+      </mat-form-field>
+      <button mat-icon-button (click)="increase(item)" aria-label="Increase count">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  </mat-card>
+</div>
