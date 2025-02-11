@@ -10,6 +10,8 @@ import { CommonModule } from '@angular/common';
 import {MatToolbar} from "@angular/material/toolbar";
 import {Constant} from "../../constants/contants";
 
+
+
 @Component({
   schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
   selector: 'app-navbar',
@@ -21,7 +23,7 @@ import {Constant} from "../../constants/contants";
 export class NavbarComponent {
 
   protected readonly Constant = Constant;
-
+  value = '';
   constructor(
     private router:Router,
   ){}

@@ -1,21 +1,27 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=double_arrow" />
+
 <div class="main-container">
   <div class="card-container">
     <div class="card">
-      <img src="https://www.mtoyjewels.com/cdn/shop/files/Mtoy_Raw_2607-scaled.jpg?v=1725974925&width=900" alt="">
-      <img src="https://i.pinimg.com/564x/88/db/c4/88dbc486e94aac81de18cbf49228be8f.jpg">
-      <button mat-raised-button (click)="onRings($event)">Rings</button>
+      <img src="https://cdn.shopify.com/s/files/1/0797/3637/3533/files/2-BIRTHSTONEBRACELETS_BirthstoneBraceletAugustPeridot_14k_Stack2_010.jpg?v=1717088619&width=600&crop=center" class="img-1">
+      <img src="https://res.cloudinary.com/kendra-scott/image/upload/q_auto,f_auto,dpr_auto/w_640,h_800,c_fit/Catalogs/kendrascott/8_16_23_demi/kendra-scott-davie-pearl-band-ring-18k-yellow-gold-vermeil-white-pearl-00.jpeg" class="img-2">
+      <button mat-raised-button> {{Constant.titles.rings}}</button>
     </div>
     <div class="card">
-      <img src="https://i.pinimg.com/564x/c3/fc/54/c3fc54ffcd9a6b65007c083b47108c0c.jpg">
-      <button mat-raised-button (click)="onNecklaces($event)">Necklaces</button>
+      <img src="https://i.pinimg.com/564x/c3/fc/54/c3fc54ffcd9a6b65007c083b47108c0c.jpg" class="img-1">
+      <img src="https://cdn.shopify.com/s/files/1/0797/3637/3533/files/3_Interlock_PaveNecklace_yg_angled.jpg?v=1722523779&width=1000&height=1000&crop=center" class="img-2">
+
+      <button mat-raised-button>{{Constant.titles.neckless}}</button>
     </div>
     <div class="card">
-      <img src="https://i.pinimg.com/564x/0e/b5/80/0eb580be7461b0cf8e5b336c466ffa9e.jpg">
-      <button mat-raised-button (click)="onEarrings($event)">Earrings</button>
+      <img src="https://i.pinimg.com/564x/0e/b5/80/0eb580be7461b0cf8e5b336c466ffa9e.jpg" class="img-1">
+      <img src="https://cfs3.monicavinader.com/images/pdp-small-large/19669017-gp-ea-trpl-prl-f1.jpg" class="img-2" >
+      <button mat-raised-button>{{Constant.titles.earrings}}</button>
     </div>
     <div class="card">
-      <img src="https://i.pinimg.com/564x/88/1f/6f/881f6fb4c9d4bae6366175ee5fffe5a2.jpg">
-      <button mat-raised-button (click)="onBracelet($event)">Bracelet</button>
+      <img src="https://cfs3.monicavinader.com/images/pdp-small-large/12351648-bl-baxa-dia.jpg" class="img-1">      <img src="https://cdn.reiskuyumculuk.com/product/cache/994x663_grand-dia-26130-29-B.webp?2933" class="img-2">
+      <button mat-raised-button>{{Constant.titles.bracelets}}</button>
+      
     </div>
   </div>
   <mat-card class="example-card1">
@@ -31,6 +37,6 @@
        </mat-card>
   </mat-card>
 </div>
-
+  
 
 <!--<app-carousel [slides]="images"></app-carousel>-->

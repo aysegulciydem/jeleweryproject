@@ -5,7 +5,10 @@ export const Constant = {
     categories : 'CATEGORIES',
     shoppingCard: 'Shopping Card',
     login: 'Login',
-    logout: 'Logout'
+    logout: 'Logout',
+    neckless: 'NECKLESS',
+    earrings: 'EARRİNGS',
+    bracelets: 'BRACELETS',
   },
 
   ADD_TO_CARD: 'Add to Card',
