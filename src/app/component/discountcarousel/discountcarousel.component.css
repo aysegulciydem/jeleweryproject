@@ -1,0 +1,67 @@
+
+.discountcarousel{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    
+     
+}
+.discountcarousel img{
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+    background-color: tra;
+    transition: opacity 1s ease-in-out;
+    padding: 0.5%;
+  }
+
+.discountitem {
+    object-fit: cover;
+    transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+    border-radius: 0.5em;
+    width: 350px;
+}
+.discountitem:hover {
+transform: scale(1.025);
+}
+@media screen and (max-width: 425px){
+.discountitem {
+    width: 59%;
+    height: 100%;
+}
+}
+@media screen and (max-width: 768px){
+.discountitem {
+    width: 300px;
+    height: 400px;
+}
+}
+.slider-button{
+    margin-top: -19rem;
+    position: relative;
+    display: flex;
+    column-gap: 55rem;
+}
+.slider-button button{
+    border: none;
+    background-color: transparent;
+    font-size:xx-large;
+    gap: 0.5rem;
+}
+.slider-button button:hover{
+    background-color: transparent;
+}
+button{
+    color: black;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    margin: 0.5rem;
+    font-family: serif;
+    font-size: 15px;
+    border-radius: 5px;
+}
+i {
+    color: #e2e2e2!important;
+}

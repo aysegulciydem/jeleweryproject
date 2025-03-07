@@ -137,4 +137,6 @@
     height: 77%;
   }
 }
-
+.discount-slider{
+  display: none;
+}
