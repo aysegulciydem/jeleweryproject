@@ -1,3 +1,5 @@
+import { subscribe } from "node:diagnostics_channel";
+
 export const Constant = {
   titles: {
     home: 'Home',
@@ -16,6 +18,38 @@ export const Constant = {
 
   errorMessage: {
     NO_PRODUCT: 'There is no available product of the categories'
+  },
+  
+  head: {
+    categories: "CATEGORİES",
+    myaccount:"MY ACCOUNT",
+    subscribe: "SUBSCRİBE TO OUR NEWSLETTER",
+    customer: "COSTUMER SERVİCES",
+    quickacces: "QUİCK ACCES",
+  },
+  categories: {
+    new: "New",
+    collections: "Collections",
+    pendants: "Pendants",
+    bridal: "Bridal",
+    gifts: "Gifts", 
+    rings: "Rings", 
+    earrings: "Earrings",
+    necklaces: "Necklaces",
+    bracelets: "Bracelets",
+    myorders: "My Orders",
+    myaddresses: "My Addresses",
+    accountinformation: "Account Information",
+    subscribe: "SUBSCRİBE",
+    bank: "Bank Account Numbers",
+    condition: "Waranty Conditions",
+    return: "Return and Cancelling Information",
+    clarification: "Clarification About Cookies",
+    process: "Process Guide",
+    faq: "FAQ",
+    main: "Main Page",
+    product: "New Products",
+    discount: "Discounts",
+    mycard: "My Card",
   }
-
 }
