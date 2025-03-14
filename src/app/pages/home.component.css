@@ -1,19 +1,28 @@
+.container-item{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 4%;
+}
+
 .card-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  width: 25%;
+  padding-top: 3%;
   & img{
     position:absolute;
     object-fit: cover;
   }
   & .img-1{
     opacity: 1;
-    height: 80%;
+    height: 100%;
     
   }
   & .img-2{
     opacity: 0;
-    height: 80%;
+    height: 100%;
   }
   & :hover .img-1{
     opacity: 0;
@@ -21,22 +30,14 @@
   & :hover .img-2{
     opacity: 1;
   }
-  & :hover button{
-    position: absolute;
-    opacity: 1;
-    pointer-events: none;
-    bottom: 27px;
-    border: none !important;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    & ::after{
-      transform: scaleX(1.4) scaleY(1.6);
-      opacity: 0;
-    }
+  & button{
+    top: -7%;
+    width: 42%;
+    border-radius: 0px;
   }
 }
 .card {
-  width: 15%;
+  width: 70%;
   display: flex;
   align-items: center;
   height: 350px;
@@ -50,60 +51,7 @@
     width: 60%;
     border-radius: 15px;
   }
-  & button{
-    position: relative;
-    opacity: 0;
-    pointer-events: none;
-    width: 40%;
-    border: none !important;
-    border-radius: 20px;
-    background-color: transparent;
-    animation: moveInBottom 5s ease-out;
-    animation-fill-mode: backwards;
-    @keyframes moveInBottom {
-      0% {
-          opacity: 0;
-          transform: translateY(30px);
-      }
   
-      100% {
-          opacity: 1;
-          transform: translateY(0px);
-      }
-    }
-    & button :link, button:visited{
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 15px 40px;
-      display: inline-block;
-      border-radius: 100px;
-      transition: all .2s;
-      position: absolute;
-    }
-    & button:active{
-      transform: translateY(-1px);
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    }
-    & button::after{
-      content: "";
-      display: inline-block;
-      height: 100%;
-      width: 100%;
-      border-radius: 100px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      transition: all .4s;
-    }
-  }
-  & :hover{
-    transform: scale(1.05);
-    & button{
-      opacity: 1;
-      pointer-events: auto;
-    }
-  }
 }
 .example-card1{
   display: flex; 

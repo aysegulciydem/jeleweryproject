@@ -1,6 +1,8 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { RouterModule } from '@angular/router';
 import {NavbarComponent} from "./component/navbar/navbar.component";
+import { RingsComponent } from './pages/rings/rings.component';
+import { routes } from './app.routes';
 
 @Component({
   schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
@@ -12,6 +14,7 @@ import {NavbarComponent} from "./component/navbar/navbar.component";
   imports: [
     RouterModule,
     NavbarComponent,
+    RingsComponent
   ],
 })
 
