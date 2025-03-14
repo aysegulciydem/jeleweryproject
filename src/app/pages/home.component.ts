@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, ViewChild, ElementRef, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
@@ -22,6 +22,7 @@ import { RingsComponent } from './rings/rings.component';
       CommonModule, CarouselComponent, DiscountcarouselComponent,RingsComponent]
 })
 export class HomeComponent {
+  
   images: SliderImages[]= [
     { id:1, src:'https://mp-cdn-prod.beymen.com/seller-portal/a0b802f2-6ef4-44ed-92e8-0c2e318305e4/542084d4-5131-4343-9ab0-a291f8c3faec.jpg', alt: 'slider1'},
     { id:2, src:'https://www.nevjewellery.com/Data/BlockUploadData/banner/img1/344/7-4-en.png?1710941122', alt: 'slider2'},
@@ -36,19 +37,15 @@ export class HomeComponent {
   discountitem: any;
   constructor(private router: Router){}
   redirectRingsPage(event: Event): void{
-    
-    console.log("çalıştı");
     this.router.navigate(['/rings']);
   }
-  onNecklaces(event:Event){
-    event.preventDefault();
+  redirectNecklacesPage(event: Event){
     this.router.navigate( ['/necklaces']);
   }
-  onEarrings(event:Event){
-    event.preventDefault();
+  redirectEarringsPage(event:Event){
     this.router.navigate(['/earrings']);
   }
-  onBracelet(event:Event){
+  redirectBraceletPage(event:Event){
     event.preventDefault();
     this.router.navigate(['/bracelet']);
   }
