@@ -1,6 +1,5 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {RingService} from "../ring.service";
 import { Product } from '../../../model/products';
 import {MatTableModule} from '@angular/material/table';
 import {MatCard} from "@angular/material/card";
@@ -9,6 +8,7 @@ import {MatFormField} from "@angular/material/form-field";
 import {FormsModule} from "@angular/forms";
 import {MatIconButton} from "@angular/material/button";
 import {MatInput} from "@angular/material/input";
+import { ProductlistserviceService } from '../../../services/productlistservice.service';
 
 @Component({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -20,24 +20,21 @@ import {MatInput} from "@angular/material/input";
   styleUrl: './productList.component.css',
 })
 
-export class ProductListComponent {
-
+export class ProductListComponent implements OnInit{
   public data: Product;
   public products: Product [] = [];
   public count: number = 1;
   public price: number = 0;
-
-  constructor(private readonly ringService: RingService)
-  {
-    this.data = this.ringService.getData();
-    if (this.data) {
-      this.products.push(this.data)
-    }
+  constructor(private readonly productlistservice: ProductlistserviceService){}
+  basketItems: any[]=[];
+  ngOnInit(): void {
+   this.productlistservice.getBasketItems().subscribe(items=> {
+    this.basketItems= items; //update basket
+   })
   }
 
   public increase(item: Product): void {
     this.count++;
-    console.log(this.count)
     this.calculatePriceOfProduct(item, 'increase')
   }
 

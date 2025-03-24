@@ -17,11 +17,11 @@ import { MatDividerModule } from '@angular/material/divider';
 import { CommonModule, NgIfContext } from '@angular/common';
 import {MatToolbar} from "@angular/material/toolbar";
 import {Router} from "@angular/router";
-import {RingService} from "./ring.service";
 import {Product, products} from "../../model/products";
 import {Constant} from "../../constants/contants";
 import {MatDialog} from "@angular/material/dialog";
 import {ProductDetailDialogComponent} from "./product-detail-dialog/product-detail-dialog.component";
+import { ProductlistserviceService } from '../../services/productlistservice.service';
 
 @Component({
   schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
@@ -47,9 +47,7 @@ import {ProductDetailDialogComponent} from "./product-detail-dialog/product-deta
   styleUrl: './rings.component.css'
 })
 export class RingsComponent{
-
   protected readonly Constant = Constant;
-
   products: any = products;
   value: any;
   noProducts: TemplateRef<NgIfContext<boolean>>;
@@ -57,16 +55,19 @@ export class RingsComponent{
   constructor(
     private readonly matDialog: MatDialog,
     private readonly router: Router,
-    private readonly ringService: RingService)
+    private readonly productlistservice: ProductlistserviceService,
+  )
   {
     this.products.forEach(product => {
       product.currentImage = product.imageUrl[0];
     });
   }
-
   addToCard(product: Product): void {
-    this.router.navigate(['/productList'])
-    this.ringService.setData(product);
+    this.productlistservice.addToBasket(product);
+    const goToCart = confirm("Product added to basket! Would you like to go to basket?");
+    if(goToCart) {
+      this.router.navigate(['/productList']);
+    }
   }
 
   openProductDetailDialogComponent(product: Product): void {

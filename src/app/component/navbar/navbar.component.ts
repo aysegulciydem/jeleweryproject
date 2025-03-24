@@ -35,4 +35,8 @@ export class NavbarComponent {
   public goToHomePage(): void {
     this.router.navigate([''])
   }
+
+  redirectShoppingCardPage(){
+    this.router.navigate(['/productList']);
+  }
 }
