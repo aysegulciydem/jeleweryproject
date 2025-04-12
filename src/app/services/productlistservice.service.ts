@@ -27,7 +27,10 @@ export class ProductlistserviceService {
   getBasketItems() {
     return this.basketItems.asObservable(); // Komponentler buradan veriyi alır
   }
-  clearBasket(){
-    //this.basketItems.next([]);
+  removeFromBasket(product: Product): void {
+    const currentBasket = this.basketItems.getValue();
+    const updatedBasket = currentBasket.filter(item => item.id !== product.id);
+    this.basketItems.next(updatedBasket);
   }
+  
 }

@@ -82,6 +82,9 @@ export class ProductListComponent implements OnInit{
   continueShopping(): void {
      this.location.back();
   }
-
+  removeItemFromBasket(item: Product): void {
+    this.productlistservice.removeFromBasket(item);
+  }
+  
 
 }
