@@ -26,6 +26,7 @@ export const Constant = {
     subscribe: "SUBSCRİBE TO OUR NEWSLETTER",
     customer: "COSTUMER SERVİCES",
     quickacces: "QUİCK ACCES",
+    mybag: "MY BAG",
   },
   categories: {
     new: "New",
@@ -51,5 +52,6 @@ export const Constant = {
     product: "New Products",
     discount: "Discounts",
     mycard: "My Card",
+    
   }
 }
