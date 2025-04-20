@@ -78,4 +78,13 @@ export class RingsComponent{
       }
     );
   }
+
+  onMouseEnter(product: Product): void {
+    // İkinci resmi göster
+    product.currentImage = product.imageUrl[1];
+  }
+  onMouseLeave(product: Product): void {
+    // İlk resmi geri yükle
+    product.currentImage = product.imageUrl[0];
+  } 
 }

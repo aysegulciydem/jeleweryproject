@@ -1,6 +1,7 @@
 
 
 export interface  Product {
+  currentImage: string;
   count: number;
   quantity: number;
   id: number,
@@ -14,7 +15,7 @@ export interface  Product {
 export const  products: Product[] = [
     {
       id: 1,
-      name: 'Gold',
+      name: '0.12 CT Baquette Cut Diamond Rose Gold Ring',
       description: '0.12 CT Baquette Cut Diamond Rose Gold Ring',
       price: 335,
       imageUrl: [
@@ -23,12 +24,13 @@ export const  products: Product[] = [
       ],
       quantity: 0,
       count: 0,
-      shipping:  4.90,
+      shipping: 4.90,
+      currentImage: ""
     },
     {
       id: 2,
-      name: 'Pink',
-      description: '4.95.96 CT Baguette Cut Diamond Rose Gold Ring',
+      name: '4.95 CT Baguette Cut Diamond Rose Gold Ring',
+      description: '4.95 CT Baguette Cut Diamond Rose Gold Ring',
       price: 500,
       imageUrl: [
         'https://www.nevjewellery.com/106-ct-baguette-cut-d…e-cut-diamond-rings-nev-jewellery-21439-26-O.webp',
@@ -36,11 +38,12 @@ export const  products: Product[] = [
       ],
       quantity: 0,
       count: 0,
-      shipping:  4.90,
+      shipping: 4.90,
+      currentImage: ""
     },
     {
       id: 3,
-      name: 'Yellow',
+      name: 'Solid 0.04 CT Baguette Cut Diamond Rose Gold Ring',
       description: 'Solid 0.04 CT Baguette Cut Diamond Rose Gold Ring',
       price: 270,
       imageUrl: [
@@ -49,11 +52,12 @@ export const  products: Product[] = [
       ],
       quantity: 0,
       count: 0,
-      shipping:  4.90,
+      shipping: 4.90,
+      currentImage: ""
     },
     {
       id: 4,
-      name: 'Black',
+      name: 'Metis 1.44 Baguette Cut Diamond Ring',
       description: 'Metis 1.44 Baguette Cut Diamond Ring',
       price: 620,
       imageUrl: [
@@ -62,11 +66,12 @@ export const  products: Product[] = [
       ],
       quantity: 0,
       count: 0,
-      shipping:  4.90,
+      shipping: 4.90,
+      currentImage: ""
     },
     {
       id: 5,
-      name: 'Black',
+      name: 'Aden 0.30 CT Baguette Cut Diamond White Gold Ring',
       description: 'Aden 0.30 CT Baguette Cut Diamond White Gold Ring',
       price: 420,
       imageUrl: [
@@ -75,7 +80,8 @@ export const  products: Product[] = [
       ],
       quantity: 0,
       count: 0,
-      shipping:  4.90,
+      shipping: 4.90,
+      currentImage: ""
     },
     {
       id: 6,
@@ -88,7 +94,8 @@ export const  products: Product[] = [
       ],
       quantity: 0,
       count: 0,
-      shipping:  4.90,
+      shipping: 4.90,
+      currentImage: ""
     },
     {
       id: 7,
@@ -101,7 +108,8 @@ export const  products: Product[] = [
       ],
       quantity: 0,
       count: 0,
-      shipping:  4.90,
+      shipping: 4.90,
+      currentImage: ""
     },
     {
       id: 8,
@@ -114,7 +122,8 @@ export const  products: Product[] = [
       ],
       quantity: 0,
       count: 0,
-      shipping:  4.90,
+      shipping: 4.90,
+      currentImage: ""
     },
     {
       id: 9,
@@ -127,7 +136,8 @@ export const  products: Product[] = [
       ],
       quantity: 0,
       count: 0,
-      shipping:  4.90,
+      shipping: 4.90,
+      currentImage: ""
     },
     {
       id: 10,
@@ -140,7 +150,8 @@ export const  products: Product[] = [
       ],
       quantity: 0,
       count: 0,
-      shipping:  4.90,
+      shipping: 4.90,
+      currentImage: ""
     },
     {
       id: 11,
@@ -153,7 +164,8 @@ export const  products: Product[] = [
       ],
       quantity: 0,
       count: 0,
-      shipping:  4.90,
+      shipping: 4.90,
+      currentImage: ""
     },
     {
       id: 12,
@@ -166,7 +178,8 @@ export const  products: Product[] = [
       ],
       quantity: 0,
       count: 0,
-      shipping:  4.90,
+      shipping: 4.90,
+      currentImage: ""
     },
     {
       id: 13,
@@ -178,7 +191,8 @@ export const  products: Product[] = [
       ],
       quantity: 0,
       count: 0,
-      shipping:  4.90,
+      shipping: 4.90,
+      currentImage: ""
     },
     {
       id: 14,
@@ -190,7 +204,8 @@ export const  products: Product[] = [
       ],
       quantity: 0,
       count: 0,
-      shipping:  4.90,
+      shipping: 4.90,
+      currentImage: ""
     },
     {
       id: 15,
@@ -202,7 +217,8 @@ export const  products: Product[] = [
       ],
       quantity: 0,
       count: 0,
-      shipping:  4.90,
+      shipping: 4.90,
+      currentImage: ""
     },
     {
       id: 16,
@@ -214,6 +230,7 @@ export const  products: Product[] = [
       ],
       quantity: 0,
       count: 0,
-      shipping:  4.90,
+      shipping: 4.90,
+      currentImage: ""
     }
 ]

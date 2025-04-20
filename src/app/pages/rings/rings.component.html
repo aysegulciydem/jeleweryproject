@@ -4,11 +4,18 @@
   </div>
 
   <div class="card-container" *ngIf="products && products.length > 0; else noProducts">
-    <mat-card class="product-card" *ngFor="let product of products">
+    <mat-card class="product-card" *ngFor="let product of products"
+      (mouseenter)="onMouseEnter(product)"
+      (mouseleave)="onMouseLeave(product)">
+
       <img src="{{product.currentImage}}" alt="{{product.name}}">
-      <p style="text-align: center">{{product.name}}</p>
-      <div style="display: flex; align-items: center; justify-content: space-evenly">
+
+      <div style="text-align: center;">
+        <p style="text-align: center">{{product.name}}</p>
         <p style="margin: 0!important;">{{product.price}}$</p>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: space-evenly">
         <button (click)="openProductDetailDialogComponent(product)" mat-button>{{Constant.DETAIL}}</button>
         <button  (click)="addToCard(product)" mat-button>{{Constant.ADD_TO_CARD}}</button>
       </div>

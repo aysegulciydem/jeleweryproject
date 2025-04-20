@@ -114,9 +114,10 @@
 .container-end{
   display: flex ;
   flex-direction: row ;
-  gap: 12rem ;
-  justify-content: start;
+  gap: 4rem ;
+  justify-content: center;
   padding: 1rem;
+  text-align: center;
 }
 .input-group {
   position: relative;
