@@ -85,7 +85,7 @@ export const  products: Product[] = [
     },
     {
       id: 6,
-      name: 'Black',
+      name: '0.55 CT Multicolor Sapphire and Brown Diamond Ring',
       description: '0.55 CT Multicolor Sapphire and Brown Diamond Ring',
       price: 175,
       imageUrl: [
@@ -99,7 +99,7 @@ export const  products: Product[] = [
     },
     {
       id: 7,
-      name: 'Black',
+      name: 'Flare 0.28 CT Multicolor Sapphire and Daimond Ring',
       description: 'Flare 0.28 CT Multicolor Sapphire and Daimond Ring',
       price: 200,
       imageUrl: [
@@ -113,7 +113,7 @@ export const  products: Product[] = [
     },
     {
       id: 8,
-      name: 'Black',
+      name: 'Cutie  0.16 CT Daimond and Green Sapphire Dual Heart Ring',
       description: 'Cutie  0.16 CT Daimond and Green Sapphire Dual Heart Ring',
       price: 230,
       imageUrl: [
@@ -127,7 +127,7 @@ export const  products: Product[] = [
     },
     {
       id: 9,
-      name: 'Black',
+      name: 'Eye 0.11 CT Sapphire and Diamond Rose Gold Ring',
       description: 'Eye 0.11 CT Sapphire and Diamond Rose Gold Ring',
       price: 167,
       imageUrl: [
@@ -141,7 +141,7 @@ export const  products: Product[] = [
     },
     {
       id: 10,
-      name: 'Black',
+      name: 'Aten Diamond and Sapphire Rose Gold Ring',
       description: 'Aten Diamond and Sapphire Rose Gold Ring',
       price: 285,
       imageUrl: [
@@ -155,7 +155,7 @@ export const  products: Product[] = [
     },
     {
       id: 11,
-      name: 'Black',
+      name: '2.38 CT Multicolor Sapphire White Gold Eternity Ring',
       description: '2.38 CT Multicolor Sapphire White Gold Eternity Ring',
       price: 305,
       imageUrl: [
@@ -169,7 +169,7 @@ export const  products: Product[] = [
     },
     {
       id: 12,
-      name: 'Black',
+      name: '2.55 CT Oval Cut Citrine and Diamond Rose Gold Ring',
       description: '2.55 CT Oval Cut Citrine and Diamond Rose Gold Ring',
       price: 332,
       imageUrl: [
@@ -184,6 +184,7 @@ export const  products: Product[] = [
     {
       id: 13,
       name: ' Hearts 0.05 CT Diamond White Gold Ring',
+      description: ' Hearts 0.05 CT Diamond White Gold Ring',
       price: 189,
       imageUrl: [
         'https://www.nevjewellery.com/hearts-005-ct-diamond…d-ring-diamond-rings-nev-jewellery-11052-22-O.jpg',
@@ -197,6 +198,7 @@ export const  products: Product[] = [
     {
       id: 14,
       name: 'Loop 0.02 CT Diamond Rose Gold Ring',
+      description: 'Loop 0.02 CT Diamond Rose Gold Ring',
       price: 210,
       imageUrl: [
         'https://www.nevjewellery.com/loop-002-ct-diamond-r…d-ring-diamond-rings-nev-jewellery-13953-33-O.jpg',
@@ -210,6 +212,7 @@ export const  products: Product[] = [
     {
       id: 15,
       name: 'Minimal Diamond Chevron Ring',
+      description: 'Minimal Diamond Chevron Ring',
       price: 200,
       imageUrl: [
         'https://www.nevjewellery.com/minimal-diamond-chevron-ring-1-diamond-rings-nev-jewellery-826-15-O.jpg',
@@ -222,7 +225,8 @@ export const  products: Product[] = [
     },
     {
       id: 16,
-      name: 'Moon 0.09 CT Blue Sapphire and Diamond White Gold Ring',
+      name: '0.09 CT Blue Sapphire Ring',
+      description: '0.09 CT Blue Sapphire and Diamond White Gold Ring',
       price: 285,
       imageUrl: [
         'https://www.nevjewellery.com/moon-009-ct-blue-sapp…lored-gemstone-rings-nev-jewellery-12894-22-O.jpg',

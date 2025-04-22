@@ -9,7 +9,7 @@ export const Constant = {
     login: 'Login',
     logout: 'Logout',
     neckless: 'NECKLESS',
-    earrings: 'EARRİNGS',
+    earrings: 'EARRINGS',
     bracelets: 'BRACELETS',
   },
 
@@ -21,11 +21,11 @@ export const Constant = {
   },
   
   head: {
-    categories: "CATEGORİES",
+    categories: "CATEGORIES",
     myaccount:"MY ACCOUNT",
-    subscribe: "SUBSCRİBE TO OUR NEWSLETTER",
-    customer: "COSTUMER SERVİCES",
-    quickacces: "QUİCK ACCES",
+    subscribe: "SUBSCRIBE TO OUR NEWSLETTER",
+    customer: "COSTUMER SERVICES",
+    quickacces: "QUICK ACCES",
     mybag: "MY BAG",
   },
   categories: {
@@ -41,7 +41,7 @@ export const Constant = {
     myorders: "My Orders",
     myaddresses: "My Addresses",
     accountinformation: "Account Information",
-    subscribe: "SUBSCRİBE",
+    subscribe: "SUBSCRIBE",
     bank: "Bank Account Numbers",
     condition: "Waranty Conditions",
     return: "Return and Cancelling Information",

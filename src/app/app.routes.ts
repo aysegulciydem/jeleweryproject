@@ -40,6 +40,10 @@ export const routes: Routes = [
     {
         'path': 'productList',
         loadComponent: () => import('./pages/rings/productList/productList.component').then(c => c.ProductListComponent),
+    },
+    {
+        'path': 'information',
+        loadComponent: () => import('./component/information/information.component').then(c => c.InformationComponent),
     }
 ]
 

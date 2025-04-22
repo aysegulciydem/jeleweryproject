@@ -11,6 +11,7 @@ import {Constant} from "../constants/contants";
 import {  DiscountSliderImages, SliderImages } from '../../asset/images/images';
 import { DiscountcarouselComponent } from '../component/discountcarousel/discountcarousel.component';
 import { RingsComponent } from './rings/rings.component';
+import { InformationComponent } from '../component/information/information.component';
 
 @Component({
    schemas: [CUSTOM_ELEMENTS_SCHEMA,],
@@ -18,7 +19,7 @@ import { RingsComponent } from './rings/rings.component';
     standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
-    imports: [RouterModule, NavbarComponent, MatCardModule, MatButtonModule, MatDividerModule, 
+    imports: [RouterModule, NavbarComponent, MatCardModule, MatButtonModule, MatDividerModule, InformationComponent,
       CommonModule, CarouselComponent, DiscountcarouselComponent,RingsComponent]
 })
 export class HomeComponent {

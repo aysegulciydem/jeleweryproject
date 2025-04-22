@@ -4,6 +4,7 @@ import {NavbarComponent} from "./component/navbar/navbar.component";
 import { RingsComponent } from './pages/rings/rings.component';
 import { routes } from './app.routes';
 import { CommonModule } from '@angular/common';
+import { InformationComponent } from './component/information/information.component';
 
 @Component({
   schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
@@ -16,16 +17,13 @@ import { CommonModule } from '@angular/common';
     RouterModule,
     NavbarComponent,
     RingsComponent,
-    CommonModule
+    CommonModule,
+    InformationComponent
   ],
 })
 
 export class AppComponent  {isHomePage: boolean = false;
 
-  constructor(private router: Router) {
-    this.router.events.subscribe(() => {
-      this.isHomePage = this.router.url === '/home'; // 'home' rotasında mı kontrol et
-    });
-  }
+  constructor() {}
 }
 
