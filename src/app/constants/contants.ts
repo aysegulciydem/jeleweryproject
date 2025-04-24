@@ -52,6 +52,7 @@ export const Constant = {
     product: "New Products",
     discount: "Discounts",
     mycard: "My Card",
+    sort: "Sort By",
     
   }
 }

@@ -1,7 +1,8 @@
 import {
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
-  TemplateRef
+  TemplateRef,
+  ViewChild
 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -10,7 +11,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormsModule, Validators } from '@angular/forms';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
@@ -22,7 +23,19 @@ import {Constant} from "../../constants/contants";
 import {MatDialog} from "@angular/material/dialog";
 import {ProductDetailDialogComponent} from "./product-detail-dialog/product-detail-dialog.component";
 import { ProductlistserviceService } from '../../services/productlistservice.service';
+import {FormGroupDirective,NgForm} from '@angular/forms';
+import {ErrorStateMatcher} from '@angular/material/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+import{MatDrawer} from '@angular/material/sidenav';
 
+/** Error when invalid control is dirty, touched, or submitted. */
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
 @Component({
   schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
   selector: 'app-rings',
@@ -41,6 +54,16 @@ import { ProductlistserviceService } from '../../services/productlistservice.ser
     MatDividerModule,
     CommonModule,
     MatToolbar,
+    ReactiveFormsModule, 
+    MatFormFieldModule,
+    FormsModule, 
+    ReactiveFormsModule, 
+    MatInputModule, 
+    MatSelectModule,
+    MatSliderModule, 
+    MatFormFieldModule, 
+    MatSelectModule, 
+    MatButtonModule
   ],
   providers: [{provide: MatPaginatorIntl}],
   templateUrl: './rings.component.html',
@@ -50,7 +73,13 @@ export class RingsComponent{
   protected readonly Constant = Constant;
   products: any = products;
   value: any;
+  showFiller = false;
   noProducts: TemplateRef<NgIfContext<boolean>>;
+  selected = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
+  
+  selectFormControl = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
+  matcher = new MyErrorStateMatcher();
+
 
   constructor(
     private readonly matDialog: MatDialog,
@@ -69,6 +98,12 @@ export class RingsComponent{
       this.router.navigate(['/productList']);
     }
   }
+  @ViewChild('drawer') drawer!: MatDrawer;
+
+  toggleDrawer() {
+    this.drawer.toggle();
+  }
+  
 
   openProductDetailDialogComponent(product: Product): void {
     this.matDialog.open(ProductDetailDialogComponent,

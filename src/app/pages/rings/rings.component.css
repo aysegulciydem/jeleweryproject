@@ -11,7 +11,14 @@
     .categories-name{
       margin-bottom: 0!important;
     }
-  }
+    ::ng-deep .mdc-line-ripple  {
+      display: none;
+    }
+    ::ng-deep.mat-mdc-text-field-wrapper{
+      background-color: write;
+    }
+  }  
+   
 
   .card-container{
     display: flex;
@@ -35,9 +42,12 @@
 
       & img {
         width: 95%;
+        padding-top: 2%;
+
       }
     }
   }
+ 
 }
 
 
