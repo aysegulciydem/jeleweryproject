@@ -9,8 +9,14 @@
     </div>
     <div class="bar-right">
       <i class="fa-regular fa-heart"></i>
-      <i class="fa-solid fa-bag-shopping" (click)="redirectShoppingCardPage()"></i>
+      <mat-icon matBadge="{{itemCount}}"><i class="fa-solid fa-bag-shopping" (click)="redirectShoppingCardPage()"></i></mat-icon>
+      
       <button mat-button color="primary">{{Constant.titles.shoppingCard}}</button>
       <button (click)="goToLoginPage()" mat-button color="primary">{{Constant.titles.logout}}</button>
     </div>
 </mat-toolbar>
+
+
+
+
+

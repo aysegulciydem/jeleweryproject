@@ -54,22 +54,24 @@ export class ProductListComponent implements OnInit{
   }
 
   public increase(item: Product): void {
-    item.count = (item.count || 1) + 1;
+    item.quantity = (item.quantity || 1) + 1;
+    this.productlistservice.updateBasketItem(item);
   }
   
   public decrease(item: Product): void {
-    if (item.count && item.count > 1) {
-      item.count--;
+    if (item.quantity && item.quantity > 1) {
+      item.quantity--;
+      this.productlistservice.updateBasketItem(item);
     }
   }
   
-
   getSubtotal(): number {
     return this.basketItems.reduce((total, item) => {
-      const quantity = item.count || 1;
+      const quantity = item.quantity || 1;
       return total + (item.price * quantity);
     }, 0);
   }
+   
   
   getShipping(): number {
     console.log(this.shipping);

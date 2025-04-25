@@ -3,17 +3,17 @@
   <div class="first-container">
     <mat-card class="card-container" *ngFor="let item of basketItems">
       <img src="{{item.currentImage}}" alt="{{item.name}}">
-      <div class="info-container">
+      <div class="info-container" style="width: 40%;">
         <p style="font-weight: 500">{{item.name}}</p>
         <p style="color: #333;font-size: 14px;line-height: 18px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">
           {{item.description}}
         </p>
       </div>
-      <div class="counter-container">
-        <button mat-icon-button (click)="decrease(item)" [disabled]="count === 1">
+      <div class="counter-container"  style="width: 15%;">
+        <button mat-icon-button (click)="decrease(item)" [disabled]="item.quantity === 1">
           <mat-icon>remove</mat-icon>
         </button>
-        <input type="text" [(ngModel)]="count" min="1" style="width: 30px; text-align: center">
+        <input type="text" [(ngModel)]="item.quantity" min="1" style="width: 30px; text-align: center">
         <button mat-icon-button (click)="increase(item)">
           <mat-icon>add</mat-icon>
         </button>
@@ -49,9 +49,7 @@
         <mat-expansion-panel-header>
           <mat-panel-description>
             Add a promo code
-            <span class="material-symbols-outlined">
-              add
-              </span>
+            <span class="material-symbols-outlined"></span>
           </mat-panel-description>
         </mat-expansion-panel-header>
     
