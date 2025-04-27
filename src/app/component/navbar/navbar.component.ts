@@ -11,11 +11,12 @@ import {MatToolbar} from "@angular/material/toolbar";
 import {Constant} from "../../constants/contants";
 import { ProductlistserviceService } from '../../services/productlistservice.service';
 import {MatBadgeModule} from '@angular/material/badge';
+import{MatMenuModule, MatMenuTrigger} from '@angular/material/menu';
 @Component({
   schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
   selector: 'app-navbar',
   standalone: true,
-  imports: [MatButtonModule, MatDividerModule, MatIconModule, FormsModule, MatFormFieldModule, MatInputModule, CommonModule, MatToolbar, MatBadgeModule],
+  imports: [MatButtonModule, MatDividerModule, MatIconModule, FormsModule, MatFormFieldModule, MatInputModule, CommonModule, MatToolbar, MatBadgeModule,MatMenuModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
@@ -32,16 +33,32 @@ export class NavbarComponent implements OnInit {
       this.itemCount = count;
   });
   }
+  closeMenuTimeout: any;
+
+openMenu(trigger: MatMenuTrigger) {
+  trigger.openMenu();
+}
+
+startCloseTimer(trigger: MatMenuTrigger) {
+  this.closeMenuTimeout = setTimeout(() => {
+    trigger.closeMenu();
+  }, 1500); // 300ms sonra kapatır
+}
+
+cancelCloseTimer() {
+  clearTimeout(this.closeMenuTimeout);
+}
 
   goToLoginPage(){
     this.router.navigate(['/login']);
   }
-
   public goToHomePage(): void {
     this.router.navigate([''])
   }
-
   redirectShoppingCardPage(){
     this.router.navigate(['/productList']);
+  }
+  redirectRingsPage(event: Event): void{
+    this.router.navigate(['/rings']);
   }
 }

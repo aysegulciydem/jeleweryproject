@@ -1,6 +1,8 @@
 import {
   Component,
+  computed,
   CUSTOM_ELEMENTS_SCHEMA,
+  signal,
   TemplateRef,
   ViewChild
 } from '@angular/core';
@@ -27,14 +29,18 @@ import {FormGroupDirective,NgForm} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
-import{MatDrawer} from '@angular/material/sidenav';
-
+import{MatDrawer, MatSidenav} from '@angular/material/sidenav';
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
     return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
   }
+}
+export interface Task {
+  name: string;
+  completed: boolean;
+  subtasks?: Task[];
 }
 @Component({
   schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
@@ -63,7 +69,13 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
     MatSliderModule, 
     MatFormFieldModule, 
     MatSelectModule, 
-    MatButtonModule
+    MatButtonModule,
+    MatExpansionModule,
+    MatCardModule,
+    FormsModule,
+    MatCardModule,
+    MatDividerModule,
+    
   ],
   providers: [{provide: MatPaginatorIntl}],
   templateUrl: './rings.component.html',
@@ -72,6 +84,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 export class RingsComponent{
   protected readonly Constant = Constant;
   products: any = products;
+  isToggleOpen: boolean = false;
   value: any;
   showFiller = false;
   noProducts: TemplateRef<NgIfContext<boolean>>;
@@ -79,8 +92,35 @@ export class RingsComponent{
   
   selectFormControl = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
   matcher = new MyErrorStateMatcher();
-
-
+  
+  readonly task = signal<Task>({
+    name: 'Color',
+    completed: false,
+    subtasks: [
+      {name: 'Gold', completed: false},
+      {name: 'Grey', completed: false},
+      {name: 'White', completed: false},
+    ],
+  });
+  readonly partiallyComplete = computed(() => {
+    const task = this.task();
+    if (!task.subtasks) {
+      return false;
+    }
+    return task.subtasks.some(t => t.completed) && !task.subtasks.every(t => t.completed);
+  });
+  update(completed: boolean, index?: number) {
+    this.task.update(task => {
+      if (index === undefined) {
+        task.completed = completed;
+        task.subtasks?.forEach(t => (t.completed = completed));
+      } else {
+        task.subtasks![index].completed = completed;
+        task.completed = task.subtasks?.every(t => t.completed) ?? true;
+      }
+      return {...task};
+    });
+  }
   constructor(
     private readonly matDialog: MatDialog,
     private readonly router: Router,
@@ -99,12 +139,9 @@ export class RingsComponent{
     }
   }
   @ViewChild('drawer') drawer!: MatDrawer;
-
   toggleDrawer() {
     this.drawer.toggle();
   }
-  
-
   openProductDetailDialogComponent(product: Product): void {
     this.matDialog.open(ProductDetailDialogComponent,
       {
@@ -113,7 +150,6 @@ export class RingsComponent{
       }
     );
   }
-
   onMouseEnter(product: Product): void {
     // İkinci resmi göster
     product.currentImage = product.imageUrl[1];
@@ -122,4 +158,8 @@ export class RingsComponent{
     // İlk resmi geri yükle
     product.currentImage = product.imageUrl[0];
   } 
+  toggleFilter() {
+    this.isToggleOpen = !this.isToggleOpen;
+  }
+  
 }

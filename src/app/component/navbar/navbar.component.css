@@ -48,3 +48,15 @@ input {
   color: #d7dbdd;
   
 }
+.category-bar{
+  padding-left: 30%;
+  button{
+    text-transform: uppercase;
+    padding-right: 5%;
+    cursor: pointer;
+    font-size: larger;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}

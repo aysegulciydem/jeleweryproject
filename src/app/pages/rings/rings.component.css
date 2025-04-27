@@ -1,6 +1,23 @@
 .main-container {
   padding-bottom: 5%;
   background-color: whitesmoke;
+  .filter-toggle-screen{
+    width: 80%;
+    background-color: alicebluex;
+    .example-section {
+      margin: 12px 0;
+    }
+    
+    .example-margin {
+      margin: 0 12px;
+    }
+    
+    ul {
+      list-style-type: none;
+      margin-top: 4px;
+    }
+    
+  }
   
   .sub-title{
     display: flex;
@@ -33,13 +50,11 @@
       flex-direction: column;
       align-items: center;
       width: 8%;
-      height: 470px;
+      height: 490px;
       gap: 15px;
       p{
         min-height: 50px;
       }
-    
-
       & img {
         width: 95%;
         padding-top: 2%;

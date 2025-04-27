@@ -1,4 +1,5 @@
-<mat-toolbar style="background-color: whitesmoke">
+<div class="main-navbar" style="display: flex; flex-direction: column;">
+  <mat-toolbar style="background-color: whitesmoke;"> 
     <div style="display: flex; flex-direction: row;">
       <img src="" alt="">
       <button (click)="goToHomePage()" mat-button color="primary">{{Constant.titles.home}}</button>
@@ -9,14 +10,58 @@
     </div>
     <div class="bar-right">
       <i class="fa-regular fa-heart"></i>
-      <mat-icon matBadge="{{itemCount}}"><i class="fa-solid fa-bag-shopping" (click)="redirectShoppingCardPage()"></i></mat-icon>
-      
+      <mat-icon matBadge="{{itemCount}}" aria-hidden="false"><i class="fa-solid fa-bag-shopping" (click)="redirectShoppingCardPage()"></i></mat-icon>
       <button mat-button color="primary">{{Constant.titles.shoppingCard}}</button>
       <button (click)="goToLoginPage()" mat-button color="primary">{{Constant.titles.logout}}</button>
     </div>
-</mat-toolbar>
+  </mat-toolbar>
+  <div class="category-bar">
+    <button mat-button [matMenuTriggerFor]="ringsMenu" (mouseenter)="openMenu(ringsTrigger)" (mouseleave)="startCloseTimer(ringsTrigger)" #ringsTrigger="matMenuTrigger">
+      {{Constant.categories.rings}}
+    </button>
+    <mat-menu #ringsMenu="matMenu" (mouseenter)="cancelCloseTimer()"
+    (mouseleave)="startCloseTimer(ringsTrigger)">
+      <button mat-menu-item (click)="redirectRingsPage($event)">Gold Rings</button>
+      <button mat-menu-item>Silver Rings</button>
+    </mat-menu>
+  
+    <button mat-button [matMenuTriggerFor]="earringsMenu" (mouseenter)="openMenu(earringsTrigger)"  (mouseleave)="startCloseTimer(earringsTrigger)" #earringsTrigger="matMenuTrigger">
+      {{Constant.categories.earrings}}
+    </button>
+    <mat-menu #earringsMenu="matMenu" (mouseenter)="cancelCloseTimer()"
+    (mouseleave)="startCloseTimer(earringsTrigger)">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  
+    <button mat-button [matMenuTriggerFor]="braceletsMenu" (mouseenter)="openMenu(braceletsTrigger)" (mouseleave)="startCloseTimer(braceletsTrigger)" #braceletsTrigger="matMenuTrigger">
+      {{Constant.categories.bracelets}}
+    </button>
+    <mat-menu #braceletsMenu="matMenu" (mouseenter)="cancelCloseTimer()"
+    (mouseleave)="startCloseTimer(braceletsTrigger)">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  
+    <button mat-button [matMenuTriggerFor]="necklacesMenu" (mouseenter)=".openMenu(necklacesTrigger)"  (mouseleave)="startCloseTimer(necklacesTrigger)" #necklacesTrigger="matMenuTrigger">
+      {{Constant.categories.necklaces}}
+    </button>
+    <mat-menu #necklacesMenu="matMenu" (mouseenter)="cancelCloseTimer()"
+    (mouseleave)="startCloseTimer(necklacesTrigger)>
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  
+    <button mat-button [matMenuTriggerFor]="bridalMenu" (mouseenter)="openMenu(bridalTrigger)"  (mouseleave)="startCloseTimer(bridalTrigger) #bridalTrigger="matMenuTrigger">
+      {{Constant.categories.bridal}}
+    </button>
+    <mat-menu #bridalMenu="matMenu" (mouseenter)="cancelCloseTimer()"
+    (mouseleave)="startCloseTimer(bridalTrigger)">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </div>
+  
+  
 
-
-
-
-
+</div>
