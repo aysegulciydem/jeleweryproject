@@ -6,7 +6,7 @@
     <div class="card-container">
       <div class="card">
         <img src="https://cdn.shopify.com/s/files/1/0797/3637/3533/files/2-BIRTHSTONEBRACELETS_BirthstoneBraceletAugustPeridot_14k_Stack2_010.jpg?v=1717088619&width=600&crop=center" class="img-1">
-        <img src="https://res.cloudinary.com/kendra-scott/image/upload/q_auto,f_auto,dpr_auto/w_640,h_800,c_fit/Catalogs/kendrascott/8_16_23_demi/kendra-scott-davie-pearl-band-ring-18k-yellow-gold-vermeil-white-pearl-00.jpeg" class="img-2">    
+        <img src="https://res.cloudinary.com/kendra-scott/image/upload/q_auto,f_auto,dpr_auto/w_640,h_800,c_fit/Catalogs/kendrascott/8_16_23_demi/kendra-scott-davie-pearl-band-ring-18k-yellow-gold-vermeil-white-pearl-00.jpeg" class="img-2">
       </div>
       <button mat-raised-button (click)="redirectRingsPage($event)"> {{Constant.titles.rings}}</button>
     </div>
@@ -15,7 +15,7 @@
         <img src="https://i.pinimg.com/564x/c3/fc/54/c3fc54ffcd9a6b65007c083b47108c0c.jpg" class="img-1">
         <img src="https://cdn.shopify.com/s/files/1/0797/3637/3533/files/3_Interlock_PaveNecklace_yg_angled.jpg?v=1722523779&width=1000&height=1000&crop=center" class="img-2">
       </div>
-      <button mat-raised-button (click)="redirectNecklacesPage($event)">{{Constant.titles.neckless}}</button>
+      <button mat-raised-button (click)="redirectNecklacesPage($event)">{{Constant.titles.necklaces}}</button>
     </div>
     <div class="card-container">
       <div class="card">
@@ -39,7 +39,7 @@
     <mat-card class="second">
       <img class="middle" src="https://res.cloudinary.com/kendra-scott/image/upload/q_auto,f_auto,dpr_auto/v1733171226/enhancedstorycomponents-imageuploader/TrendReport/2024/Holiday/Holiday%203/YR_Holiday.jpg" alt="neckless">
     </mat-card>
-    <app-discountcarousel *ngIf=" discountslide.length > 0" [discountslide]="discountslide"></app-discountcarousel>  
+    <app-discountcarousel *ngIf=" discountslide.length > 0" [discountslide]="discountslide"></app-discountcarousel>
   </mat-card>
 </div>
 <app-carousel *ngIf="images.length > 0"  [slides]="images"></app-carousel>

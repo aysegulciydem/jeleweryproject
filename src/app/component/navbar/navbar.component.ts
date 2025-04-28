@@ -12,11 +12,13 @@ import {Constant} from "../../constants/contants";
 import { ProductlistserviceService } from '../../services/productlistservice.service';
 import {MatBadgeModule} from '@angular/material/badge';
 import{MatMenuModule, MatMenuTrigger} from '@angular/material/menu';
+import {MatTab, MatTabGroup} from "@angular/material/tabs";
+import {RingsComponent} from "../../pages/rings/rings.component";
 @Component({
   schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
   selector: 'app-navbar',
   standalone: true,
-  imports: [MatButtonModule, MatDividerModule, MatIconModule, FormsModule, MatFormFieldModule, MatInputModule, CommonModule, MatToolbar, MatBadgeModule,MatMenuModule],
+  imports: [MatButtonModule, MatDividerModule, MatIconModule, FormsModule, MatFormFieldModule, MatInputModule, CommonModule, MatToolbar, MatBadgeModule, MatMenuModule, MatTabGroup, MatTab, RingsComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
@@ -63,5 +65,25 @@ cancelCloseTimer() {
   }
   redirectEarringsPage(event: Event): void{
     this.router.navigate(['/earrings']);
+  }
+
+  goToRelatedPage(key: string) {
+
+    switch (key) {
+      case 'necklaces':
+        this.router.navigate(['/necklaces']);
+        break;
+      case 'rings':
+        this.router.navigate(['/rings']);
+        break;
+      case 'bracelets':
+        this.router.navigate(['/bracelet']);
+        break;
+      case 'earrings':
+        this.router.navigate(['/earrings']);
+        break;
+    }
+
+
   }
 }

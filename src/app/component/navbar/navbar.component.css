@@ -1,20 +1,7 @@
-mat-toolbar {
-  justify-content: space-between;
-  height: 92px !important;
-}
-
-.input-group {
-  position: relative;
-  margin: 1.5rem 0;
-  justify-content: center;
-  width: 55%;
-}
 input {
   border: none;
   outline: none;
-  padding: 0.75rem;
   font-size: 1.5rem;
-  width: 40%;
 }
 .effect-7 {
   border: transparent ;
@@ -23,7 +10,6 @@ input {
   background-size: 2.1875rem;
   padding-left: 30px;
   transition: all 2s;
- ;
 }
 
 .effect-7:focus {
@@ -37,8 +23,8 @@ input {
   padding-right: 50px;
   width: 20%;
   &:hover{
-    transform: scale(1.3); 
-    transition: transform 0.3s ease-in-out; 
+    transform: scale(1.3);
+    transition: transform 0.3s ease-in-out;
   }
 }
 .fa-magnifying-glass{
@@ -46,7 +32,7 @@ input {
   padding-top: 1.3%;
   margin-left: -32px  !important;
   color: #d7dbdd;
-  
+
 }
 .category-bar{
   padding-left: 30%;

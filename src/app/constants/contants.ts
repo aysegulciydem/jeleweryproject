@@ -2,13 +2,13 @@ import { subscribe } from "node:diagnostics_channel";
 
 export const Constant = {
   titles: {
-    home: 'Home',
+    home: 'HOME',
     rings: 'RINGS',
     categories : 'CATEGORIES',
     shoppingCard: 'Shopping Card',
     login: 'Login',
     logout: 'Logout',
-    neckless: 'NECKLESS',
+    necklaces: 'NECKLACES',
     earrings: 'EARRINGS',
     bracelets: 'BRACELETS',
   },
@@ -19,7 +19,7 @@ export const Constant = {
   errorMessage: {
     NO_PRODUCT: 'There is no available product of the categories'
   },
-  
+
   head: {
     categories: "CATEGORIES",
     myaccount:"MY ACCOUNT",
@@ -33,8 +33,8 @@ export const Constant = {
     collections: "Collections",
     pendants: "Pendants",
     bridal: "Bridal",
-    gifts: "Gifts", 
-    rings: "Rings", 
+    gifts: "Gifts",
+    rings: "Rings",
     earrings: "Earrings",
     necklaces: "Necklaces",
     bracelets: "Bracelets",
@@ -53,6 +53,6 @@ export const Constant = {
     discount: "Discounts",
     mycard: "My Card",
     sort: "Sort By",
-    
+
   }
 }
