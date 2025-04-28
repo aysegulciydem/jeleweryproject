@@ -1,6 +1,7 @@
 import { Routes } from "@angular/router";
 import { CarouselComponent } from "./component/carousel/carousel.component";
 import { RingsComponent } from "./pages/rings/rings.component";
+import { EarringsComponent } from "./pages/earrings/earrings.component";
 
 export const routes: Routes = [
     {
@@ -31,7 +32,7 @@ export const routes: Routes = [
     },
     {
         'path': 'earrings',
-        loadComponent: () => import ('./pages/earrings/earrings.component').then(c => c.EarringsComponent),
+        component: EarringsComponent,
     },
     {
         'path': 'bracelet',

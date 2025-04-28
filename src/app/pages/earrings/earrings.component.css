@@ -1,0 +1,73 @@
+.main-container {
+    padding-bottom: 5%;
+    background-color: whitesmoke;
+    .filter-toggle-screen{
+      width: 80%;
+      background-color: alicebluex;
+      .example-section {
+        margin: 12px 0;
+      }
+      
+      .example-margin {
+        margin: 0 12px;
+      }
+      
+      ul {
+        list-style-type: none;
+        margin-top: 4px;
+      }
+      
+    }
+    
+    .sub-title{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 1rem;
+  
+      .categories-name{
+        margin-bottom: 0!important;
+      }
+      ::ng-deep .mdc-line-ripple  {
+        display: none;
+      }
+      ::ng-deep.mat-mdc-text-field-wrapper{
+        background-color: write;
+      }
+    }  
+     
+  
+    .card-container{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 60%;
+      margin-left: 20%;
+      .product-card{
+        flex: 0 0 calc(25% - 20px); 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 8%;
+        height: 490px;
+        gap: 15px;
+        p{
+          min-height: 50px;
+        }
+        & img {
+          width: 95%;
+          padding-top: 2%;
+  
+        }
+      }
+    }
+   
+  }
+  
+  
+  
+  
+  
+  
+  

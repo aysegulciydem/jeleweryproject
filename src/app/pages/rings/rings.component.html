@@ -85,9 +85,6 @@
         All Filter
         </button>
     </div>
-  
-    
-
     <div class="card-container" *ngIf="products && products.length > 0; else noProducts">
       <mat-card class="product-card" *ngFor="let product of products"
         (mouseenter)="onMouseEnter(product)"

@@ -61,4 +61,7 @@ cancelCloseTimer() {
   redirectRingsPage(event: Event): void{
     this.router.navigate(['/rings']);
   }
+  redirectEarringsPage(event: Event): void{
+    this.router.navigate(['/earrings']);
+  }
 }

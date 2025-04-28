@@ -21,8 +21,16 @@
     </button>
     <mat-menu #ringsMenu="matMenu" (mouseenter)="cancelCloseTimer()"
     (mouseleave)="startCloseTimer(ringsTrigger)">
-      <button mat-menu-item (click)="redirectRingsPage($event)">Gold Rings</button>
-      <button mat-menu-item>Silver Rings</button>
+      <div style="display: flex; flex-direction: row;">
+        <div style="width: 50%;">
+          <button mat-menu-item (click)="redirectRingsPage($event)">Gold Rings</button>
+          <button mat-menu-item>Silver Rings</button>
+          <button mat-menu-item>Men's Rings</button>
+        </div>
+        <img src="https://res.cloudinary.com/mejuri-com/image/upload/q_auto,f_auto/v1693924269/App/Onboarding/Styles/Statement_Rings.jpg" class="img-1" style="width: 50%;height: 50%;padding: 0.5%;">
+
+      </div>
+      
     </mat-menu>
   
     <button mat-button [matMenuTriggerFor]="earringsMenu" (mouseenter)="openMenu(earringsTrigger)"  (mouseleave)="startCloseTimer(earringsTrigger)" #earringsTrigger="matMenuTrigger">
@@ -30,8 +38,14 @@
     </button>
     <mat-menu #earringsMenu="matMenu" (mouseenter)="cancelCloseTimer()"
     (mouseleave)="startCloseTimer(earringsTrigger)">
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
+    <div style="display: flex; flex-direction: row;">
+      <div style="width: 50%;">
+        <button mat-menu-item (click)="redirectEarringsPage($event)">Gold Rings</button>
+        <button mat-menu-item>Silver Rings</button>
+        <button mat-menu-item>Men's Rings</button>
+      </div>
+      <img src="https://res.cloudinary.com/mejuri-com/image/upload/q_auto,f_auto/v1693924269/App/Onboarding/Styles/Statement_Rings.jpg" class="img-1" style="width: 50%;height: 50%;padding: 0.5%;">
+    </div>
     </mat-menu>
   
     <button mat-button [matMenuTriggerFor]="braceletsMenu" (mouseenter)="openMenu(braceletsTrigger)" (mouseleave)="startCloseTimer(braceletsTrigger)" #braceletsTrigger="matMenuTrigger">
@@ -39,26 +53,44 @@
     </button>
     <mat-menu #braceletsMenu="matMenu" (mouseenter)="cancelCloseTimer()"
     (mouseleave)="startCloseTimer(braceletsTrigger)">
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
+    <div style="display: flex; flex-direction: row;">
+      <div style="width: 50%;">
+        <button mat-menu-item (click)="redirectRingsPage($event)">Gold Rings</button>
+        <button mat-menu-item>Silver Rings</button>
+        <button mat-menu-item>Men's Rings</button>
+      </div>
+      <img src="https://res.cloudinary.com/mejuri-com/image/upload/q_auto,f_auto/v1693924269/App/Onboarding/Styles/Statement_Rings.jpg" class="img-1" style="width: 50%;height: 50%;padding: 0.5%;">
+    </div>
     </mat-menu>
   
-    <button mat-button [matMenuTriggerFor]="necklacesMenu" (mouseenter)=".openMenu(necklacesTrigger)"  (mouseleave)="startCloseTimer(necklacesTrigger)" #necklacesTrigger="matMenuTrigger">
+    <button mat-button [matMenuTriggerFor]="necklacesMenu" (mouseenter)="openMenu(necklacesTrigger)"  (mouseleave)="startCloseTimer(necklacesTrigger)" #necklacesTrigger="matMenuTrigger">
       {{Constant.categories.necklaces}}
     </button>
     <mat-menu #necklacesMenu="matMenu" (mouseenter)="cancelCloseTimer()"
-    (mouseleave)="startCloseTimer(necklacesTrigger)>
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
+     (mouseleave)="startCloseTimer(necklacesTrigger)">
+     <div style="display: flex; flex-direction: row;">
+      <div style="width: 50%;">
+        <button mat-menu-item (click)="redirectRingsPage($event)">Gold Rings</button>
+        <button mat-menu-item>Silver Rings</button>
+        <button mat-menu-item>Men's Rings</button>
+      </div>
+      <img src="https://res.cloudinary.com/mejuri-com/image/upload/q_auto,f_auto/v1693924269/App/Onboarding/Styles/Statement_Rings.jpg" class="img-1" style="width: 50%;height: 50%;padding: 0.5%;">
+    </div>
     </mat-menu>
   
-    <button mat-button [matMenuTriggerFor]="bridalMenu" (mouseenter)="openMenu(bridalTrigger)"  (mouseleave)="startCloseTimer(bridalTrigger) #bridalTrigger="matMenuTrigger">
+    <button mat-button [matMenuTriggerFor]="bridalMenu" (mouseenter)="openMenu(bridalTrigger)"  (mouseleave)="startCloseTimer(bridalTrigger)" #bridalTrigger="matMenuTrigger">
       {{Constant.categories.bridal}}
     </button>
     <mat-menu #bridalMenu="matMenu" (mouseenter)="cancelCloseTimer()"
     (mouseleave)="startCloseTimer(bridalTrigger)">
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
+    <div style="display: flex; flex-direction: row;">
+      <div style="width: 50%;">
+        <button mat-menu-item (click)="redirectRingsPage($event)">Gold Rings</button>
+        <button mat-menu-item>Silver Rings</button>
+        <button mat-menu-item>Men's Rings</button>
+      </div>
+      <img src="https://res.cloudinary.com/mejuri-com/image/upload/q_auto,f_auto/v1693924269/App/Onboarding/Styles/Statement_Rings.jpg" class="img-1" style="width: 50%;height: 50%;padding: 0.5%;">
+    </div>
     </mat-menu>
   </div>
   
