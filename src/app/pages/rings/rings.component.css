@@ -1,8 +1,10 @@
 .main-container {
+  display: flex; 
+  flex-direction: row;
   padding-bottom: 5%;
   background-color: whitesmoke;
   .filter-toggle-screen{
-    width: 80%;
+    width: 100%;
     background-color: alicebluex;
     .example-section {
       margin: 12px 0;
@@ -19,44 +21,48 @@
     
   }
   
-  .sub-title{
+  .total-container{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 1rem;
+    flex-direction: column;
+    padding-left: 3%;
+    padding-right: 3%;
 
-    .categories-name{
-      margin-bottom: 0!important;
-    }
-    ::ng-deep .mdc-line-ripple  {
-      display: none;
-    }
-    ::ng-deep.mat-mdc-text-field-wrapper{
-      background-color: write;
-    }
+    .sub-title{
+      flex-direction: row;
+      justify-content: center;
+     
+
+      .categories-name{
+        margin-bottom: 0!important;
+      }
+      ::ng-deep .mdc-line-ripple  {
+        display: none;
+      }
+      ::ng-deep.mat-mdc-text-field-wrapper{
+        background-color: write;
+      }
+    }  
   }  
-   
 
   .card-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    width: 60%;
-    margin-left: 20%;
+    width: 100%;
     .product-card{
       flex: 0 0 calc(25% - 20px); 
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 8%;
-      height: 490px;
       gap: 15px;
       p{
         min-height: 50px;
+
       }
       & img {
-        width: 95%;
+        width: 65%;
         padding-top: 2%;
 
       }
