@@ -1,32 +1,43 @@
 .main-container {
-    padding-bottom: 5%;
-    background-color: whitesmoke;
-    .filter-toggle-screen{
-      width: 80%;
-      background-color: alicebluex;
-      .example-section {
-        margin: 12px 0;
-      }
-      
-      .example-margin {
-        margin: 0 12px;
-      }
-      
-      ul {
-        list-style-type: none;
-        margin-top: 4px;
-      }
-      
+  display: flex; 
+  flex-direction: row;
+  padding-bottom: 5%;
+  background-color: whitesmoke;
+  .filter-toggle-screen{
+    width: 100%;
+    background-color: alicebluex;
+    .example-section {
+      margin: 12px 0;
     }
     
-    .sub-title{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      margin: 1rem;
+    .example-margin {
+      margin: 0 12px;
+    }
+    
+    ul {
+      list-style-type: none;
+      margin-top: 4px;
+    }
+    
+  }
   
+  .total-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 3%;
+
+    .sub-title{
+      flex-direction: row;
+      justify-content: space-between;  
+      display: flex; 
+      flex-direction: row;
       .categories-name{
         margin-bottom: 0!important;
+        font-family: Georgia, 'Times New Roman', Times, serif; 
+        font-weight: 549;
+        padding-left: 1%;
       }
       ::ng-deep .mdc-line-ripple  {
         display: none;
@@ -35,39 +46,42 @@
         background-color: write;
       }
     }  
-     
   
-    .card-container{
+    .example-button-container{
+      padding-bottom: 1%;
+      padding-left: 1%;
+    }
+  }  
+
+  .card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    .product-card{
+      flex: 0 0 calc(25% - 20px); 
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      width: 60%;
-      margin-left: 20%;
-      .product-card{
-        flex: 0 0 calc(25% - 20px); 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 8%;
-        height: 490px;
-        gap: 15px;
-        p{
-          min-height: 50px;
-        }
-        & img {
-          width: 95%;
-          padding-top: 2%;
-  
-        }
+      flex-direction: column;
+      align-items: center;
+      width: 8%;
+      gap: 15px;
+      p{
+        min-height: 50px;
+
+      }
+      & img {
+        width: 70%;
+        padding-top: 2%;
+
       }
     }
-   
   }
-  
-  
-  
-  
-  
-  
-  
+ 
+}
+
+
+
+
+
+

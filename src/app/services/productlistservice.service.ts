@@ -8,9 +8,7 @@ import { Product } from '../model/products';
 })
 export class ProductlistserviceService {
   private basketItems= new BehaviorSubject<Product[]>([]);
-  basketItems$ = this.basketItems.asObservable();
-  basketSubject: any;
-   
+  basketItems$ = this.basketItems.asObservable();  
   itemCount$ = this.basketItems.asObservable().pipe(
     map(items => items.reduce((total, item) => total + item.quantity, 0)) 
   );

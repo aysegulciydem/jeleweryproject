@@ -2,6 +2,7 @@ import {
   Component,
   computed,
   CUSTOM_ELEMENTS_SCHEMA,
+  OnInit,
   signal,
   TemplateRef,
   ViewChild
@@ -23,12 +24,14 @@ import {Router} from "@angular/router";
 import { ProductEarring, productEarring} from "../../model/products";
 import {Constant} from "../../constants/contants";
 import {MatDialog} from "@angular/material/dialog";
-import { EarringsService } from '../../services/earringservice.service';
 import {FormGroupDirective,NgForm} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import{MatDrawer, MatSidenav} from '@angular/material/sidenav';
+import { ProductlistserviceService } from '../../services/productlistservice.service';
+import { ProductDetailDialogComponent } from '../rings/product-detail-dialog/product-detail-dialog.component';
+import { EarringsService } from '../../services/earringservice.service';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -81,7 +84,7 @@ export interface Task {
   styleUrl: './earrings.component.css'
 })
 
-export class EarringsComponent {
+export class EarringsComponent implements OnInit {
   protected readonly Constant = Constant;
   isToggleOpen: boolean = false;
   value: any;
@@ -124,10 +127,13 @@ export class EarringsComponent {
     private readonly matDialog: MatDialog,
     private readonly router: Router,
     private readonly earringservice: EarringsService,
-  )
-  {
-    this.productEarrings.forEach(productEarring => {
-      productEarring.currentImage = productEarring.imageUrl[0];
+  ){}
+  ngOnInit(): void {
+    this.earringservice.getEarringItems().subscribe((data: ProductEarring[]) => {
+      this.productEarrings = data;
+      this.productEarrings.forEach(productEarring => {
+        productEarring.currentImage = productEarring.imageUrl[0];
+      });
     });
   }
   addToCard(productEarring: ProductEarring): void {
@@ -141,13 +147,22 @@ export class EarringsComponent {
   toggleDrawer() {
     this.drawer.toggle();
   }
+
+   openProductDetailDialogComponent(productEarring: ProductEarring): void {
+      this.matDialog.open(ProductDetailDialogComponent,
+        {
+          data: productEarring,
+          disableClose: true
+        }
+      );
+    }
   
   onMouseEnter(productEarring: ProductEarring): void {
     productEarring.currentImage = productEarring.imageUrl[1];
   }
   onMouseLeave(productEarring: ProductEarring): void {
     // İlk resmi geri yükle
-    this.productEarrings.currentImage = productEarring.imageUrl[0];
+    productEarring.currentImage = productEarring.imageUrl[0];
   } 
   toggleFilter() {
     this.isToggleOpen = !this.isToggleOpen;

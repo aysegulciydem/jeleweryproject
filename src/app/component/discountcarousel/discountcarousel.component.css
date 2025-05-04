@@ -10,7 +10,7 @@
      
 }
 .discountcarousel img{
-    width: 100%;
+    width: 107%;
     height: 100%;
     box-shadow: none;
     background-color: tra;
@@ -24,9 +24,7 @@
     border-radius: 0.5em;
     width: 350px;
 }
-.discountitem:hover {
-transform: scale(1.025);
-}
+
 @media screen and (max-width: 425px){
 .discountitem {
     width: 59%;

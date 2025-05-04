@@ -1,46 +1,52 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, map } from 'rxjs';
-import { ProductEarring } from '../model/products';
+import { BehaviorSubject, map, Observable, of } from 'rxjs';
+import { productEarring, ProductEarring } from '../model/products';
 @Injectable({
   providedIn: 'root'
 })
 export class EarringsService {
-  private basketItems= new BehaviorSubject<ProductEarring[]>([]);
-  basketItems$ = this.basketItems.asObservable();
-  basketSubject: any;
-   
-  itemCount$ = this.basketItems.asObservable().pipe(
+  private readonly productEarring: ProductEarring[] = productEarring;
+  private earringItems= new BehaviorSubject<ProductEarring[]>([]);
+  earringItems$ = this.earringItems.asObservable();
+  itemCount$ = this.earringItems.asObservable().pipe(
     map(items => items.reduce((total, item) => total + item.quantity, 0)) 
   );
 
   constructor() { }
-  addToBasket(productEarring: any){
-   let currentBasket= this.basketItems.getValue();
-   let existingProduct = currentBasket.find(item => item.id === productEarring.id);
+  addToBasket(product: ProductEarring){
+   let currentEarring= this.earringItems.getValue();
+   let existingProduct = currentEarring.find(item => item.id === product.id);
    if(existingProduct){
     existingProduct.quantity+=1;
    }else{
-    currentBasket.push({...productEarring,quantity:1});
+    currentEarring.push({...product,quantity:1});
    }
-   this.basketItems.next([...currentBasket]);
+   this.earringItems.next([...currentEarring]);
 
   }
-  getBasketItems() {
-    return this.basketItems.asObservable(); // Komponentler buradan veriyi alır
+  getEarringItems(): Observable<ProductEarring[]> {
+    return of(productEarring).pipe(
+      map(items =>
+        items.map(item => ({
+          ...item,
+          currentImage: item.imageUrl[0]
+        }))
+      )
+    );
   }
-  removeFromBasket(productEarring: ProductEarring): void {
-    const currentBasket = this.basketItems.getValue();
-    const updatedBasket = currentBasket.filter(item => item.id !== productEarring.id);
-    this.basketItems.next(updatedBasket);
+  removeFromBasket(product: ProductEarring): void {
+    const currentEarring = this.earringItems.getValue();
+    const updatedBasket = currentEarring.filter(item => item.id !== product.id);
+    this.earringItems.next(updatedBasket);
   }
-  updateBasketItem(updatedItem: ProductEarring) {
-    const currentBasket = this.basketItems.getValue();
-    const updatedBasket = currentBasket.map(item =>
+  updateEarringItem(updatedItem: ProductEarring) {
+    const currentEarring = this.earringItems.getValue();
+    const updatedBasket = currentEarring.map(item =>
       item.id === updatedItem.id
         ? { ...item, quantity: updatedItem.quantity }
         : item
     );
-    this.basketItems.next(updatedBasket);
+    this.earringItems.next(updatedBasket);
   }
   
 }

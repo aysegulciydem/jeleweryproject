@@ -89,7 +89,6 @@ export class RingsComponent{
   showFiller = false;
   noProducts: TemplateRef<NgIfContext<boolean>>;
   selected = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
-  
   selectFormControl = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
   matcher = new MyErrorStateMatcher();
   
@@ -151,11 +150,9 @@ export class RingsComponent{
     );
   }
   onMouseEnter(product: Product): void {
-    // İkinci resmi göster
     product.currentImage = product.imageUrl[1];
   }
   onMouseLeave(product: Product): void {
-    // İlk resmi geri yükle
     product.currentImage = product.imageUrl[0];
   } 
   toggleFilter() {

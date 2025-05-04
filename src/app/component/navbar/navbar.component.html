@@ -11,8 +11,8 @@
     </div>
 
     <div style="display: flex">
-      <div>
-        <input type="text" class="effect-7">
+      <div style="padding-right: 2%;">
+        <input type="text" class="effect-7" placeholder="Search">
         <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
       </div>
       <button mat-button (click)="redirectShoppingCardPage()"><i class="fa-regular fa-heart"></i></button>
@@ -20,85 +20,4 @@
       <button mat-button (click)="goToLoginPage()">{{Constant.titles.logout}}</button>
     </div>
   </mat-toolbar>
-<!--  <div class="category-bar">-->
-<!--    <button mat-button [matMenuTriggerFor]="ringsMenu" (mouseenter)="openMenu(ringsTrigger)" (mouseleave)="startCloseTimer(ringsTrigger)" #ringsTrigger="matMenuTrigger">-->
-<!--      {{Constant.categories.rings}}-->
-<!--    </button>-->
-<!--    <mat-menu #ringsMenu="matMenu" (mouseenter)="cancelCloseTimer()"-->
-<!--    (mouseleave)="startCloseTimer(ringsTrigger)">-->
-<!--      <div style="display: flex; flex-direction: row;">-->
-<!--        <div style="width: 50%;">-->
-<!--          <button mat-menu-item (click)="redirectRingsPage($event)">Gold Rings</button>-->
-<!--          <button mat-menu-item>Silver Rings</button>-->
-<!--          <button mat-menu-item>Men's Rings</button>-->
-<!--        </div>-->
-<!--        <img src="https://res.cloudinary.com/mejuri-com/image/upload/q_auto,f_auto/v1693924269/App/Onboarding/Styles/Statement_Rings.jpg" class="img-1" style="width: 50%;height: 50%;padding: 0.5%;">-->
-
-<!--      </div>-->
-<!--      -->
-<!--    </mat-menu>-->
-<!--  -->
-<!--    <button mat-button [matMenuTriggerFor]="earringsMenu" (mouseenter)="openMenu(earringsTrigger)"  (mouseleave)="startCloseTimer(earringsTrigger)" #earringsTrigger="matMenuTrigger">-->
-<!--      {{Constant.categories.earrings}}-->
-<!--    </button>-->
-<!--    <mat-menu #earringsMenu="matMenu" (mouseenter)="cancelCloseTimer()"-->
-<!--    (mouseleave)="startCloseTimer(earringsTrigger)">-->
-<!--    <div style="display: flex; flex-direction: row;">-->
-<!--      <div style="width: 50%;">-->
-<!--        <button mat-menu-item (click)="redirectEarringsPage($event)">Gold Rings</button>-->
-<!--        <button mat-menu-item>Silver Rings</button>-->
-<!--        <button mat-menu-item>Men's Rings</button>-->
-<!--      </div>-->
-<!--      <img src="https://res.cloudinary.com/mejuri-com/image/upload/q_auto,f_auto/v1693924269/App/Onboarding/Styles/Statement_Rings.jpg" class="img-1" style="width: 50%;height: 50%;padding: 0.5%;">-->
-<!--    </div>-->
-<!--    </mat-menu>-->
-<!--  -->
-<!--    <button mat-button [matMenuTriggerFor]="braceletsMenu" (mouseenter)="openMenu(braceletsTrigger)" (mouseleave)="startCloseTimer(braceletsTrigger)" #braceletsTrigger="matMenuTrigger">-->
-<!--      {{Constant.categories.bracelets}}-->
-<!--    </button>-->
-<!--    <mat-menu #braceletsMenu="matMenu" (mouseenter)="cancelCloseTimer()"-->
-<!--    (mouseleave)="startCloseTimer(braceletsTrigger)">-->
-<!--    <div style="display: flex; flex-direction: row;">-->
-<!--      <div style="width: 50%;">-->
-<!--        <button mat-menu-item (click)="redirectRingsPage($event)">Gold Rings</button>-->
-<!--        <button mat-menu-item>Silver Rings</button>-->
-<!--        <button mat-menu-item>Men's Rings</button>-->
-<!--      </div>-->
-<!--      <img src="https://res.cloudinary.com/mejuri-com/image/upload/q_auto,f_auto/v1693924269/App/Onboarding/Styles/Statement_Rings.jpg" class="img-1" style="width: 50%;height: 50%;padding: 0.5%;">-->
-<!--    </div>-->
-<!--    </mat-menu>-->
-<!--  -->
-<!--    <button mat-button [matMenuTriggerFor]="necklacesMenu" (mouseenter)="openMenu(necklacesTrigger)"  (mouseleave)="startCloseTimer(necklacesTrigger)" #necklacesTrigger="matMenuTrigger">-->
-<!--      {{Constant.categories.necklaces}}-->
-<!--    </button>-->
-<!--    <mat-menu #necklacesMenu="matMenu" (mouseenter)="cancelCloseTimer()"-->
-<!--     (mouseleave)="startCloseTimer(necklacesTrigger)">-->
-<!--     <div style="display: flex; flex-direction: row;">-->
-<!--      <div style="width: 50%;">-->
-<!--        <button mat-menu-item (click)="redirectRingsPage($event)">Gold Rings</button>-->
-<!--        <button mat-menu-item>Silver Rings</button>-->
-<!--        <button mat-menu-item>Men's Rings</button>-->
-<!--      </div>-->
-<!--      <img src="https://res.cloudinary.com/mejuri-com/image/upload/q_auto,f_auto/v1693924269/App/Onboarding/Styles/Statement_Rings.jpg" class="img-1" style="width: 50%;height: 50%;padding: 0.5%;">-->
-<!--    </div>-->
-<!--    </mat-menu>-->
-<!--  -->
-<!--    <button mat-button [matMenuTriggerFor]="bridalMenu" (mouseenter)="openMenu(bridalTrigger)"  (mouseleave)="startCloseTimer(bridalTrigger)" #bridalTrigger="matMenuTrigger">-->
-<!--      {{Constant.categories.bridal}}-->
-<!--    </button>-->
-<!--    <mat-menu #bridalMenu="matMenu" (mouseenter)="cancelCloseTimer()"-->
-<!--    (mouseleave)="startCloseTimer(bridalTrigger)">-->
-<!--    <div style="display: flex; flex-direction: row;">-->
-<!--      <div style="width: 50%;">-->
-<!--        <button mat-menu-item (click)="redirectRingsPage($event)">Gold Rings</button>-->
-<!--        <button mat-menu-item>Silver Rings</button>-->
-<!--        <button mat-menu-item>Men's Rings</button>-->
-<!--      </div>-->
-<!--      <img src="https://res.cloudinary.com/mejuri-com/image/upload/q_auto,f_auto/v1693924269/App/Onboarding/Styles/Statement_Rings.jpg" class="img-1" style="width: 50%;height: 50%;padding: 0.5%;">-->
-<!--    </div>-->
-<!--    </mat-menu>-->
-<!--  </div>-->
-
-
-
 </div>

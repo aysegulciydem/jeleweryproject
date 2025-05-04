@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: row;
   padding-bottom: 4%;
-  padding-left: 9%;
-
+  padding-left: 5%;
 }
 
 .card-container {
@@ -58,7 +57,7 @@
   display: flex; 
   flex-direction: row;
   justify-content: start;
-  padding-left: 9%;
+  padding-left: 8%;
   gap: 2rem;
   box-shadow: none;
   & img{
