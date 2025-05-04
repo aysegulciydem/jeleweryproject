@@ -32,6 +32,7 @@ import{MatDrawer, MatSidenav} from '@angular/material/sidenav';
 import { ProductlistserviceService } from '../../services/productlistservice.service';
 import { ProductDetailDialogComponent } from '../rings/product-detail-dialog/product-detail-dialog.component';
 import { EarringsService } from '../../services/earringservice.service';
+import { EarringsDetailDialogComponent } from './earrings-detail-dialog/earrings-detail-dialog.component';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -143,19 +144,20 @@ export class EarringsComponent implements OnInit {
       this.router.navigate(['/productList']);
     }
   }
+  openProductDetailDialogComponent(productEarring: ProductEarring): void {
+    this.matDialog.open(EarringsDetailDialogComponent,
+      {
+        data: productEarring,
+        disableClose: true
+      }
+    );
+  }
+
   @ViewChild('drawer') drawer!: MatDrawer;
   toggleDrawer() {
     this.drawer.toggle();
   }
 
-   openProductDetailDialogComponent(productEarring: ProductEarring): void {
-      this.matDialog.open(ProductDetailDialogComponent,
-        {
-          data: productEarring,
-          disableClose: true
-        }
-      );
-    }
   
   onMouseEnter(productEarring: ProductEarring): void {
     productEarring.currentImage = productEarring.imageUrl[1];
