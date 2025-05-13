@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, map } from 'rxjs';
-import { Product } from '../model/products';
+import { BehaviorSubject, map, Observable, of } from 'rxjs';
+import { earrings, Product } from '../model/products';
 
 
 @Injectable({
@@ -14,7 +14,7 @@ export class ProductlistserviceService {
   );
 
   constructor() { }
-  addToBasket(product: any){
+  addToBasket(product: Product){
    let currentBasket= this.basketItems.getValue();
    let existingProduct = currentBasket.find(item => item.id === product.id);
    if(existingProduct){
@@ -23,10 +23,12 @@ export class ProductlistserviceService {
     currentBasket.push({...product,quantity:1});
    }
    this.basketItems.next([...currentBasket]);
-
   }
   getBasketItems() {
     return this.basketItems.asObservable(); // Komponentler buradan veriyi alır
+  }
+  getEarrings(): Observable<Product[]> {
+    return of(earrings); // earrings arrayını observable olarak döndür
   }
   removeFromBasket(product: Product): void {
     const currentBasket = this.basketItems.getValue();

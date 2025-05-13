@@ -21,31 +21,23 @@ import { MatDividerModule } from '@angular/material/divider';
 import { CommonModule, NgIfContext } from '@angular/common';
 import {MatToolbar} from "@angular/material/toolbar";
 import {Router} from "@angular/router";
-import { ProductEarring, productEarring} from "../../model/products";
+import { earrings, Product} from "../../model/products";
 import {Constant} from "../../constants/contants";
 import {MatDialog} from "@angular/material/dialog";
 import {FormGroupDirective,NgForm} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
-import{MatDrawer, MatSidenav} from '@angular/material/sidenav';
-import { ProductlistserviceService } from '../../services/productlistservice.service';
-import { ProductDetailDialogComponent } from '../rings/product-detail-dialog/product-detail-dialog.component';
-import { EarringsService } from '../../services/earringservice.service';
+import{MatDrawer} from '@angular/material/sidenav';
 import { EarringsDetailDialogComponent } from './earrings-detail-dialog/earrings-detail-dialog.component';
-
+import { Task } from '../../model/task';
+import { ProductlistserviceService } from '../../services/productlistservice.service';
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
     return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
   }
 }
-export interface Task {
-  name: string;
-  completed: boolean;
-  subtasks?: Task[];
-}
-
 @Component({
   schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
   selector: 'app-rings',
@@ -94,7 +86,8 @@ export class EarringsComponent implements OnInit {
   selected = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
   selectFormControl = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
   matcher = new MyErrorStateMatcher();
-  
+  earrings: Product[] = [];
+
   readonly task = signal<Task>({
     name: 'Color',
     completed: false,
@@ -111,7 +104,7 @@ export class EarringsComponent implements OnInit {
     }
     return task.subtasks.some(t => t.completed) && !task.subtasks.every(t => t.completed);
   });
-  productEarrings: any;
+  products: any;
   update(completed: boolean, index?: number) {
     this.task.update(task => {
       if (index === undefined) {
@@ -127,27 +120,33 @@ export class EarringsComponent implements OnInit {
   constructor(
     private readonly matDialog: MatDialog,
     private readonly router: Router,
-    private readonly earringservice: EarringsService,
-  ){}
-  ngOnInit(): void {
-    this.earringservice.getEarringItems().subscribe((data: ProductEarring[]) => {
-      this.productEarrings = data;
-      this.productEarrings.forEach(productEarring => {
-        productEarring.currentImage = productEarring.imageUrl[0];
-      });
+    private readonly productListservice: ProductlistserviceService,
+  ){
+    this.earrings = []; // diziyi tanımla
+    this.productListservice.getEarrings().subscribe((data: Product[]) => {
+    this.earrings = data; // diziyi doldur
+    this.earrings.forEach((product: Product) => {
+      product.currentImage = product.imageUrl[0];
     });
+  });
+}
+  
+  
+  
+  ngOnInit(): void {
+    
   }
-  addToCard(productEarring: ProductEarring): void {
-    this.earringservice.addToBasket(productEarring);
+  addToCard(product: Product): void {
+    this.productListservice.addToBasket(product);
     const goToCart = confirm("Product added to basket! Would you like to go to basket?");
     if(goToCart) {
       this.router.navigate(['/productList']);
     }
   }
-  openProductDetailDialogComponent(productEarring: ProductEarring): void {
+  openProductDetailDialogComponent(product: Product): void {
     this.matDialog.open(EarringsDetailDialogComponent,
       {
-        data: productEarring,
+        data: product,
         disableClose: true
       }
     );
@@ -158,18 +157,20 @@ export class EarringsComponent implements OnInit {
     this.drawer.toggle();
   }
 
-  
-  onMouseEnter(productEarring: ProductEarring): void {
-    productEarring.currentImage = productEarring.imageUrl[1];
+  onMouseEnter(product: Product): void {
+    product.currentImage = product.imageUrl[1];
   }
-  onMouseLeave(productEarring: ProductEarring): void {
+  onMouseLeave(product: Product): void {
     // İlk resmi geri yükle
-    productEarring.currentImage = productEarring.imageUrl[0];
+    product.currentImage = product.imageUrl[0];
   } 
   toggleFilter() {
     this.isToggleOpen = !this.isToggleOpen;
   }
 }
+
+
+
 
 
 

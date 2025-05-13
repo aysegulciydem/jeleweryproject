@@ -7,7 +7,7 @@ import {
   MatDialogTitle
 } from "@angular/material/dialog";
 import {MatButton} from "@angular/material/button";
-import {ProductEarring} from "../../../model/products";
+import {Product} from "../../../model/products";
 
 @Component({
   selector: 'app-earrings-detail-dialog',
@@ -25,7 +25,7 @@ import {ProductEarring} from "../../../model/products";
 export class EarringsDetailDialogComponent {
   constructor(
       private readonly matDialogRef: MatDialogRef<EarringsDetailDialogComponent>,
-      @Inject(MAT_DIALOG_DATA) public dialogData: ProductEarring,
+      @Inject(MAT_DIALOG_DATA) public dialogData: Product,
     ) {
     }
   

@@ -11,7 +11,6 @@ export interface  Product {
   imageUrl: string[];
   shipping: number;
 }
-
 export const  products: Product[] = [
     {
       id: 1,
@@ -238,21 +237,7 @@ export const  products: Product[] = [
       currentImage: ""
     }
 ]
-
-
-export interface  ProductEarring {
-  currentImage: string;
-  count: number;
-  quantity: number;
-  id: number,
-  name: string,
-  description?: string,
-  price: number,
-  imageUrl: string[];
-  shipping: number;
-}
-
-export const  productEarring: ProductEarring[] = [
+export const  earrings: Product[]  = [
   {
     id: 1,
     name: 'All Diamond Rose Gold Single Earring',

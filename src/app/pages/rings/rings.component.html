@@ -87,9 +87,7 @@
       <mat-card class="product-card" *ngFor="let product of products"
         (mouseenter)="onMouseEnter(product)"
         (mouseleave)="onMouseLeave(product)">
-
         <img src="{{product.currentImage}}" alt="{{product.name}}">
-
         <div style="text-align: center; height: 80px;">
           <p style="text-align: center">{{product.name}}</p>
           <p style="margin: 0!important;">{{product.price}}$</p>

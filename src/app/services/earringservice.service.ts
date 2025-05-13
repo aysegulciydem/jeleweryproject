@@ -6,37 +6,30 @@ import { productEarring, ProductEarring } from '../model/products';
 })
 export class EarringsService {
   private readonly productEarring: ProductEarring[] = productEarring;
-  private earringItems= new BehaviorSubject<ProductEarring[]>([]);
+  private earringItems= new BehaviorSubject<ProductEarring[]>(productEarring);
   earringItems$ = this.earringItems.asObservable();
   itemCount$ = this.earringItems.asObservable().pipe(
     map(items => items.reduce((total, item) => total + item.quantity, 0)) 
   );
 
   constructor() { }
-  addToBasket(product: ProductEarring){
+  addToBasket(earring: any){
    let currentEarring= this.earringItems.getValue();
-   let existingProduct = currentEarring.find(item => item.id === product.id);
+   let existingProduct = currentEarring.find(item => item.id === earring.id);
    if(existingProduct){
     existingProduct.quantity+=1;
    }else{
-    currentEarring.push({...product,quantity:1});
+    currentEarring.push({...earring,quantity:1});
    }
-   this.earringItems.next([...currentEarring]);
+   this.earringItems.next(currentEarring);
 
   }
-  getEarringItems(): Observable<ProductEarring[]> {
-    return of(productEarring).pipe(
-      map(items =>
-        items.map(item => ({
-          ...item,
-          currentImage: item.imageUrl[0]
-        }))
-      )
-    );
+  getEarringItems(){
+    return this.earringItems.asObservable();
   }
-  removeFromBasket(product: ProductEarring): void {
+  removeFromBasket(productEarring: ProductEarring): void {
     const currentEarring = this.earringItems.getValue();
-    const updatedBasket = currentEarring.filter(item => item.id !== product.id);
+    const updatedBasket = currentEarring.filter(item => item.id !== productEarring.id);
     this.earringItems.next(updatedBasket);
   }
   updateEarringItem(updatedItem: ProductEarring) {
