@@ -1,90 +1,84 @@
-.container-item{
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 4%;
-  padding-left: 5%;
-}
-
-.card-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 22%;
-  padding-top: 3%;
-    & img{
-    position:absolute;
-    object-fit: cover;
-  }
-  & .img-1{
-    opacity: 1;
-    height: 400px;
-    
-  }
-  & .img-2{
-    opacity: 0;
-    height: 400px;
-  }
-  & :hover .img-1{
-    opacity: 0;
-  }
-  & :hover .img-2{
-    opacity: 1;
-  }
-  & button{
-    top: -7%;
-    width: 52%;
-    border-radius: 0px;
-  }
-}
-.card {
-  width: 65%;
-  display: flex;
-  align-items: center;
-  height: 350px;
-  padding: 1rem;
-  justify-content: inherit;
-  border: none;
-  overflow: hidden;
-  transition: transform 0.3s;
-  cursor: pointer;
-  & img {
-    width: 80%;
-  }
-  
-}
-.example-card1{
+.main-container {
   display: flex; 
   flex-direction: row;
-  justify-content: start;
-  padding-left: 8%;
-  gap: 2rem;
-  box-shadow: none;
-  & img{
-    border-radius: 0.75rem;
-  } 
-}
-.first{
-  width: 10%;
-  gap: 2px;
-  box-shadow: none;
-}
-.second{
-  width: 27%;
-  box-shadow: none;
-}
-.middle{
-  padding: 1%;
-}
-.discount{
-  width: 27%;
-  box-shadow: none; 
-  & img{
-    width: 1060px;
-    height: 77%;
+  padding-bottom: 5%;
+  background-color: whitesmoke;
+  mat-sidenav{
+    width: 15%;
   }
+  .filter-toggle-screen{
+    width: 100%;
+    background-color: alicebluex;
+    .example-section {
+      margin: 12px 0;
+    }
+    .example-margin {
+      margin: 0 12px;
+    }
+    ul {
+      list-style-type: none;
+      margin-top: 4px;
+    } 
+  }
+  .total-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 8%;
+    width: 80%;
+    .sub-title{
+      flex-direction: row;
+      justify-content: space-between;  
+      display: flex; 
+      flex-direction: row;
+      .categories-name{
+        margin-bottom: 0!important;
+        font-family: Georgia, 'Times New Roman', Times, serif; 
+        font-weight: 549;
+        padding-left: 1%;
+      }
+      ::ng-deep .mdc-line-ripple  {
+        display: none;
+      }
+      ::ng-deep.mat-mdc-text-field-wrapper{
+        background-color: write;
+      }
+    }  
+
+    .example-button-container{
+      padding-bottom: 1%;
+      padding-left: 1%;
+    }
+  }  
+  .card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    .product-card{
+      flex: 0 0 calc(25% - 20px); 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 2%;
+      gap: 15px;
+      p{
+        min-height: 50px;
+
+      }
+      & img {
+        width: 95%;
+        padding-top: 2%;
+
+      }
+    }
+  }
+ 
 }
-.discount-slider{
-  display: none;
-}
+
+
+
+
+
 

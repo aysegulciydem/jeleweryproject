@@ -4,7 +4,7 @@
   padding-bottom: 5%;
   background-color: whitesmoke;
   mat-sidenav{
-    width: 45%;
+    width: 15%;
   }
   .filter-toggle-screen{
     width: 100%;
@@ -12,25 +12,20 @@
     .example-section {
       margin: 12px 0;
     }
-    
     .example-margin {
       margin: 0 12px;
     }
-    
     ul {
       list-style-type: none;
       margin-top: 4px;
-    }
-    
+    } 
   }
-  
   .total-container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-left: 3%;
-    padding-right: 3%;
-
+    padding-right: 8%;
+    width: 80%;
     .sub-title{
       flex-direction: row;
       justify-content: space-between;  
@@ -49,13 +44,12 @@
         background-color: write;
       }
     }  
-  
+
     .example-button-container{
       padding-bottom: 1%;
       padding-left: 1%;
     }
   }  
-
   .card-container{
     display: flex;
     justify-content: center;
@@ -67,14 +61,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 8%;
+      width: 2%;
       gap: 15px;
       p{
         min-height: 50px;
 
       }
       & img {
-        width: 70%;
+        width: 95%;
         padding-top: 2%;
 
       }
@@ -88,3 +82,4 @@
 
 
 
+  

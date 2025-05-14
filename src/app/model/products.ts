@@ -480,12 +480,12 @@ export const  necklaces: Product[]  = [
   },
   {
     id: 2,
-    name: 'White Pearly Enamel Rose Gold Drop Shaped Single Earring',
-    description: 'White Pearly Enamel Rose Gold Drop Shaped Single Earring',
-    price: 72,
+    name: 'Yellow Gold Pole Star Necklace with Turquoise Enamel',
+    description: 'Yellow Gold Pole Star Necklace with Turquoise Enamel',
+    price: 1720,
     imageUrl: [
-      'https://www.nevjewellery.com/white-pearly-enamel-rose-gold-drop-shaped-single-earring-single-earrings-nev-jewellery-16686-19-O.webp',
-      'https://www.nevjewellery.com/white-pearly-enamel-rose-gold-drop-shaped-single-earring-single-earrings-nev-jewellery-16684-19-O.webp'
+      'https://nevjewellery.com/yellow-gold-pole-star-necklace-with-turquoise-enamel-gold-necklace-nev-jewellery-25197-48-O.webp',
+      'https://nevjewellery.com/yellow-gold-pole-star-necklace-with-turquoise-enamel-gold-necklace-nev-jewellery-25198-48-B.webp'
     ],
     quantity: 0,
     count: 0,
@@ -494,12 +494,12 @@ export const  necklaces: Product[]  = [
   },
   {
     id: 3,
-    name: 'Bliss Line 0.10 CT Pink Sapphire and White Sapphire Mini Single Earring',
-    description: 'Bliss Line 0.10 CT Pink Sapphire and White Sapphire Mini Single Earring',
-    price: 143,
+    name: 'Alida 0.69 CT Emerald and Diamond Yellow Gold Necklace',
+    description: 'Alida 0.69 CT Emerald and Diamond Yellow Gold Necklace',
+    price: 1200,
     imageUrl: [
-      'https://www.nevjewellery.com/bliss-line-010-ct-pink-sapphire-and-white-sapphire-mini-single-earring-single-earrings-nev-jewellery-1826-33-O.jpg',
-      'https://www.nevjewellery.com/bliss-line-010-ct-pink-sapphire-and-white-sapphire-mini-single-earring-single-earrings-nev-jewellery-1827-33-O.jpg'
+      'https://nevjewellery.com/alida-061-ct-emerald-and-diamond-yellow-gold-necklace-emerald-necklace-nev-jewellery-21685-39-B.webp',
+      'https://nevjewellery.com/alida-061-ct-emerald-and-diamond-yellow-gold-necklace-emerald-necklace-nev-jewellery-20804-39-B.webp'
     ],
     quantity: 0,
     count: 0,
@@ -508,12 +508,12 @@ export const  necklaces: Product[]  = [
   },
   {
     id: 4,
-    name: 'Boson 0.18 CT Brown Diamond and Black Enamel Earring',
-    description: 'Boson 0.18 CT Brown Diamond and Black Enamel Earring',
-    price: 350,
+    name: 'Yellow and White Gold Double-Sided Necklace',
+    description: 'Yellow and White Gold Double-Sided Necklace',
+    price: 1380,
     imageUrl: [
-      'https://www.nevjewellery.com/boson-018-ct-brown-diamond-and-black-enamel-earring-diamond-earrings-with-enamel-nev-jewellery-4035-15-O.jpg',
-      'https://www.nevjewellery.com/boson-018-ct-brown-diamond-and-black-enamel-earring-diamond-earrings-with-enamel-nev-jewellery-18646-15-O.webp'
+      'https://nevjewellery.com/white-gold-italian-stud-necklace-gold-necklace-nev-jewellery-25350-48-O.webp',
+      'https://nevjewellery.com/white-gold-italian-stud-necklace-gold-necklace-nev-jewellery-25354-48-B.webp'
     ],
     quantity: 0,
     count: 0,
@@ -522,12 +522,12 @@ export const  necklaces: Product[]  = [
   },
   {
     id: 5,
-    name: 'Flare 0.26 CT Diamond Mini Earring',
-    description: 'Flare 0.26 CT Diamond Mini Earring',
-    price: 420,
+    name: 'Owen 2.55 CT Pear Cut Diamond White Gold Necklace',
+    description: 'Owen 2.55 CT Pear Cut Diamond White Gold Necklace',
+    price: 4500,
     imageUrl: [
-      'https://www.nevjewellery.com/flare-026-ct-diamond-mini-earring-single-earrings-nev-jewellery-15579-21-O.jpg',
-      'https://www.nevjewellery.com/flare-026-ct-diamond-mini-earring-single-earrings-nev-jewellery-15580-21-O.jpg'
+      'https://nevjewellery.com/owen-255-ct-pear-cut-diamond-white-gold-necklace-diamond-pendants-nev-jewellery-17472-34-B.webp',
+      'https://nevjewellery.com/owen-255-ct-pear-cut-diamond-white-gold-necklace-diamond-pendants-nev-jewellery-17473-34-O.webp'
     ],
     quantity: 0,
     count: 0,
@@ -536,12 +536,12 @@ export const  necklaces: Product[]  = [
   },
   {
     id: 6,
-    name: '0.55 CT Multicolor Sapphire and Brown Diamond Ring',
-    description: '0.55 CT Multicolor Sapphire and Brown Diamond Ring',
-    price: 115,
+    name: 'Rita 0.03 CT Baguette Cut Diamond Rose Gold Pendant',
+    description: 'Rita 0.03 CT Baguette Cut Diamond Rose Gold Pendant',
+    price: 1150,
     imageUrl: [
-      'https://www.nevjewellery.com/dream-032-ct-baguette-cut-diamond-single-earring-baguette-cut-diamond-earring-nev-jewellery-1856-34-O.jpg',
-      'https://www.nevjewellery.com/dream-032-ct-baguette-cut-diamond-single-earring-baguette-cut-diamond-earring-nev-jewellery-1855-34-O.jpg'
+      'https://nevjewellery.com/rita-003-ct-baguette-cut-diamond-rose-gold-pendant-baguette-cut-diamond-necklace-nev-jewellery-6511-10-B.jpg',
+      'https://nevjewellery.com/rita-003-ct-baguette-cut-diamond-rose-gold-pendant-baguette-cut-diamond-necklace-nev-jewellery-6512-10-O.jpg'
     ],
     quantity: 0,
     count: 0,
@@ -550,12 +550,12 @@ export const  necklaces: Product[]  = [
   },
   {
     id: 7,
-    name: '2.74 CT Diamond White Gold Sphere Single Earring',
-    description: '2.74 CT Diamond White Gold Sphere Single Earring',
-    price: 120,
+    name: 'Trine Yellow Gold Pendant/Charm',
+    description: 'Trine Yellow Gold Pendant/Charm',
+    price: 900,
     imageUrl: [
-      'https://www.nevjewellery.com/274-ct-diamond-white-gold-sphere-single-earring-single-earrings-nev-jewellery-12316-25-B.jpg',
-      'https://www.nevjewellery.com/274-ct-diamond-white-gold-sphere-single-earring-single-earrings-nev-jewellery-12317-25-O.jpg'
+      'https://nevjewellery.com/trine-yellow-gold-pendantcharm-charm-nev-jewellery-24798-46-B.webp',
+      'https://nevjewellery.com/trine-yellow-gold-pendantcharm-charm-nev-jewellery-24797-46-O.webp'
     ],
     quantity: 0,
     count: 0,
@@ -564,12 +564,12 @@ export const  necklaces: Product[]  = [
   },
   {
     id: 8,
-    name: 'Camelia Orange Sapphire Rose Gold Single Earring',
-    description: 'Camelia Orange Sapphire Rose Gold Single Earring',
-    price: 270,
+    name: 'Spica 0.23 CT Diamond and Turquoise Enamel Pendant',
+    description: 'Spica 0.23 CT Diamond and Turquoise Enamel Pendant',
+    price: 2070,
     imageUrl: [
-      'https://www.nevjewellery.com/camelia-orange-sapphire-rose-gold-single-earring-single-earrings-nev-jewellery-20935-39-O.webp',
-      'https://www.nevjewellery.com/camelia-orange-sapphire-rose-gold-single-earring-single-earrings-nev-jewellery-20936-39-B.webp'
+      'https://nevjewellery.com/spica-023-ct-diamond-and-turquoise-enamel-pendant-diamond-pendants-with-enamel-nev-jewellery-16576-15-B.webp',
+      'https://nevjewellery.com/spica-023-ct-diamond-and-turquoise-enamel-pendant-diamond-pendants-with-enamel-nev-jewellery-4433-15-O.jpg'
     ],
     quantity: 0,
     count: 0,
@@ -578,12 +578,12 @@ export const  necklaces: Product[]  = [
   },
   {
     id: 9,
-    name: 'Mirror Pear Cut Diamond White Gold Single Earring',
-    description: 'Mirror Pear Cut Diamond White Gold Single Earring',
-    price: 167,
+    name: 'Sophia 0.41 CT Emerald and Diamond Yellow Gold Necklace',
+    description: 'Sophia 0.41 CT Emerald and Diamond Yellow Gold Necklace',
+    price: 1160,
     imageUrl: [
-      'https://www.nevjewellery.com/mirror-pear-cut-diamond-white-gold-single-earring-single-earrings-nev-jewellery-20849-39-O.webp',
-      'https://www.nevjewellery.com/mirror-pear-cut-diamond-white-gold-single-earring-single-earrings-nev-jewellery-20850-39-O.webp'
+      'https://nevjewellery.com/sophia-041-ct-emerald-and-diamond-yellow-gold-necklace-emerald-necklace-nev-jewellery-22546-41-B.webp',
+      'https://nevjewellery.com/sophia-041-ct-emerald-and-diamond-yellow-gold-necklace-emerald-necklace-nev-jewellery-22548-41-B.webp'
     ],
     quantity: 0,
     count: 0,
@@ -592,12 +592,12 @@ export const  necklaces: Product[]  = [
   },
   {
     id: 10,
-    name: 'Diya Diamond Rose Gold Single Earring',
-    description: 'Diya Diamond Rose Gold Single Earring',
-    price: 205,
+    name: 'Perseus 0.52 CT Black Diamond and Baguette Cut Diamond Necklace',
+    description: 'Perseus 0.52 CT Black Diamond and Baguette Cut Diamond Necklace',
+    price: 1075,
     imageUrl: [
-      'https://www.nevjewellery.com/diya-diamond-rose-gold-single-earring-diamond-earrings-nev-jewellery-23091-42-O.webp',
-      'https://www.nevjewellery.com/diya-diamond-rose-gold-single-earring-diamond-earrings-nev-jewellery-23102-42-O.webp'
+      'https://nevjewellery.com/perseus-052-ct-black-diamond-and-baguette-cut-diamond-necklace-diamond-pendants-nev-jewellery-23239-15-B.webp',
+      'https://nevjewellery.com/perseus-052-ct-black-diamond-and-baguette-cut-diamond-necklace-diamond-pendants-nev-jewellery-4349-15-B.jpg'
     ],
     quantity: 0,
     count: 0,
@@ -606,12 +606,12 @@ export const  necklaces: Product[]  = [
   },
   {
     id: 11,
-    name: 'Eclipse 0.26 CT Sapphire and Diamond Single Earring',
-    description: 'Eclipse 0.26 CT Sapphire and Diamond Single Earring',
-    price: 335,
+    name: 'Disco 2.63 CT Diamond Rose Gold Sphere Pendant',
+    description: 'Disco 2.63 CT Diamond Rose Gold Sphere Pendant',
+    price: 1500,
     imageUrl: [
-      'https://www.nevjewellery.com/eclipse-026-ct-sapphire-and-diamond-single-earring-single-earrings-nev-jewellery-22218-21-O.webp',
-      'https://www.nevjewellery.com/eclipse-026-ct-sapphire-and-diamond-single-earring-single-earrings-nev-jewellery-23179-21-O.webp'
+      'https://nevjewellery.com/disco-263-ct-diamond-rose-gold-sphere-pendant-diamond-pendants-nev-jewellery-23111-23-B.webp',
+      'https://nevjewellery.com/disco-263-ct-diamond-rose-gold-sphere-pendant-diamond-pendants-nev-jewellery-21348-23-B.webp'
     ],
     quantity: 0,
     count: 0,
@@ -620,12 +620,12 @@ export const  necklaces: Product[]  = [
   },
   {
     id: 12,
-    name: 'Crimp Black 0.07 CT Black Diamond Mini Single Earring',
-    description: 'Crimp Black 0.07 CT Black Diamond Mini Single Earring',
-    price: 232,
+    name: '0.03 CT Baguette Cut Diamond R Letter Rose Gold Necklace',
+    description: '0.03 CT Baguette Cut Diamond R Letter Rose Gold Necklace',
+    price: 982,
     imageUrl: [
-      'https://www.nevjewellery.com/crimp-black-007-ct-black-diamond-mini-single-earring-single-earrings-nev-jewellery-11526-21-O.jpg',
-      'https://www.nevjewellery.com/crimp-black-007-ct-black-diamond-mini-single-earring-single-earrings-nev-jewellery-23178-21-O.webp'
+      'https://nevjewellery.com/003-ct-baguette-cut-diamond-r-letter-rose-gold-necklace-alphabet-nev-jewellery-23037-42-B.webp',
+      'https://nevjewellery.com/003-ct-baguette-cut-diamond-r-letter-rose-gold-necklace-alphabet-nev-jewellery-23019-42-O.webp'
     ],
     quantity: 0,
     count: 0,
@@ -634,12 +634,12 @@ export const  necklaces: Product[]  = [
   },
   {
     id: 13,
-    name: ' 0.84 CT Diamond, Ruby and Emerald Long Earring',
-    description: ' 0.84 CT Diamond, Ruby and Emerald Long Earring',
-    price: 225,
+    name: 'Sandy 0.34 CT Emerald Rose Gold Necklace',
+    description: ' Sandy 0.34 CT Emerald Rose Gold Necklace',
+    price: 1425,
     imageUrl: [
-      'https://www.nevjewellery.com/084-ct-diamond-ruby-and-emerald-long-earring-colored-gemstone-earrings-nev-jewellery-6678-20-O.jpg',
-      'https://www.nevjewellery.com/084-ct-diamond-ruby-and-emerald-long-earring-colored-gemstone-earrings-nev-jewellery-23155-20-O.webp'
+      'https://nevjewellery.com/sandy-034-ct-emerald-rose-gold-necklace-emerald-necklace-nev-jewellery-20163-37-B.webp',
+      'https://nevjewellery.com/sandy-034-ct-emerald-rose-gold-necklace-emerald-necklace-nev-jewellery-23728-37-B.webp'
     ],
     quantity: 0,
     count: 0,
@@ -648,12 +648,12 @@ export const  necklaces: Product[]  = [
   },
   {
     id: 14,
-    name: 'Lindi 0.14 CT Black Diamond and Multicolor Sapphire Rose Gold Earring',
-    description: 'Lindi 0.14 CT Black Diamond and Multicolor Sapphire Rose Gold Earring',
-    price: 210,
+    name: '2.48 CT Diamond Rose Gold Necklace',
+    description: '2.48 CT Diamond Rose Gold Necklace',
+    price: 2150,
     imageUrl: [
-      'https://www.nevjewellery.com/lindi-014-ct-black-diamond-and-multicolor-sapphire-rose-gold-earring-single-earrings-nev-jewellery-22360-41-O.webp',
-      'https://www.nevjewellery.com/lindi-014-ct-black-diamond-and-multicolor-sapphire-rose-gold-earring-single-earrings-nev-jewellery-23196-41-O.webp'
+      'https://nevjewellery.com/280-ct-diamond-rose-gold-necklace-diamond-pendants-nev-jewellery-9249-26-B.jpg',
+      'https://nevjewellery.com/280-ct-diamond-rose-gold-necklace-diamond-pendants-nev-jewellery-9250-26-B.jpg'
     ],
     quantity: 0,
     count: 0,
@@ -662,12 +662,12 @@ export const  necklaces: Product[]  = [
   },
   {
     id: 15,
-    name: '0.14 CT Diamond Rose Gold Single Earring',
-    description: '0.14 CT Diamond Rose Gold Single Earring',
-    price: 245,
+    name: 'Flanch Yellow Gold Necklace',
+    description: 'Flanch Yellow Gold Necklace',
+    price: 1270,
     imageUrl: [
-      'https://www.nevjewellery.com/014-ct-diamond-rose-gold-single-earring-diamond-earrings-nev-jewellery-9298-26-O.jpg',
-      'https://www.nevjewellery.com/014-ct-diamond-rose-gold-single-earring-diamond-earrings-nev-jewellery-21500-26-O.webp'
+      'https://nevjewellery.com/flanch-yellow-gold-necklace-gold-necklace-nev-jewellery-25333-48-B.webp',
+      'https://nevjewellery.com/flanch-yellow-gold-necklace-gold-necklace-nev-jewellery-25334-48-B.webp'
     ],
     quantity: 0,
     count: 0,
@@ -676,12 +676,12 @@ export const  necklaces: Product[]  = [
   },
   {
     id: 16,
-    name: 'Minimal Moon Rose Gold Single Earring',
-    description: 'Minimal Moon Rose Gold Single Earring ',
-    price: 185,
+    name: '0.18 CT Diamond and Enamel Rose Gold Necklace',
+    description: '0.18 CT Diamond and Enamel Rose Gold Necklace',
+    price: 1805,
     imageUrl: [
-      'https://www.nevjewellery.com/minimal-moon-rose-gold-single-earring-gold-earrings-nev-jewellery-13114-19-O.jpg',
-      'https://www.nevjewellery.com/minimal-moon-rose-gold-single-earring-gold-earrings-nev-jewellery-4822-19-O.jpg'
+      'https://nevjewellery.com/0-18-ct-diamond-and-enamel-rose-gold-necklace-diamond-pendants-with-enamel-nev-jewellery-21514-29-B.webp',
+      'https://nevjewellery.com/0-18-ct-diamond-and-enamel-rose-gold-necklace-diamond-pendants-with-enamel-nev-jewellery-11774-29-B.jpg'
     ],
     quantity: 0,
     count: 0,
