@@ -30,6 +30,7 @@ import {ErrorStateMatcher} from '@angular/material/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import{MatDrawer, MatSidenav} from '@angular/material/sidenav';
+import { MultiCheckboxComponent } from '../../component/multi-checkbox/multi-checkbox.component';
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -75,6 +76,7 @@ export interface Task {
     FormsModule,
     MatCardModule,
     MatDividerModule,
+    MultiCheckboxComponent
     
   ],
   providers: [{provide: MatPaginatorIntl}],
@@ -91,35 +93,6 @@ export class RingsComponent{
   selected = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
   selectFormControl = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
   matcher = new MyErrorStateMatcher();
-  
-  readonly task = signal<Task>({
-    name: 'Color',
-    completed: false,
-    subtasks: [
-      {name: 'Gold', completed: false},
-      {name: 'Grey', completed: false},
-      {name: 'White', completed: false},
-    ],
-  });
-  readonly partiallyComplete = computed(() => {
-    const task = this.task();
-    if (!task.subtasks) {
-      return false;
-    }
-    return task.subtasks.some(t => t.completed) && !task.subtasks.every(t => t.completed);
-  });
-  update(completed: boolean, index?: number) {
-    this.task.update(task => {
-      if (index === undefined) {
-        task.completed = completed;
-        task.subtasks?.forEach(t => (t.completed = completed));
-      } else {
-        task.subtasks![index].completed = completed;
-        task.completed = task.subtasks?.every(t => t.completed) ?? true;
-      }
-      return {...task};
-    });
-  }
   constructor(
     private readonly matDialog: MatDialog,
     private readonly router: Router,
