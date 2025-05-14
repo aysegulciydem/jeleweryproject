@@ -53,6 +53,111 @@ export const Constant = {
     discount: "Discounts",
     mycard: "My Card",
     sort: "Sort By",
-
-  }
+  },
+  color: [
+    {
+      key: "black",
+      label: "Black"
+    },
+    {
+      key: "blue",
+      label: "Blue"
+    },
+    {
+      key: "red",
+      label: "Red"
+    },
+    {
+      key: "green",
+      label: "Green"
+    },
+    {
+      key: "yellow",
+      label: "Yellow"
+    },
+    {
+      key: "rose",
+      label: "Rose"
+    },
+    {
+      key: "white",
+      label: "White"
+    },
+    {
+      key: "gold",
+      label: "Gold"
+    },
+    {
+      key: "silver",
+      label: "Silver"
+    },
+    {
+      key: "none",
+      label: "None"
+    },
+    {
+      key: "orange",
+      label: "Orange"
+    },
+    {
+      key: "pink",
+      label: "Pink"
+    },
+    {
+      key: "purple",
+      label: "Purple"
+    },
+    {
+      key: "brown",
+      label: "Brown"
+    },
+    {
+      key: "gray",
+      label: "Gray"
+    },
+    {
+      key: "violet",
+      label: "Violet"
+    },
+  ],
+  material: [
+    {
+      key: "yellowgold14k",
+      label: "14k Yellow Gold"
+    },
+    {
+      key: "whitegold14k",
+      label: "14k White Gold"
+    },
+    {
+      key: "sterlingsilver",
+      label: "Sterling Silver"
+    },
+    {
+      key: "goldvermeil18k",
+      label: "18k Gold Vermeil"
+    },
+    {
+      key: "enamel",
+      label: "Enamel"
+    }
+  ],
+  price: [
+    {
+      key: "Under 150",
+      label: "Under 150"
+    },
+    {
+      key: "150-300",
+      label: "150-300"
+    },
+    {
+      key: "300-500",
+      label: "300-500"
+    },
+    {
+      key: "500 +",
+      label: "500 +"
+    },    
+  ]
 }

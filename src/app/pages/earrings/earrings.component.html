@@ -3,53 +3,8 @@
     <mat-sidenav #sidenav mode="over" position="start">
       <div *ngIf="isToggleOpen"  class="filter-toggle-screen" style="padding: 16px;">
         <h4>Filters</h4>
-        <section class="example-section">
-          <span class="example-list-section">
-            <mat-checkbox
-              class="example-margin"
-              [checked]="task().completed"
-              [indeterminate]="partiallyComplete()"
-              (change)="update($event.checked)"
-            >
-              {{task().name}}
-            </mat-checkbox>
-          </span>
-          <span class="example-list-section">
-            <ul>
-              @for (subtask of task().subtasks; track subtask; let i = $index) {
-                <li>
-                  <mat-checkbox [checked]="subtask.completed" (change)="update($event.checked, i)">
-                    {{subtask.name}}
-                  </mat-checkbox>
-                </li>
-              }
-            </ul>
-          </span>
-        </section>
-        <section class="example-section">
-          <span class="example-list-section">
-            <mat-checkbox
-              class="example-margin"
-              [checked]="task().completed"
-              [indeterminate]="partiallyComplete()"
-              (change)="update($event.checked)"
-            >
-              {{task().name}}
-            </mat-checkbox>
-          </span>
-          <span class="example-list-section">
-            <ul>
-              @for (subtask of task().subtasks; track subtask; let i = $index) {
-                <li>
-                  <mat-checkbox [checked]="subtask.completed" (change)="update($event.checked, i)">
-                    {{subtask.name}}
-                  </mat-checkbox>
-                </li>
-              }
-            </ul>
-          </span>
-        </section>
-       </div>
+        <app-multi-checkbox></app-multi-checkbox>
+      </div>   
     </mat-sidenav>   
     <div class="total-container">
       <div class="sub-title">

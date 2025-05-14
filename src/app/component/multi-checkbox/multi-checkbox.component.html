@@ -1,0 +1,32 @@
+<mat-accordion>  
+    <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Material </mat-panel-title>
+        </mat-expansion-panel-header>
+        <section [formGroup]="materialGroup" class="material-section">
+            <p *ngFor="let material of materialOptions">
+                <mat-checkbox [formControlName]="material.key">{{ material.label }}</mat-checkbox>
+            </p>
+        </section>   
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Color </mat-panel-title>
+        </mat-expansion-panel-header>
+        <section [formGroup]="colorGroup" class="color-section">
+            <p *ngFor="let color of colorOptions">
+                <mat-checkbox [formControlName]="color.key">{{ color.label }}</mat-checkbox>
+            </p>
+        </section>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Price </mat-panel-title>
+        </mat-expansion-panel-header>
+        <section [formGroup]="priceGroup" class="price-section">
+            <p *ngFor="let price of priceOptions">
+                <mat-checkbox [formControlName]="price.key">{{ price.label }}</mat-checkbox>
+            </p>
+        </section>
+    </mat-expansion-panel>
+</mat-accordion>

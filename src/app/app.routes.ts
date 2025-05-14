@@ -2,6 +2,7 @@ import { Routes } from "@angular/router";
 import { CarouselComponent } from "./component/carousel/carousel.component";
 import { RingsComponent } from "./pages/rings/rings.component";
 import { EarringsComponent } from "./pages/earrings/earrings.component";
+import { MultiCheckboxComponent } from "./component/multi-checkbox/multi-checkbox.component";
 
 export const routes: Routes = [
     {
@@ -45,6 +46,10 @@ export const routes: Routes = [
     {
         'path': 'information',
         loadComponent: () => import('./component/information/information.component').then(c => c.InformationComponent),
-    }
+    },
+    {
+        'path': 'multicheckbox',
+        component: MultiCheckboxComponent,
+    },
 ]
 

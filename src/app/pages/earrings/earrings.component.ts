@@ -21,7 +21,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { CommonModule, NgIfContext } from '@angular/common';
 import {MatToolbar} from "@angular/material/toolbar";
 import {Router} from "@angular/router";
-import { earrings, Product} from "../../model/products";
+import {  Product} from "../../model/products";
 import {Constant} from "../../constants/contants";
 import {MatDialog} from "@angular/material/dialog";
 import {FormGroupDirective,NgForm} from '@angular/forms';
@@ -30,8 +30,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import{MatDrawer} from '@angular/material/sidenav';
 import { EarringsDetailDialogComponent } from './earrings-detail-dialog/earrings-detail-dialog.component';
-import { Task } from '../../model/task';
 import { ProductlistserviceService } from '../../services/productlistservice.service';
+import { MultiCheckboxComponent } from '../../component/multi-checkbox/multi-checkbox.component';
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
@@ -71,6 +71,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
     FormsModule,
     MatCardModule,
     MatDividerModule,
+    MultiCheckboxComponent
   ],
   providers: [{provide: MatPaginatorIntl}],
   templateUrl: './earrings.component.html',
@@ -87,36 +88,10 @@ export class EarringsComponent implements OnInit {
   selectFormControl = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
   matcher = new MyErrorStateMatcher();
   earrings: Product[] = [];
+ 
 
-  readonly task = signal<Task>({
-    name: 'Color',
-    completed: false,
-    subtasks: [
-      {name: 'Gold', completed: false},
-      {name: 'Grey', completed: false},
-      {name: 'White', completed: false},
-    ],
-  });
-  readonly partiallyComplete = computed(() => {
-    const task = this.task();
-    if (!task.subtasks) {
-      return false;
-    }
-    return task.subtasks.some(t => t.completed) && !task.subtasks.every(t => t.completed);
-  });
+  
   products: any;
-  update(completed: boolean, index?: number) {
-    this.task.update(task => {
-      if (index === undefined) {
-        task.completed = completed;
-        task.subtasks?.forEach(t => (t.completed = completed));
-      } else {
-        task.subtasks![index].completed = completed;
-        task.completed = task.subtasks?.every(t => t.completed) ?? true;
-      }
-      return {...task};
-    });
-  }
   constructor(
     private readonly matDialog: MatDialog,
     private readonly router: Router,
@@ -130,12 +105,7 @@ export class EarringsComponent implements OnInit {
     });
   });
 }
-  
-  
-  
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
   addToCard(product: Product): void {
     this.productListservice.addToBasket(product);
     const goToCart = confirm("Product added to basket! Would you like to go to basket?");

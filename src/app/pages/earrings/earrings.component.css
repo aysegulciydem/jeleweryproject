@@ -3,6 +3,9 @@
   flex-direction: row;
   padding-bottom: 5%;
   background-color: whitesmoke;
+  mat-sidenav{
+    width: 45%;
+  }
   .filter-toggle-screen{
     width: 100%;
     background-color: alicebluex;
