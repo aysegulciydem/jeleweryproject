@@ -689,3 +689,230 @@ export const  necklaces: Product[]  = [
     currentImage: ""
   }
 ]
+export const  bracelets: Product[]  = [
+  {
+    id: 1,
+    name: 'Mini Heart Pavé Diamond Bracelet',
+    description: 'Mini Heart Pavé Diamond Bracelet',
+    price: 240,
+    imageUrl: [
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/1-14KHEARTS_PaveDiamondHeartBracelet_14K_Stack_046.jpg?v=1720618073&width=800&height=956&crop=center',
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/3-14KHEARTS_PaveDiamondHeartBracelet_14K_FlatLay_095.jpg?v=1717088342&width=800&height=956&crop=center'
+    ],
+    quantity: 0,
+    count: 0,
+    shipping: 4.90,
+    currentImage: ""
+  },
+  {
+    id: 2,
+    name: 'Multi Gemstone Station Bracelet',
+    description: 'Multi Gemstone Station Bracelet',
+    price: 300,
+    imageUrl: [
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/1-BIRTHSTONEBRACELETS_BirthstoneBraceletAprilDiamond_14k_Stack_011.jpg?v=1720212392&width=800&height=956&crop=center',
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/0-BIRTHSTONEBRACELETS_BirthstoneBraceletAprilDiamond_14k_TopDown_065.jpg?v=1720212392&width=800&height=956&crop=center'
+    ],
+    quantity: 0,
+    count: 0,
+    shipping: 4.90,
+    currentImage: ""
+  },
+  {
+    id: 3,
+    name: 'Lab Grown Sapphire Tennis Bracelet',
+    description: 'Lab Grown Sapphire Tennis Bracelet',
+    price: 280,
+    imageUrl: [
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/1-LGS3mmBraceletSilver-SS-Stack_00220231103-8314-sqpyfd.png?v=1724173021&width=800&height=956&crop=center',
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/0-RESHOOT-LabGrownSapphireTennis_Bracelet-SS-Front_119.jpg?v=1724173013&width=800&height=956&crop=center'
+    ],
+    quantity: 0,
+    count: 0,
+    shipping: 4.90,
+    currentImage: ""
+  },
+  {
+    id: 4,
+    name: 'Heart Station Bracelet',
+    description: 'Heart Station Bracelet',
+    price: 700,
+    imageUrl: [
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/1-VERMEILBRACELETS_MultiStationBraceletHeartVermeil_V_Stack_019.jpg?v=1720119706&width=800&height=956&crop=center',
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/0-VERMEILBRACELETS_MultiStationBraceletHeartVermeil_V_TopDown_033.jpg?v=1720119706&width=800&height=956&crop=center'
+    ],
+    quantity: 0,
+    count: 0,
+    shipping: 4.90,
+    currentImage: ""
+  },
+  {
+    id: 5,
+    name: 'Multi Gemstone Station Bracelet',
+    description: 'Multi Gemstone Station Bracelet',
+    price: 410,
+    imageUrl: [
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/2-BIRTHSTONEBRACELETS_BirthstoneBraceletSeptemberBlueSapphire_14k_Stack2_024.jpg?v=1720212392&width=800&height=956&crop=center',
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/0-BIRTHSTONEBRACELETS_BirthstoneBraceletSeptemberBlueSapphire_14k_TopDown_030.jpg?v=1720212392&width=800&height=956&crop=center'
+    ],
+    quantity: 0,
+    count: 0,
+    shipping: 4.90,
+    currentImage: ""
+  },
+  {
+    id: 6,
+    name: 'Solo Diamond Bracelet',
+    description: 'Solo Diamond Bracelet',
+    price: 550,
+    imageUrl: [
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/2-SoloDiamondBracelet-14K-Stack_014.jpg?v=1720127271&width=800&height=956&crop=center',
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/0-SoloDiamondBracelet-14K-TopDown_161.jpg?v=1720127271&width=800&height=956&crop=center'
+    ],
+    quantity: 0,
+    count: 0,
+    shipping: 4.90,
+    currentImage: ""
+  },
+  {
+    id: 7,
+    name: 'Zadie Bezel Lab Grown Sapphire Tennis Bracelet',
+    description: 'Zadie Bezel Lab Grown Sapphire Tennis Bracelet',
+    price: 390,
+    imageUrl: [
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/0-LGSEternityTennisChase_LGSBezelTennisBracelet_V_OffFigureFrontViewTennis-PDP.jpg?v=1736353250&width=800&height=956&crop=center',
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/2-LGSEternityTennisChase_LGSBezelTennisBracelet_V_ArtfulDiamond_PDP.jpg?v=1736353251&width=800&height=956&crop=center'
+    ],
+    quantity: 0,
+    count: 0,
+    shipping: 4.90,
+    currentImage: ""
+  },
+  {
+    id: 8,
+    name: 'Base Chain Convertible Bracelet',
+    description: 'Base Chain Convertible Bracelet',
+    price: 270,
+    imageUrl: [
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/1-MEJURICUSTOMCHAINS-MejuriCustomVermeilChainBracelet-V-Stack1_094.jpg?v=1722973172&width=1000&height=1195&crop=center',
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/0-MEJURICUSTOMCHAINS-MejuriCustomVermeilChainBracelet-V-TopDown_479.jpg?v=1722973172&width=1000&height=1195&crop=center'
+    ],
+    quantity: 0,
+    count: 0,
+    shipping: 4.90,
+    currentImage: ""
+  },
+  {
+    id: 9,
+    name: 'Bold Spheres Bracelet',
+    description: 'Bold Spheres Bracelet',
+    price: 460,
+    imageUrl: [
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/1-BoldSpheresBracelet-14K-Stack2_014.jpg?v=1720026881&width=1000&height=1195&crop=center',
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/0-BoldSpheresBracelet-14K-TopDown_027.jpg?v=1720026881&width=1000&height=1195&crop=center'
+    ],
+    quantity: 0,
+    count: 0,
+    shipping: 4.90,
+    currentImage: ""
+  },
+  {
+    id: 10,
+    name: 'Patra Diamond Tennis Bracelet',
+    description: 'Patra Diamond Tennis Bracelet',
+    price: 2205,
+    imageUrl: [
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/1-CleoTennisBracelet-14K-Stack_042.jpg?v=1720618113&width=1000&height=1195&crop=center',
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/0-CleoTennisBracelet-14K-TopDown_541.jpg?v=1720618113&width=1000&height=1195&crop=center'
+    ],
+    quantity: 0,
+    count: 0,
+    shipping: 4.90,
+    currentImage: ""
+  },
+  {
+    id: 11,
+    name: 'Rectangular Micro-Pavé Diamond Tennis Bracelet',
+    description: 'Rectangular Micro-Pavé Diamond Tennis Bracelet',
+    price: 1800,
+    imageUrl: [
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/1-BaguetteTennisRiviereBracelet-14K-Solo_001.jpg?v=1720205603&width=1000&height=1195&crop=center',
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/3-BaguetteTennisRiviereBracelet-14K-DesignMacro_475.jpg?v=1720205603&width=1000&height=1195&crop=center'
+    ],
+    quantity: 0,
+    count: 0,
+    shipping: 4.90,
+    currentImage: ""
+  },
+  {
+    id: 12,
+    name: 'Lotus Bracelet',
+    description: 'Lotus Bracelet',
+    price: 980,
+    imageUrl: [
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/1-Evergreen_LotusBracelet_V_Stack_009.jpg?v=1732125486&width=1000&height=1000&crop=center',
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/Lotus_Bracelet_V_Overhead.jpg?v=1720401029&width=1000&height=1000&crop=center'
+    ],
+    quantity: 0,
+    count: 0,
+    shipping: 4.90,
+    currentImage: ""
+  },
+  {
+    id: 13,
+    name: 'Large Square Oval Chain Charm Bracelet',
+    description: 'Large Square Oval Chain Charm Bracelet',
+    price: 700,
+    imageUrl: [
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/1-ENHANCERCHAINS-LargeSquareOvalChainCharmBracelet-14K-Stack_106.jpg?v=1721916632&width=1000&height=1195&crop=center',
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/0-ENHANCERCHAINS-LargeSquareOvalChainCharmBracelet-14K-TopDown_137.jpg?v=1721916630&width=1000&height=1195&crop=center'
+    ],
+    quantity: 0,
+    count: 0,
+    shipping: 4.90,
+    currentImage: ""
+  },
+  {
+    id: 14,
+    name: 'Mini Heart Pavé Diamond Bracelet',
+    description: 'Mini Heart Pavé Diamond Bracelet',
+    price: 240,
+    imageUrl: [
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/2-BlackDiamonds-MiniHeartBlackDiamondBracelet-14K-Stack1_029.jpg?v=1717088342&width=1000&height=1195&crop=center',
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/0-BLACKDIAMONDS-MiniHeartBlackDiamondBracelet-14K-TopDown_065.jpg?v=1717088342&width=1000&height=1195&crop=center'
+    ],
+    quantity: 0,
+    count: 0,
+    shipping: 4.90,
+    currentImage: ""
+  },
+  {
+    id: 15,
+    name: 'Dôme Cuff Bracelet',
+    description: 'Dôme Cuff Bracelet',
+    price: 1270,
+    imageUrl: [
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/1_DomeCuffBracelet_SS_Fair_Solo.jpg?v=1717088212&width=1000&height=1000&crop=center',
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/0_DomeCuffBracelet_SS_Hero_Front.jpg?v=1717088212&width=1000&height=1000&crop=center'
+    ],
+    quantity: 0,
+    count: 0,
+    shipping: 4.90,
+    currentImage: ""
+  },
+  {
+    id: 16,
+    name: 'Bezel Lab Grown Diamond Bracelet',
+    description: 'Bezel Lab Grown Diamond Bracelet',
+    price: 2150,
+    imageUrl: [
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/1-LABGROWNDIAMONDSBEZEL-LargeSoloDiamondBracelet-14K-Stack_018.jpg?v=1719971652&width=1000&height=1195&crop=center',
+      'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/0-LABGROWNDIAMONDSBEZEL-LargeSoloDiamondBracelet-14K-TopDown_444.jpg?v=1719971652&width=1000&height=1195&crop=center'
+    ],
+    quantity: 0,
+    count: 0,
+    shipping: 4.90,
+    currentImage: ""
+  }
+]
+
