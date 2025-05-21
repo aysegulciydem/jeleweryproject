@@ -1,12 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import {
+  MAT_DIALOG_DATA,
+  MatDialogActions, MatDialogClose,
+  MatDialogContent,
+  MatDialogRef,
+  MatDialogTitle
+} from "@angular/material/dialog";
+import {MatButton} from "@angular/material/button";
+import {Product} from "../../../model/products";
 
 @Component({
   selector: 'app-bracelet-detail-dialog',
   standalone: true,
-  imports: [],
+  imports: [
+    MatDialogContent,
+    MatDialogActions,
+    MatDialogTitle,
+    MatButton,
+    MatDialogClose
+  ],
   templateUrl: './bracelet-detail-dialog.component.html',
   styleUrl: './bracelet-detail-dialog.component.css'
 })
 export class BraceletDetailDialogComponent {
-
+ constructor(
+      private readonly matDialogRef: MatDialogRef<BraceletDetailDialogComponent>,
+      @Inject(MAT_DIALOG_DATA) public dialogData: Product,
+    ) {
+    }
+  
+    closeDialogComponent() {
+      this.matDialogRef.close();
+    }
 }

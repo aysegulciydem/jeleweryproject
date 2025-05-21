@@ -890,7 +890,7 @@ export const  bracelets: Product[]  = [
     id: 15,
     name: 'Dôme Cuff Bracelet',
     description: 'Dôme Cuff Bracelet',
-    price: 1270,
+    price: 320,
     imageUrl: [
       'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/1_DomeCuffBracelet_SS_Fair_Solo.jpg?v=1717088212&width=1000&height=1000&crop=center',
       'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/0_DomeCuffBracelet_SS_Hero_Front.jpg?v=1717088212&width=1000&height=1000&crop=center'
@@ -904,7 +904,7 @@ export const  bracelets: Product[]  = [
     id: 16,
     name: 'Bezel Lab Grown Diamond Bracelet',
     description: 'Bezel Lab Grown Diamond Bracelet',
-    price: 2150,
+    price: 450,
     imageUrl: [
       'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/1-LABGROWNDIAMONDSBEZEL-LargeSoloDiamondBracelet-14K-Stack_018.jpg?v=1719971652&width=1000&height=1195&crop=center',
       'https://cdn.shopify.com/s/files/1/0797/3637/3533/files/0-LABGROWNDIAMONDSBEZEL-LargeSoloDiamondBracelet-14K-TopDown_444.jpg?v=1719971652&width=1000&height=1195&crop=center'
