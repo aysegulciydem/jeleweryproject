@@ -1,6 +1,7 @@
 
 
 export interface  Product {
+  bracelet: any;
   currentImage: string;
   count: number;
   quantity: number;
@@ -24,7 +25,8 @@ export const  products: Product[] = [
       quantity: 0,
       count: 0,
       shipping: 4.90,
-      currentImage: ""
+      currentImage: "",
+      bracelet: undefined
     },
     {
       id: 2,
@@ -38,7 +40,8 @@ export const  products: Product[] = [
       quantity: 0,
       count: 0,
       shipping: 4.90,
-      currentImage: ""
+      currentImage: "",
+      bracelet: undefined
     },
     {
       id: 3,
@@ -52,7 +55,8 @@ export const  products: Product[] = [
       quantity: 0,
       count: 0,
       shipping: 4.90,
-      currentImage: ""
+      currentImage: "",
+      bracelet: undefined
     },
     {
       id: 4,
@@ -66,7 +70,8 @@ export const  products: Product[] = [
       quantity: 0,
       count: 0,
       shipping: 4.90,
-      currentImage: ""
+      currentImage: "",
+      bracelet: undefined
     },
     {
       id: 5,
@@ -80,7 +85,8 @@ export const  products: Product[] = [
       quantity: 0,
       count: 0,
       shipping: 4.90,
-      currentImage: ""
+      currentImage: "",
+      bracelet: undefined
     },
     {
       id: 6,
@@ -94,7 +100,8 @@ export const  products: Product[] = [
       quantity: 0,
       count: 0,
       shipping: 4.90,
-      currentImage: ""
+      currentImage: "",
+      bracelet: undefined
     },
     {
       id: 7,
@@ -108,7 +115,8 @@ export const  products: Product[] = [
       quantity: 0,
       count: 0,
       shipping: 4.90,
-      currentImage: ""
+      currentImage: "",
+      bracelet: undefined
     },
     {
       id: 8,
@@ -122,7 +130,8 @@ export const  products: Product[] = [
       quantity: 0,
       count: 0,
       shipping: 4.90,
-      currentImage: ""
+      currentImage: "",
+      bracelet: undefined
     },
     {
       id: 9,
@@ -136,7 +145,8 @@ export const  products: Product[] = [
       quantity: 0,
       count: 0,
       shipping: 4.90,
-      currentImage: ""
+      currentImage: "",
+      bracelet: undefined
     },
     {
       id: 10,
@@ -150,7 +160,8 @@ export const  products: Product[] = [
       quantity: 0,
       count: 0,
       shipping: 4.90,
-      currentImage: ""
+      currentImage: "",
+      bracelet: undefined
     },
     {
       id: 11,
@@ -164,7 +175,8 @@ export const  products: Product[] = [
       quantity: 0,
       count: 0,
       shipping: 4.90,
-      currentImage: ""
+      currentImage: "",
+      bracelet: undefined
     },
     {
       id: 12,
@@ -178,7 +190,8 @@ export const  products: Product[] = [
       quantity: 0,
       count: 0,
       shipping: 4.90,
-      currentImage: ""
+      currentImage: "",
+      bracelet: undefined
     },
     {
       id: 13,
@@ -192,7 +205,8 @@ export const  products: Product[] = [
       quantity: 0,
       count: 0,
       shipping: 4.90,
-      currentImage: ""
+      currentImage: "",
+      bracelet: undefined
     },
     {
       id: 14,
@@ -206,7 +220,8 @@ export const  products: Product[] = [
       quantity: 0,
       count: 0,
       shipping: 4.90,
-      currentImage: ""
+      currentImage: "",
+      bracelet: undefined
     },
     {
       id: 15,
@@ -220,7 +235,8 @@ export const  products: Product[] = [
       quantity: 0,
       count: 0,
       shipping: 4.90,
-      currentImage: ""
+      currentImage: "",
+      bracelet: undefined
     },
     {
       id: 16,
@@ -234,7 +250,8 @@ export const  products: Product[] = [
       quantity: 0,
       count: 0,
       shipping: 4.90,
-      currentImage: ""
+      currentImage: "",
+      bracelet: undefined
     }
 ]
 export const  earrings: Product[]  = [
@@ -250,7 +267,8 @@ export const  earrings: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 2,
@@ -264,7 +282,8 @@ export const  earrings: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 3,
@@ -278,7 +297,8 @@ export const  earrings: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 4,
@@ -292,7 +312,8 @@ export const  earrings: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 5,
@@ -306,7 +327,8 @@ export const  earrings: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 6,
@@ -320,7 +342,8 @@ export const  earrings: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 7,
@@ -334,7 +357,8 @@ export const  earrings: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 8,
@@ -348,7 +372,8 @@ export const  earrings: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 9,
@@ -362,7 +387,8 @@ export const  earrings: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 10,
@@ -376,7 +402,8 @@ export const  earrings: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 11,
@@ -390,7 +417,8 @@ export const  earrings: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 12,
@@ -404,7 +432,8 @@ export const  earrings: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 13,
@@ -418,7 +447,8 @@ export const  earrings: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 14,
@@ -432,7 +462,8 @@ export const  earrings: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 15,
@@ -446,7 +477,8 @@ export const  earrings: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 16,
@@ -460,7 +492,8 @@ export const  earrings: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   }
 ]
 export const  necklaces: Product[]  = [
@@ -476,7 +509,8 @@ export const  necklaces: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 2,
@@ -490,7 +524,8 @@ export const  necklaces: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 3,
@@ -504,7 +539,8 @@ export const  necklaces: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 4,
@@ -518,7 +554,8 @@ export const  necklaces: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 5,
@@ -532,7 +569,8 @@ export const  necklaces: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 6,
@@ -546,7 +584,8 @@ export const  necklaces: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 7,
@@ -560,7 +599,8 @@ export const  necklaces: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 8,
@@ -574,7 +614,8 @@ export const  necklaces: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 9,
@@ -588,7 +629,8 @@ export const  necklaces: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 10,
@@ -602,7 +644,8 @@ export const  necklaces: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 11,
@@ -616,7 +659,8 @@ export const  necklaces: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 12,
@@ -630,7 +674,8 @@ export const  necklaces: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 13,
@@ -644,7 +689,8 @@ export const  necklaces: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 14,
@@ -658,7 +704,8 @@ export const  necklaces: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 15,
@@ -672,7 +719,8 @@ export const  necklaces: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 16,
@@ -686,7 +734,8 @@ export const  necklaces: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   }
 ]
 export const  bracelets: Product[]  = [
@@ -702,7 +751,8 @@ export const  bracelets: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 2,
@@ -716,7 +766,8 @@ export const  bracelets: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 3,
@@ -730,7 +781,8 @@ export const  bracelets: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 4,
@@ -744,7 +796,8 @@ export const  bracelets: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 5,
@@ -758,7 +811,8 @@ export const  bracelets: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 6,
@@ -772,7 +826,8 @@ export const  bracelets: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 7,
@@ -786,7 +841,8 @@ export const  bracelets: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 8,
@@ -800,7 +856,8 @@ export const  bracelets: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 9,
@@ -814,7 +871,8 @@ export const  bracelets: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 10,
@@ -828,7 +886,8 @@ export const  bracelets: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 11,
@@ -842,7 +901,8 @@ export const  bracelets: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 12,
@@ -856,7 +916,8 @@ export const  bracelets: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 13,
@@ -870,7 +931,8 @@ export const  bracelets: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 14,
@@ -884,7 +946,8 @@ export const  bracelets: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 15,
@@ -898,7 +961,8 @@ export const  bracelets: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   },
   {
     id: 16,
@@ -912,7 +976,8 @@ export const  bracelets: Product[]  = [
     quantity: 0,
     count: 0,
     shipping: 4.90,
-    currentImage: ""
+    currentImage: "",
+    bracelet: undefined
   }
 ]
 

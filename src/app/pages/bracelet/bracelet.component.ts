@@ -113,7 +113,7 @@ export class BraceletComponent {
       this.matDialog.open(BraceletDetailDialogComponent,
         {
           data: product,
-          disableClose: true
+          //disableClose: true
         }
       );
     }
