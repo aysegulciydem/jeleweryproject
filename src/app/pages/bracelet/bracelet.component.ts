@@ -2,6 +2,7 @@ import {
   Component,
   computed,
   CUSTOM_ELEMENTS_SCHEMA,
+  Input,
   OnInit,
   signal,
   TemplateRef,
@@ -32,6 +33,7 @@ import{MatDrawer} from '@angular/material/sidenav';
 import { BraceletDetailDialogComponent } from './bracelet-detail-dialog/bracelet-detail-dialog.component';
 import { ProductlistserviceService } from '../../services/productlistservice.service';
 import { MultiCheckboxComponent } from '../../component/multi-checkbox/multi-checkbox.component';
+import { BehaviorSubject } from 'rxjs';
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
@@ -79,57 +81,64 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class BraceletComponent {
   protected readonly Constant = Constant;
-    isToggleOpen: boolean = false;
-    value: any;
-    showFiller = false;
-    noProducts: TemplateRef<NgIfContext<boolean>>;
-    selected = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
-    selectFormControl = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
-    matcher = new MyErrorStateMatcher();
-    bracelets: Product[] = [];
-    products: any;
-    constructor(
-      private readonly matDialog: MatDialog,
-      private readonly router: Router,
-      private readonly productListservice: ProductlistserviceService,
-    ){
-      this.bracelets = []; // diziyi tanımla
-      this.productListservice.getBracelets().subscribe((data: Product[]) => {
-      this.bracelets = data; // diziyi doldur
-      this.bracelets.forEach((product: Product) => {
-        product.currentImage = product.imageUrl[0];
-      });
-    });
-  }
-    ngOnInit(): void {}
-    addToCard(product: Product): void {
-      this.productListservice.addToBasket(product);
-      const goToCart = confirm("Product added to basket! Would you like to go to basket?");
-      if(goToCart) {
-        this.router.navigate(['/productList']);
-      }
-    }
-    openProductDetailDialogComponent(product: Product): void {
-      this.matDialog.open(BraceletDetailDialogComponent,
-        {
-          data: product,
-          //disableClose: true
-        }
-      );
-    }
+  isToggleOpen: boolean = false;
+  value: any;
+  showFiller = false;
+  noProducts: TemplateRef<NgIfContext<boolean>>;
+  selected = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
+  selectFormControl = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
+  matcher = new MyErrorStateMatcher();
+  bracelets: Product[] = [];
+  @Input() product!: Product;
   
-    @ViewChild('drawer') drawer!: MatDrawer;
-    toggleDrawer() {
-      this.drawer.toggle();
-    }
-  
-    onMouseEnter(product: Product): void {
-      product.currentImage = product.imageUrl[1];
-    }
-    onMouseLeave(product: Product): void {
+  constructor(
+    private readonly matDialog: MatDialog,
+    private readonly router: Router,
+    private readonly productListservice: ProductlistserviceService,
+  ){
+    this.bracelets = []; // diziyi tanımla
+    this.productListservice.getBracelets().subscribe((data: Product[]) => {
+    this.bracelets = data; // diziyi doldur
+    this.bracelets.forEach((product: Product) => {
       product.currentImage = product.imageUrl[0];
-    } 
-    toggleFilter() {
-      this.isToggleOpen = !this.isToggleOpen;
+    });
+  });}
+
+  ngOnInit(): void {
+  }
+
+  addToCard(product: Product): void {
+    this.productListservice.addToBasket(product);
+    const goToCart = confirm("Product added to basket! Would you like to go to basket?");
+    if(goToCart) {
+      this.router.navigate(['/productList']);
     }
+  }
+  openProductDetailDialogComponent(product: Product): void {
+    this.matDialog.open(BraceletDetailDialogComponent,
+      {
+        data: product,
+        //disableClose: true
+      }
+    );
+  }
+
+  @ViewChild('drawer') drawer!: MatDrawer;
+  toggleDrawer() {
+    this.drawer.toggle();
+  }
+  toggleFavorite(product: Product): void {
+    console.log('Favoriye ekleniyor:', product);
+    this.productListservice.addToFavorite(product);
+    this.router.navigate(['favorite-page', 'favorite']);
+  }
+  onMouseEnter(product: Product): void {
+    product.currentImage = product.imageUrl[1];
+  }
+  onMouseLeave(product: Product): void {
+    product.currentImage = product.imageUrl[0];
+  } 
+  toggleFilter() {
+    this.isToggleOpen = !this.isToggleOpen;
+  }
 }

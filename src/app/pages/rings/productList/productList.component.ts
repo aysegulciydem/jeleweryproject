@@ -43,13 +43,11 @@ export class ProductListComponent implements OnInit{
   public shipping: number= 4.90;
   constructor(private readonly productlistservice: ProductlistserviceService,
     private  location: Location
-  ){
-    
-  }
+  ){}
   basketItems: any[]=[];
   ngOnInit(): void {
    this.productlistservice.getBasketItems().subscribe(items=> {
-    this.basketItems= items; //update basket
+    this.basketItems= items;
    })
   }
 

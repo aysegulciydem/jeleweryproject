@@ -60,6 +60,10 @@ cancelCloseTimer() {
   redirectShoppingCardPage(){
     this.router.navigate(['/productList']);
   }
+  redirectFavoritePage(){
+    this.router.navigate(['/favorite-page']);
+  }
+
   redirectRingsPage(event: Event): void{
     this.router.navigate(['/rings']);
   }

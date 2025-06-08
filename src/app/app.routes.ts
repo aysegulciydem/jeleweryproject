@@ -3,6 +3,9 @@ import { CarouselComponent } from "./component/carousel/carousel.component";
 import { RingsComponent } from "./pages/rings/rings.component";
 import { EarringsComponent } from "./pages/earrings/earrings.component";
 import { MultiCheckboxComponent } from "./component/multi-checkbox/multi-checkbox.component";
+import { FavoriteComponent } from "./pages/favorite-page/favorite/favorite.component";
+import { FavoritePageComponent } from "./pages/favorite-page/favorite-page.component";
+import { AccountComponent } from "./pages/favorite-page/account/account.component";
 
 export const routes: Routes = [
     {
@@ -51,5 +54,29 @@ export const routes: Routes = [
         'path': 'multicheckbox',
         component: MultiCheckboxComponent,
     },
+    {
+        'path': 'favorite-page',
+        component:FavoritePageComponent,
+        children: [
+            {
+                'path': 'favorite',
+                component: FavoriteComponent,
+            },
+            {
+                'path': 'account',
+                component: AccountComponent,
+                
+            }
+            
+        ]
+
+    },
+    
+
+
+
+
+
+
 ]
 
