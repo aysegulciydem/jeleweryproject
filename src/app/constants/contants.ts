@@ -28,6 +28,7 @@ export const Constant = {
     quickacces: "QUICK ACCES",
     mybag: "MY BAG",
     account: "Account",
+    myfavourties: "My Favourties",
   },
   categories: {
     new: "New",

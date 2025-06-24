@@ -23,7 +23,6 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        
       }
       img {
         width: 12%;
@@ -39,7 +38,6 @@
     }
 
   }
-  
   .second-container{
     width: 30%;
     .order{
