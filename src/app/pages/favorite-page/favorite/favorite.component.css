@@ -90,3 +90,25 @@
     }
    
 }
+.button-bottom{
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    button{
+        padding-top: 0.5%;
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        box-shadow: var(--mdc-elevated-card-container-elevation);
+        font-size: large;        
+        &:hover{
+            background-color: #e5e8e8;
+        }
+        svg{
+            padding-right: 1%;
+        }
+        .text{
+            padding-top: 1.5%
+        }
+    }
+}

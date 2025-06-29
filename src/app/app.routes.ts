@@ -59,6 +59,11 @@ export const routes: Routes = [
         component:FavoritePageComponent,
         children: [
             {
+                'path': '', // Boş path
+                redirectTo: 'favorite', // favorite'a yönlendir
+                pathMatch: 'full'
+            },
+            {
                 'path': 'favorite',
                 component: FavoriteComponent,
             },

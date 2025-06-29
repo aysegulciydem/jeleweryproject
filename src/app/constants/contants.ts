@@ -55,6 +55,10 @@ export const Constant = {
     discount: "Discounts",
     mycard: "My Card",
     sort: "Sort By",
+    addselect: "ADD SELECTED TO CARD",
+    deleteselected: "DELETE SELECTED",
+    print: "PRİNT",
+    share: "SHARE",
   },
   color: [
     {
