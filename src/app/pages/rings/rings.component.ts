@@ -111,6 +111,11 @@ export class RingsComponent{
     }
   }
   @ViewChild('drawer') drawer!: MatDrawer;
+  toggleFavorite(product: Product): void {
+    console.log('Favoriye ekleniyor:', product);
+    this.productlistservice.addToFavorite(product);
+    this.router.navigate(['favorite-page', 'favorite']);
+  }
   toggleDrawer() {
     this.drawer.toggle();
   }

@@ -96,7 +96,7 @@ export class BraceletComponent {
     private readonly router: Router,
     private readonly productListservice: ProductlistserviceService,
   ){
-    this.bracelets = []; // diziyi tanımla
+    this.bracelets = [];
     this.productListservice.getBracelets().subscribe((data: Product[]) => {
     this.bracelets = data; // diziyi doldur
     this.bracelets.forEach((product: Product) => {

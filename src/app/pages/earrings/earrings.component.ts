@@ -123,6 +123,10 @@ export class EarringsComponent implements OnInit {
   }
 
   @ViewChild('drawer') drawer!: MatDrawer;
+  toggleFavorite(product: Product): void {
+    this.productListservice.addToFavorite(product);
+    this.router.navigate(['favorite-page', 'favorite']);
+  }
   toggleDrawer() {
     this.drawer.toggle();
   }

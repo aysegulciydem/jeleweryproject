@@ -120,6 +120,11 @@ protected readonly Constant = Constant;
   }
 
   @ViewChild('drawer') drawer!: MatDrawer;
+  toggleFavorite(product: Product): void {
+    console.log('Favoriye ekleniyor:', product);
+    this.productListservice.addToFavorite(product);
+    this.router.navigate(['favorite-page', 'favorite']);
+  }
   toggleDrawer() {
     this.drawer.toggle();
   }

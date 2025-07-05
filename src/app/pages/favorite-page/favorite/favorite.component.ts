@@ -26,8 +26,7 @@ export class FavoriteComponent implements OnInit {
     private  location: Location,
   ){}
   ngOnInit(): void {
-    this.productlistservice.getFavoriteItems().subscribe(items => {
-      console.log('Favoriye eklenen ürünler:', items);
+    this.productlistservice.getFavoriteItems().subscribe(items => { 
       this.favoriteItems= items;
     })
   }
