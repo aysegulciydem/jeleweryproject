@@ -30,6 +30,12 @@ export const Constant = {
     account: "Account",
     myfavourties: "My Favourties",
     track: "TRACK YOUR PACKAGE",
+    orders: "ORDERS",
+    addressbook: "ADDRESS BOOK",
+    favorites: "FAVOURITES",
+    points: "POINTS",
+    coupons: "COUPONS",
+    returnrequest: "RETURN REQUEST",
   },
   categories: {
     new: "New",
