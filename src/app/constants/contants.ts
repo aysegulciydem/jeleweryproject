@@ -29,6 +29,7 @@ export const Constant = {
     mybag: "MY BAG",
     account: "Account",
     myfavourties: "My Favourties",
+    track: "TRACK YOUR PACKAGE",
   },
   categories: {
     new: "New",

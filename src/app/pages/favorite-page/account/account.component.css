@@ -1,0 +1,42 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+    .track-package{
+        width: 50%;
+        font-size: large;
+        background-color: #eaecee ;
+        padding: 1%;
+        margin-left: 10%;
+        border-radius: 3%;
+        .track-package-head{
+            display: flex;
+            flex-direction: row;
+            gap: 1%;
+            justify-content: center;
+        }
+        .track-package-input{
+            padding-left: 37%;
+            .example-form {
+                min-width: 150px;
+                max-width: 500px;
+                width: 100%;
+              }
+
+            .example-full-width {
+               width: 100%;
+               display: flex;
+               flex-direction: row;
+               padding: 1.5%;
+            }
+           .input-icon{
+                display: flex !important;
+                flex-direction: row !important;
+           }
+           .example-full-width-button{
+            padding-left: 17%;
+           }
+                
+        }
+    }
+}
