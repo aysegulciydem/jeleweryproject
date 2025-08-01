@@ -15,7 +15,6 @@ import { InformationComponent } from './component/information/information.compon
     imports: [
         RouterModule,
         NavbarComponent,
-        RingsComponent,
         CommonModule,
         InformationComponent
     ]

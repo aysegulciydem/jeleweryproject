@@ -16,7 +16,7 @@ import { threadId } from 'node:worker_threads';
 
 @Component({
     selector: 'app-login',
-    imports: [CommonModule, RouterOutlet, RouterModule, MatCardModule, MatButtonModule, MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule, MatButtonModule, MatIconModule, MatDividerModule, MatError, MatInputModule, MatFormFieldModule],
+    imports: [CommonModule, RouterModule, MatCardModule, MatButtonModule, MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule, MatButtonModule, MatIconModule, MatDividerModule, MatError, MatInputModule, MatFormFieldModule],
     changeDetection: ChangeDetectionStrategy.OnPush,
     templateUrl: './login.component.html',
     styleUrl: './login.component.css'

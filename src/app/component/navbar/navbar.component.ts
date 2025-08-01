@@ -17,7 +17,7 @@ import {RingsComponent} from "../../pages/rings/rings.component";
 @Component({
     schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
     selector: 'app-navbar',
-    imports: [MatButtonModule, MatDividerModule, MatIconModule, FormsModule, MatFormFieldModule, MatInputModule, CommonModule, MatToolbar, MatBadgeModule, MatMenuModule, MatTabGroup, MatTab, RingsComponent],
+    imports: [MatButtonModule, MatDividerModule, MatIconModule, FormsModule, MatFormFieldModule, MatInputModule, CommonModule, MatToolbar, MatBadgeModule, MatMenuModule],
     templateUrl: './navbar.component.html',
     styleUrl: './navbar.component.css'
 })

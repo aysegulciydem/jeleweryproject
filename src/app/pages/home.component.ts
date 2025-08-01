@@ -18,8 +18,8 @@ import { InformationComponent } from '../component/information/information.compo
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
-    imports: [RouterModule, NavbarComponent, MatCardModule, MatButtonModule, MatDividerModule, InformationComponent,
-        CommonModule, CarouselComponent, DiscountcarouselComponent, RingsComponent]
+    imports: [RouterModule, MatCardModule, MatButtonModule, MatDividerModule,
+        CommonModule, CarouselComponent, DiscountcarouselComponent]
 })
 export class HomeComponent {
   

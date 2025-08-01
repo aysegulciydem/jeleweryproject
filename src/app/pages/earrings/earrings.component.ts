@@ -54,7 +54,6 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
         MatSliderModule,
         MatDividerModule,
         CommonModule,
-        MatToolbar,
         ReactiveFormsModule,
         MatFormFieldModule,
         FormsModule,

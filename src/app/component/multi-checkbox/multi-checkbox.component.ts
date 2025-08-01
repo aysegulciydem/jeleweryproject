@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 @Component({
     schemas: [(CUSTOM_ELEMENTS_SCHEMA), NO_ERRORS_SCHEMA],
     selector: 'app-multi-checkbox',
-    imports: [MatExpansionModule, FormsModule, ReactiveFormsModule, MatCheckboxModule, JsonPipe, CommonModule],
+    imports: [MatExpansionModule, FormsModule, ReactiveFormsModule, MatCheckboxModule, CommonModule],
     changeDetection: ChangeDetectionStrategy.OnPush,
     templateUrl: './multi-checkbox.component.html',
     styleUrl: './multi-checkbox.component.css'

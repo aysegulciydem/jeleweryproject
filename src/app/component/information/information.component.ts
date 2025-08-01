@@ -5,7 +5,7 @@ import { Constant } from '../../constants/contants';
 @Component({
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     selector: 'app-information',
-    imports: [CommonModule, InformationComponent],
+    imports: [CommonModule],
     templateUrl: './information.component.html',
     styleUrl: './information.component.css'
 })

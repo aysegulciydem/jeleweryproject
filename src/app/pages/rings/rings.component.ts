@@ -59,7 +59,6 @@ export interface Task {
         MatSliderModule,
         MatDividerModule,
         CommonModule,
-        MatToolbar,
         ReactiveFormsModule,
         MatFormFieldModule,
         FormsModule,
