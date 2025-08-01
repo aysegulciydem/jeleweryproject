@@ -10,12 +10,11 @@ import { Location } from '@angular/common';
 import { Constant } from '../../../constants/contants';
 
 @Component({
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  selector: 'app-favorite',
-  standalone: true,
-  imports: [CommonModule,MatCheckboxModule,MatButtonModule, MatDividerModule, MatIconModule],
-  templateUrl: './favorite.component.html',
-  styleUrl: './favorite.component.css'
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    selector: 'app-favorite',
+    imports: [CommonModule, MatCheckboxModule, MatButtonModule, MatDividerModule, MatIconModule],
+    templateUrl: './favorite.component.html',
+    styleUrl: './favorite.component.css'
 })
 export class FavoriteComponent implements OnInit {
   favoriteItems: Product[]=[]; 

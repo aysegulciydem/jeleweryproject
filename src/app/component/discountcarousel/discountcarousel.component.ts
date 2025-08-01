@@ -5,12 +5,11 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  schemas: [NO_ERRORS_SCHEMA],
-  selector: 'app-discountcarousel',
-  standalone: true,
-  imports: [CommonModule,MatButtonModule, MatDividerModule, MatIconModule],
-  templateUrl: './discountcarousel.component.html',
-  styleUrl: './discountcarousel.component.css'
+    schemas: [NO_ERRORS_SCHEMA],
+    selector: 'app-discountcarousel',
+    imports: [CommonModule, MatButtonModule, MatDividerModule, MatIconModule],
+    templateUrl: './discountcarousel.component.html',
+    styleUrl: './discountcarousel.component.css'
 })
 export class DiscountcarouselComponent {
   @Input() discountslide: DiscountSliderImages[]=[];

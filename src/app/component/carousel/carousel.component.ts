@@ -6,11 +6,10 @@ import { MatIconModule } from '@angular/material/icon';
 
 
 @Component({
-  selector: 'app-carousel',
-  standalone: true,
-  imports: [CommonModule,MatButtonModule, MatDividerModule, MatIconModule],
-  templateUrl: './carousel.component.html',
-  styleUrl: './carousel.component.css'
+    selector: 'app-carousel',
+    imports: [CommonModule, MatButtonModule, MatDividerModule, MatIconModule],
+    templateUrl: './carousel.component.html',
+    styleUrl: './carousel.component.css'
 })
 export class CarouselComponent {  
   @Input() slides: SliderImages[]=[];

@@ -10,17 +10,16 @@ import {MatButton} from "@angular/material/button";
 import {Product} from "../../../model/products";
 
 @Component({
-  selector: 'app-product-detail-dialog',
-  standalone: true,
-  imports: [
-    MatDialogContent,
-    MatDialogActions,
-    MatDialogTitle,
-    MatButton,
-    MatDialogClose
-  ],
-  templateUrl: './product-detail-dialog.component.html',
-  styleUrl: './product-detail-dialog.component.css'
+    selector: 'app-product-detail-dialog',
+    imports: [
+        MatDialogContent,
+        MatDialogActions,
+        MatDialogTitle,
+        MatButton,
+        MatDialogClose
+    ],
+    templateUrl: './product-detail-dialog.component.html',
+    styleUrl: './product-detail-dialog.component.css'
 })
 export class ProductDetailDialogComponent {
 

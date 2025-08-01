@@ -7,19 +7,18 @@ import { CommonModule } from '@angular/common';
 import { InformationComponent } from './component/information/information.component';
 
 @Component({
-  schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
-  selector: 'app-root',
-  standalone: true,
-  providers: [],
-  templateUrl: `./app.component.html`,
-  styleUrls: ['./app.component.css'],
-  imports: [
-    RouterModule,
-    NavbarComponent,
-    RingsComponent,
-    CommonModule,
-    InformationComponent
-  ],
+    schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
+    selector: 'app-root',
+    providers: [],
+    templateUrl: `./app.component.html`,
+    styleUrls: ['./app.component.css'],
+    imports: [
+        RouterModule,
+        NavbarComponent,
+        RingsComponent,
+        CommonModule,
+        InformationComponent
+    ]
 })
 
 export class AppComponent  {isHomePage: boolean = false;

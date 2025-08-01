@@ -11,19 +11,18 @@ import { Product} from "../../../model/products";
 import { CommonModule } from '@angular/common';
 
 @Component({
-  schemas: [NO_ERRORS_SCHEMA],
-  selector: 'app-bracelet-detail-dialog',
-  standalone: true,
-  imports: [
-    MatDialogContent,
-    MatDialogActions,
-    MatDialogTitle,
-    MatButton,
-    MatDialogClose,
-    CommonModule
-  ],
-  templateUrl: './bracelet-detail-dialog.component.html',
-  styleUrl: './bracelet-detail-dialog.component.css'
+    schemas: [NO_ERRORS_SCHEMA],
+    selector: 'app-bracelet-detail-dialog',
+    imports: [
+        MatDialogContent,
+        MatDialogActions,
+        MatDialogTitle,
+        MatButton,
+        MatDialogClose,
+        CommonModule
+    ],
+    templateUrl: './bracelet-detail-dialog.component.html',
+    styleUrl: './bracelet-detail-dialog.component.css'
 })
 export class BraceletDetailDialogComponent {
  

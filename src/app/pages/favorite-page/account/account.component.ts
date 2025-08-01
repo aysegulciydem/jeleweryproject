@@ -6,11 +6,10 @@ import {FormsModule} from '@angular/forms';
 
 
 @Component({
-  selector: 'app-account',
-  standalone: true,
-  imports: [FormsModule, MatFormFieldModule, MatInputModule],
-  templateUrl: './account.component.html',
-  styleUrl: './account.component.css'
+    selector: 'app-account',
+    imports: [FormsModule, MatFormFieldModule, MatInputModule],
+    templateUrl: './account.component.html',
+    styleUrl: './account.component.css'
 })
 export class AccountComponent {
   Constant = Constant;

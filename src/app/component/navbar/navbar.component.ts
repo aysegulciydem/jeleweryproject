@@ -15,12 +15,11 @@ import{MatMenuModule, MatMenuTrigger} from '@angular/material/menu';
 import {MatTab, MatTabGroup} from "@angular/material/tabs";
 import {RingsComponent} from "../../pages/rings/rings.component";
 @Component({
-  schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
-  selector: 'app-navbar',
-  standalone: true,
-  imports: [MatButtonModule, MatDividerModule, MatIconModule, FormsModule, MatFormFieldModule, MatInputModule, CommonModule, MatToolbar, MatBadgeModule, MatMenuModule, MatTabGroup, MatTab, RingsComponent],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+    schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
+    selector: 'app-navbar',
+    imports: [MatButtonModule, MatDividerModule, MatIconModule, FormsModule, MatFormFieldModule, MatInputModule, CommonModule, MatToolbar, MatBadgeModule, MatMenuModule, MatTabGroup, MatTab, RingsComponent],
+    templateUrl: './navbar.component.html',
+    styleUrl: './navbar.component.css'
 })
 export class NavbarComponent implements OnInit {
   protected readonly Constant = Constant;

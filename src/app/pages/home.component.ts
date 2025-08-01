@@ -14,13 +14,12 @@ import { RingsComponent } from './rings/rings.component';
 import { InformationComponent } from '../component/information/information.component';
 
 @Component({
-   schemas: [CUSTOM_ELEMENTS_SCHEMA,],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA,],
     selector: 'app-home',
-    standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
     imports: [RouterModule, NavbarComponent, MatCardModule, MatButtonModule, MatDividerModule, InformationComponent,
-      CommonModule, CarouselComponent, DiscountcarouselComponent,RingsComponent]
+        CommonModule, CarouselComponent, DiscountcarouselComponent, RingsComponent]
 })
 export class HomeComponent {
   

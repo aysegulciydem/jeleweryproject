@@ -4,16 +4,15 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { AccountComponent } from './account/account.component';
 
 @Component({
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  selector: 'app-favorite-page',
-  standalone: true,
-  imports: [
-    CommonModule,
-    FavoriteComponent,
-    AccountComponent
-  ],
-  templateUrl: './favorite-page.component.html',
-  styleUrl: './favorite-page.component.css'
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    selector: 'app-favorite-page',
+    imports: [
+        CommonModule,
+        FavoriteComponent,
+        AccountComponent
+    ],
+    templateUrl: './favorite-page.component.html',
+    styleUrl: './favorite-page.component.css'
 })
 export class FavoritePageComponent {
   currentSection: string = 'favorites';

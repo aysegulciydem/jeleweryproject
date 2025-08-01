@@ -7,13 +7,12 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {Constant} from "../../constants/contants";
 import { CommonModule } from '@angular/common';
 @Component({
-  schemas: [(CUSTOM_ELEMENTS_SCHEMA),NO_ERRORS_SCHEMA],
-  selector: 'app-multi-checkbox',
-  standalone: true,
-  imports: [MatExpansionModule,FormsModule, ReactiveFormsModule, MatCheckboxModule, JsonPipe, CommonModule],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './multi-checkbox.component.html',
-  styleUrl: './multi-checkbox.component.css'
+    schemas: [(CUSTOM_ELEMENTS_SCHEMA), NO_ERRORS_SCHEMA],
+    selector: 'app-multi-checkbox',
+    imports: [MatExpansionModule, FormsModule, ReactiveFormsModule, MatCheckboxModule, JsonPipe, CommonModule],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: './multi-checkbox.component.html',
+    styleUrl: './multi-checkbox.component.css'
 })
 export class MultiCheckboxComponent {
   readonly panelOpenState = signal(false);
