@@ -6,6 +6,7 @@ import { MultiCheckboxComponent } from "./component/multi-checkbox/multi-checkbo
 import { FavoriteComponent } from "./pages/favorite-page/favorite/favorite.component";
 import { FavoritePageComponent } from "./pages/favorite-page/favorite-page.component";
 import { AccountComponent } from "./pages/favorite-page/account/account.component";
+import { PersonelinformationComponent } from "./pages/favorite-page/personelinformation/personelinformation.component";
 
 export const routes: Routes = [
     {
@@ -70,6 +71,11 @@ export const routes: Routes = [
             {
                 'path': 'account',
                 component: AccountComponent,
+                
+            },
+            {
+                'path': 'personelinformation',
+                component: PersonelinformationComponent,
                 
             }
             

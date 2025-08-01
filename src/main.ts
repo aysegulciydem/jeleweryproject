@@ -15,7 +15,7 @@ import 'zone.js';
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes, withComponentInputBinding()), provideHttpClient(withFetch()),
-    CommonModule, provideAnimationsAsync(), provideAnimationsAsync()
+    CommonModule, provideAnimationsAsync(), provideAnimationsAsync(), provideAnimationsAsync()
   ],
 })
 .catch(err => console.error(err));
