@@ -5,9 +5,10 @@ import {DatePipe} from '@angular/common';
 
 @Component({
     selector: 'app-personelinformation',
+    standalone: true,
     imports: [CommonModule, MatTabsModule, DatePipe],
     templateUrl: './personelinformation.component.html',
-    styleUrl: './personelinformation.component.css'
+    styleUrls: ['./personelinformation.component.css']
 })
 export class PersonelinformationComponent {
 

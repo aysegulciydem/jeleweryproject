@@ -5,6 +5,7 @@ import { AccountComponent } from './account/account.component';
 
 @Component({
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    standalone: true,
     selector: 'app-favorite-page',
     imports: [
         CommonModule,
