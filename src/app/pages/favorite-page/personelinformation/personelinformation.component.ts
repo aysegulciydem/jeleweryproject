@@ -16,6 +16,8 @@ import {
 } from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
@@ -25,7 +27,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 @Component({
     selector: 'app-personelinformation',
     standalone: true,
-    imports: [CommonModule, MatTabsModule, DatePipe, FormsModule, MatFormFieldModule, MatInputModule, MatDatepickerModule,FormsModule, MatFormFieldModule, ReactiveFormsModule,MatIconModule],
+    imports: [CommonModule, MatTabsModule, DatePipe, FormsModule, MatFormFieldModule, MatInputModule, MatDatepickerModule,FormsModule, MatFormFieldModule, ReactiveFormsModule,MatIconModule,MatButtonModule, MatDividerModule,],
     templateUrl: './personelinformation.component.html',
     styleUrls: ['./personelinformation.component.css'],
     providers: [provideNativeDateAdapter()],

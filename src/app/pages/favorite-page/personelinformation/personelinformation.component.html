@@ -24,7 +24,7 @@
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
-      <form class="example-form">
+      <form class="email">
         <mat-form-field class="example-full-width">
           <mat-label>Email</mat-label>
           <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
@@ -38,9 +38,9 @@
           }
         </mat-form-field>
       </form>
-      <form class="example-form">
+      <form class="phone">
         <mat-form-field class="example-full-width">
-          <mat-label>Telephone</mat-label>
+          <mat-label>Phone</mat-label>
           <span matTextPrefix>+1 &nbsp;</span>
           <input type="tel" matInput placeholder="555-555-1234">
           <mat-icon matSuffix>mode_edit</mat-icon>
@@ -51,17 +51,26 @@
           <mat-label>Address</mat-label>
           <textarea matInput placeholder="Ex. 100 Main St"></textarea>
         </mat-form-field>
-       </p>
-        <table class="example-full-width" cellspacing="0">
-          <tr>
-            <td>
-              <mat-form-field class="example-full-width">
-                <mat-label>Postal Code</mat-label>
-                <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="">
-              </mat-form-field>
-            </td>
-          </tr>
-         </table>
+      </p>
+      <table class="postal" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Postal Code</mat-label>
+              <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="">
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+      <section>
+        <div class="example-button-row">
+          <div class="example-flex-container">
+            <button matFab extended>
+              UPDATE
+            </button>
+          </div>
+        </div>
+      </section>
                     
 
 

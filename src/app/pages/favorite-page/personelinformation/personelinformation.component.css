@@ -1,13 +1,11 @@
 mat-tab-group{
     width: 100%;
     height: 100%;
+    
 }
-table{
-    margin-top: 1.5%;
-}
+
 mat-form-field {
-  width: 25%;
-  margin-top: 1.5%;
+  width: 39.5%;
 }
 
 .example-form {
@@ -17,23 +15,76 @@ mat-form-field {
 }
 
 .example-full-width {
-    width: 50%;
+    width: 63%;
+    padding-top: 2%;
 }
 
 td{
   padding-right: 8px;
 }
 .example-form{
+    width: 63%;
+    .example-full-width{
+        width: 100%;
+    }
+}
+from .example-form{
+    width: 63%;
+    .example-full-width{
+        width: 100%;
+    }
+}
+.email{
+    width: 39.5%;
+    .example-full-width{
+        width: 100%;
+    }
+}
+.phone{
     margin-top: 1.5%;
-    width: 25%;
+    width: 39.5%;
     .example-full-width{
         width: 100%;
     }
 }
 p{
-    margin-top: 1.5%;
-    width: 25%;
+    width: 39.5%;
     .example-full-width{
         width: 100%;
+    }
+}
+.postal{
+    width: 40.5%;
+    .example-full-width{
+        width: 100%;
+    }
+
+}
+section {
+  display: flex;
+  align-items: center;
+  padding-left: 30%;
+    .example-label {
+        font-size: 14px;
+        margin: 0 16px 0 8px;
+        min-width: 120px;
+    }
+
+    .example-button-row {
+    max-width: 600px;
+    }
+
+    .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+    }
+
+    .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+      button{
+        background-color: #8EC5FF;
+        color: black;
+      }
     }
 }
