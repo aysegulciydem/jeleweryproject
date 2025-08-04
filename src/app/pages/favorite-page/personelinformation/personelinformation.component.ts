@@ -4,7 +4,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {DatePipe} from '@angular/common';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule} from '@angular/forms';
+import {FormBuilder, FormGroup, FormsModule} from '@angular/forms';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {provideNativeDateAdapter} from '@angular/material/core';
 import {
@@ -34,6 +34,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PersonelinformationComponent {
+  membershipForm: FormGroup;
   tabLoadTimes: Date[] = [];
   getTimeLoaded(index: number) {
     if (!this.tabLoadTimes[index]) {
@@ -43,5 +44,23 @@ export class PersonelinformationComponent {
   }
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   matcher = new MyErrorStateMatcher();
+  constructor(private fb: FormBuilder) {
+    this.membershipForm = this.fb.group({
+      name: ['', Validators.required],
+      lastName: ['', Validators.required],
+      birthday: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', Validators.required],
+      address: [''],
+      postalCode: ['']
+    });
+  }
+  onSubmit() {
+    if (this.membershipForm.valid) {
+      console.log('Form submitted:', this.membershipForm.value);
+    } else {
+      console.log('Form is not valid!');
+    }
+  }
 
 }

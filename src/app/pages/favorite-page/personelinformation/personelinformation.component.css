@@ -1,40 +1,55 @@
+form{
+    padding: 2%;
+}
 mat-tab-group{
     width: 100%;
     height: 100%;
-    
+}
+ng-template{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 mat-form-field {
   width: 39.5%;
+  display: flex;
+  flex-direction: column;
 }
 
 .example-form {
   min-width: 150px;
   max-width: 500px;
-  width: 100%;
+  width: 63%;
+    .example-full-width{
+        width: 100%;
+    }
+}
+table .example-full-width-table{
+    width: 100%;
+    padding-top: 2%;
+    .example-full-width{
+        width: 100%;
+    }
 }
 
 .example-full-width {
-    width: 63%;
+    width: 39.5%;
     padding-top: 2%;
 }
 
 td{
   padding-right: 8px;
 }
-.example-form{
-    width: 63%;
-    .example-full-width{
-        width: 100%;
-    }
-}
+
 from .example-form{
     width: 63%;
     .example-full-width{
         width: 100%;
     }
 }
-.email{
+mat-form-field .email{
     width: 39.5%;
     .example-full-width{
         width: 100%;

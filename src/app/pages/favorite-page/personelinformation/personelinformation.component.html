@@ -1,93 +1,106 @@
-<mat-tab-group>
-  <mat-tab label="Mermbership Information" class="membership">
-    <ng-template matTabContent>
-      <table class="example-full-width" cellspacing="0">
-        <tr>
-          <td><mat-form-field class="example-full-width">
-            <mat-label>Name</mat-label>
-            <input matInput>
-          </mat-form-field></td>
-        </tr>
-      </table>
-      <table class="example-full-width" cellspacing="0">
-        <tr>
-          <td><mat-form-field class="example-full-width">
-            <mat-label>Last Name</mat-label>
-            <input matInput>
-          </mat-form-field></td>
-        </tr>
-      </table>
-      <mat-form-field>
-        <mat-label>Choose a birthday</mat-label>
-        <input matInput [matDatepicker]="picker">
-        <mat-hint>MM/DD/YYYY</mat-hint>
-        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-      <form class="email">
+<form [formGroup]="membershipForm">
+  <mat-tab-group>
+    <mat-tab label="Membership Information" class="membership">
+      <ng-template matTabContent>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width-table">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" required>
+                <mat-error *ngIf="membershipForm.get('name')?.hasError('required')">
+                  Name is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width-table">
+                <mat-label>Last Name</mat-label>
+                <input matInput formControlName="lastName" required>
+                <mat-error *ngIf="membershipForm.get('lastName')?.hasError('required')">
+                  Last Name is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+
+        <mat-form-field>
+          <mat-label>Choose a birthday</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="birthday" required>
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="membershipForm.get('birthday')?.hasError('required')">
+            Birthday is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+
         <mat-form-field class="example-full-width">
           <mat-label>Email</mat-label>
-          <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
-                placeholder="Ex. pat@example.com">
+          <input type="email" matInput formControlName="email" required placeholder="Ex. pat@example.com">
           <mat-hint>Errors appear instantly!</mat-hint>
-          @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
-            <mat-error>Please enter a valid email address</mat-error>
-          }
-          @if (emailFormControl.hasError('required')) {
-            <mat-error>Email is <strong>required</strong></mat-error>
-          }
+          <mat-error *ngIf="membershipForm.get('email')?.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+          <mat-error *ngIf="membershipForm.get('email')?.hasError('email')">
+            Please enter a valid email address
+          </mat-error>
         </mat-form-field>
-      </form>
-      <form class="phone">
+
         <mat-form-field class="example-full-width">
           <mat-label>Phone</mat-label>
           <span matTextPrefix>+1 &nbsp;</span>
-          <input type="tel" matInput placeholder="555-555-1234">
+          <input type="tel" matInput formControlName="phone" required placeholder="555-555-1234">
           <mat-icon matSuffix>mode_edit</mat-icon>
+          <mat-error *ngIf="membershipForm.get('phone')?.hasError('required')">
+            Phone is <strong>required</strong>
+          </mat-error>
         </mat-form-field>
-      </form>
-      <p>
-        <mat-form-field class="example-full-width">
-          <mat-label>Address</mat-label>
-          <textarea matInput placeholder="Ex. 100 Main St"></textarea>
-        </mat-form-field>
-      </p>
-      <table class="postal" cellspacing="0">
-        <tr>
-          <td>
-            <mat-form-field class="example-full-width">
-              <mat-label>Postal Code</mat-label>
-              <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="">
-            </mat-form-field>
-          </td>
-        </tr>
-      </table>
-      <section>
-        <div class="example-button-row">
-          <div class="example-flex-container">
-            <button matFab extended>
-              UPDATE
-            </button>
+
+        <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Address</mat-label>
+            <textarea matInput formControlName="address" placeholder="Ex. 100 Main St"></textarea>
+          </mat-form-field>
+        </p>
+
+        <table class="postal" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <mat-label>Postal Code</mat-label>
+                <input matInput formControlName="postalCode" maxlength="5" placeholder="Ex. 94105">
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+
+        <section>
+          <div class="example-button-row">
+            <div class="example-flex-container">
+              <button mat-fab extended color="primary" (click)="onSubmit()" [disabled]="!membershipForm.valid">
+                UPDATE
+              </button>
+            </div>
           </div>
-        </div>
-      </section>
-                    
+        </section>
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab label="Password Information">
+      <ng-template matTabContent>
+        
 
 
 
-
-
-
-    </ng-template>
-  </mat-tab>
-  <mat-tab label="Second">
-    <ng-template matTabContent>
-      Content 2 - Loaded: {{getTimeLoaded(2) | date:'medium'}}
-    </ng-template>
-  </mat-tab>
-  <mat-tab label="Third">
-    <ng-template matTabContent>
-      Content 3 - Loaded: {{getTimeLoaded(3) | date:'medium'}}
-    </ng-template>
-  </mat-tab>
-</mat-tab-group>
+        
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</form>
