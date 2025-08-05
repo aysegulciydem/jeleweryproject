@@ -1,0 +1,35 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-tab-group {
+  margin-bottom: 48px;
+}
+form{
+    padding-top: 2%;
+}
+.example-form {
+  min-width: 1050px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.example-button-row{
+    padding-left: 90%;
+    max-width: 1200px;
+    button{
+        background-color: #8EC5FF;
+        color: black;
+    }
+}
+.example-button-new{
+    padding-bottom: 2%;
+    button{
+        background-color: #8EC5FF;
+        color: black;
+    }
+}

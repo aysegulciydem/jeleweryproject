@@ -3,6 +3,7 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { AccountComponent } from './account/account.component';
 import { PersonelinformationComponent } from './personelinformation/personelinformation.component';
+import { MessageComponent } from './message/message.component';
 
 @Component({
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -12,7 +13,8 @@ import { PersonelinformationComponent } from './personelinformation/personelinfo
         CommonModule,
         FavoriteComponent,
         AccountComponent,
-        PersonelinformationComponent
+        PersonelinformationComponent,
+        MessageComponent
     ],
     templateUrl: './favorite-page.component.html',
     styleUrl: './favorite-page.component.css'

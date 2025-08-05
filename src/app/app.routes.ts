@@ -7,6 +7,7 @@ import { FavoriteComponent } from "./pages/favorite-page/favorite/favorite.compo
 import { FavoritePageComponent } from "./pages/favorite-page/favorite-page.component";
 import { AccountComponent } from "./pages/favorite-page/account/account.component";
 import { PersonelinformationComponent } from "./pages/favorite-page/personelinformation/personelinformation.component";
+import { MessageComponent } from "./pages/favorite-page/message/message.component";
 
 export const routes: Routes = [
     {
@@ -77,7 +78,13 @@ export const routes: Routes = [
                 'path': 'personelinformation',
                 component: PersonelinformationComponent,
                 
-            }
+            },
+            {
+                'path': 'message',
+                component: MessageComponent,
+                
+            },
+
             
         ]
 
