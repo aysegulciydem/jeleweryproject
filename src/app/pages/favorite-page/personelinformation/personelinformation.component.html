@@ -5,7 +5,7 @@
         <table class="example-full-width" cellspacing="0">
           <tr>
             <td>
-              <mat-form-field class="example-full-width-table">
+              <mat-form-field class="example-full-width-table"appearance="outline">
                 <mat-label>Name</mat-label>
                 <input matInput formControlName="name" required>
                 <mat-error *ngIf="membershipForm.get('name')?.hasError('required')">
@@ -19,7 +19,7 @@
         <table class="example-full-width" cellspacing="0">
           <tr>
             <td>
-              <mat-form-field class="example-full-width-table">
+              <mat-form-field class="example-full-width-table" appearance="outline">
                 <mat-label>Last Name</mat-label>
                 <input matInput formControlName="lastName" required>
                 <mat-error *ngIf="membershipForm.get('lastName')?.hasError('required')">
@@ -30,7 +30,7 @@
           </tr>
         </table>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Choose a birthday</mat-label>
           <input matInput [matDatepicker]="picker" formControlName="birthday" required>
           <mat-hint>MM/DD/YYYY</mat-hint>
@@ -41,7 +41,7 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="example-full-width" appearance="outline">
           <mat-label>Email</mat-label>
           <input type="email" matInput formControlName="email" required placeholder="Ex. pat@example.com">
           <mat-hint>Errors appear instantly!</mat-hint>
@@ -53,7 +53,7 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="example-full-width" appearance="outline">
           <mat-label>Phone</mat-label>
           <span matTextPrefix>+1 &nbsp;</span>
           <input type="tel" matInput formControlName="phone" required placeholder="555-555-1234">
@@ -64,7 +64,7 @@
         </mat-form-field>
 
         <p>
-          <mat-form-field class="example-full-width">
+          <mat-form-field class="example-full-width" appearance="outline">
             <mat-label>Address</mat-label>
             <textarea matInput formControlName="address" placeholder="Ex. 100 Main St"></textarea>
           </mat-form-field>
@@ -73,7 +73,7 @@
         <table class="postal" cellspacing="0">
           <tr>
             <td>
-              <mat-form-field class="example-full-width">
+              <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>Postal Code</mat-label>
                 <input matInput formControlName="postalCode" maxlength="5" placeholder="Ex. 94105">
               </mat-form-field>
@@ -92,14 +92,41 @@
         </section>
       </ng-template>
     </mat-tab>
-
     <mat-tab label="Password Information">
       <ng-template matTabContent>
-        
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Current Password</mat-label>
+          <input matInput [type]="hideCurrent ? 'password' : 'text'" [(ngModel)]="currentPassword">
+          <button mat-icon-button matSuffix (click)="hideCurrent = !hideCurrent" [attr.aria-label]="'Toggle password visibility'" [attr.aria-pressed]="!hideCurrent">
+            <mat-icon>{{hideCurrent ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
 
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>New Password</mat-label>
+          <input matInput [type]="hideNew ? 'password' : 'text'" [(ngModel)]="newPassword">
+          <button mat-icon-button matSuffix (click)="hideNew = !hideNew" [attr.aria-label]="'Toggle password visibility'" [attr.aria-pressed]="!hideNew">
+            <mat-icon>{{hideNew ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
 
-
-        
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>New Password Again</mat-label>
+          <input matInput [type]="hideNewAgain ? 'password' : 'text'" [(ngModel)]="newPasswordAgain">
+          <button mat-icon-button matSuffix (click)="hideNewAgain = !hideNewAgain" [attr.aria-label]="'Toggle password visibility'" [attr.aria-pressed]="!hideNewAgain">
+            <mat-icon>{{hideNewAgain ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>  
+        <section>
+          <div class="example-button-row">
+            <div class="example-flex-container">
+              <button mat-fab extended color="primary" (click)="onSubmit()" [disabled]="!membershipForm.valid">
+                UPDATE
+              </button>
+            </div>
+          </div>
+        </section>
+              
       </ng-template>
     </mat-tab>
   </mat-tab-group>

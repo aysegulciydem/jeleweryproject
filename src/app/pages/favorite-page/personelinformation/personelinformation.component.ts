@@ -62,5 +62,12 @@ export class PersonelinformationComponent {
       console.log('Form is not valid!');
     }
   }
+  hideCurrent = true;
+  hideNew = true;
+  hideNewAgain = true;
+
+  currentPassword = '';
+  newPassword = '';
+  newPasswordAgain = '';
 
 }

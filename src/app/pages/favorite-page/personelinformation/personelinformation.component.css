@@ -10,6 +10,7 @@ ng-template{
     height: 100%;
     display: flex;
     flex-direction: column;
+    top: 2%;
 }
 
 mat-form-field {
@@ -102,4 +103,8 @@ section {
         color: black;
       }
     }
+}
+.full-width {
+  width: 39.5%;
+  padding-top: 1%;
 }
