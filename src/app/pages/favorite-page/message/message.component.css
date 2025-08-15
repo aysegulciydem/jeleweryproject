@@ -8,6 +8,7 @@
 }
 form{
     padding-top: 2%;
+    padding-bottom: 10%;
 }
 .example-form {
   min-width: 1050px;
@@ -32,4 +33,11 @@ form{
         background-color: #8EC5FF;
         color: black;
     }
+}
+.table-container{
+  width:57.5%;
+  padding-top: 2%;
+  table{
+    border: none;
+  }
 }

@@ -1,54 +1,73 @@
 <div class="main-container">
-    <div class="first-bar">
-        <section>
-            <div class="example-button-new">
-                <div class="example-flex-container">
-                <button matFab extended>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000"><path d="M446.67-446.67H200v-66.66h246.67V-760h66.66v246.67H760v66.66H513.33V-200h-66.66v-246.67Z"/></svg>
-                    New Message
+  <div class="first-bar">
+    <section>
+      <div class="example-button-new">
+        <div class="example-flex-container">
+          <!-- New Message -->
+          <button matFab extended (click)="openForm()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000">
+              <path d="M446.67-446.67H200v-66.66h246.67V-760h66.66v246.67H760v66.66H513.33V-200h-66.66v-246.67Z"/>
+            </svg>
+            New Message
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+    <mat-tab label="My Message" class="mymessage">
+      <ng-container *ngIf="showForm; else tableView">
+        <form class="example-form" #form="ngForm" (ngSubmit)="sendMessage(form)">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Subject</mat-label>
+            <input matInput name="subject" ngModel required>
+            <mat-error *ngIf="form.submitted && form.controls['subject']?.invalid">
+              Subject is required.
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Type your message here!</mat-label>
+            <textarea matInput name="message" ngModel required></textarea>
+            <mat-error *ngIf="form.submitted && form.controls['message']?.invalid">
+              Message is required.
+            </mat-error>
+          </mat-form-field>
+          <section>
+            <div class="example-button-row">
+              <div class="example-flex-container">
+                <button matFab extended type="submit">
+                  SEND
                 </button>
-                </div>
+              </div>
             </div>
-        </section>
+          </section>
+        </form>
+      </ng-container>
 
-    </div>
-    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
-        <mat-tab label="My Message">
-            <form class="example-form" #form="ngForm">
-            
-            <mat-form-field class="example-full-width" appearance="outline">
-                <mat-label>Subject</mat-label>
-                <input matInput name="subject" ngModel required>
-                <mat-error *ngIf="form.submitted && form.controls['subject']?.invalid">
-                Subject is required.
-                </mat-error>
-            </mat-form-field>
-
-            <mat-form-field class="example-full-width" appearance="outline">
-                <mat-label>Type your message here!</mat-label>
-                <textarea matInput name="message" ngModel required></textarea>
-                <mat-error *ngIf="form.submitted && form.controls['message']?.invalid">
-                Message is required.
-                </mat-error>
-            </mat-form-field>
-
-                    <section>
-                <div class="example-button-row">
-                    <div class="example-flex-container">
-                    <button matFab extended>
-                        SEND
-                    </button>
-                    
-                    
-                    </div>
-                </div>
-                </section>
-
-            </form>
-        </mat-tab>
-    </mat-tab-group>
-
+      <ng-template #tableView>
+        <div *ngIf="messages?.length > 0" class="table-container">
+          <table border="0" cellpadding="10" cellspacing="0" width="100%">
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Message</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr  *ngFor="let msg of messages; let i = index">
+                <td>{{ msg.subject }}</td>
+                <td>{{ msg.message }}</td>
+                <td>{{ msg.date | date:'short' }}</td>
+                <button style="border: none; background-color: white;" (click)="deleteMessage(i)">
+                 <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
+                </button>
+              </tr>
+            </tbody>
+          </ table>
+        </div>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
 </div>
-
-
-

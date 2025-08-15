@@ -61,15 +61,12 @@ export class ProductListComponent implements OnInit{
       this.productlistservice.updateBasketItem(item);
     }
   }
-  
   getSubtotal(): number {
     return this.basketItems.reduce((total, item) => {
       const quantity = item.quantity || 1;
       return total + (item.price * quantity);
     }, 0);
   }
-   
-  
   getShipping(): number {
     console.log(this.shipping);
     return this.shipping;  
