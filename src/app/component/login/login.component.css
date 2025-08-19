@@ -1,51 +1,54 @@
+.main-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
-  .example-card{
-    max-width: 90rem !important;
-  }
-  .example-card img{
-    width: 40%;
-    height: 100% !important;
-    border-radius: 1rem;
-  }
-  .example-container mat-form-field + mat-form-field {
-    margin-left: 8px;
-  }
-  .user-form{
-    margin-top: 8rem;
-    margin-left: 5rem;
-  }
+  /* Arka plan: Desen + renk */
+  background-color: #f0f4f8; /* Açık, sade bir temel rengi */
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/geometric-leaves.png");
+  /* Alternatif bir yol: Base64-encoded SVG veya JPG/PNG resmi olabilir. */
 
- .example-container mat-form-field + mat-form-field {
-  margin-left: 8px;
-}
-section {
-  display: table;
-}
-
-.example-label {
-  display: table-cell;
-  font-size: 14px;
-  margin-left: 8px;
-  min-width: 120px;
-}
-
-.example-button-row {
-  display: table-cell;
-  max-width: 600px;
-}
-
-.example-button-row .mat-mdc-button-base {
-  margin: 8px 8px 8px 0;
+  background-repeat: repeat;
+  background-size: auto; /* Gerekirse belirli boyuta özelleştirilebilir, örn: '50px 50px' */
 }
 
 
+.example-card {
+  width: 550px;
+  padding: 20px;
+}
 
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
+.full-width {
+  width: 100%;
+}
 
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.forgot-link {
+  color: #1976d2;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
 
+.forgot-link:hover {
+  text-decoration: underline;
+}
 
+.form-actions {
+  margin-top: 10px;
+}
+
+.full-width-btn {
+  width: 100%;
+}

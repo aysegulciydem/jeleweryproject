@@ -1,51 +1,63 @@
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-  <mat-card class="example-card" appearance="outlined">
-    <mat-card-content class="user-form">
-      <p><i class="fa-duotone fa-solid fa-user"></i>&nbsp;Account</p>
-      <div class="example-container">
-        <mat-form-field>
-          <mat-label>Enter your email</mat-label>
+<div class="main-container">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <mat-card class="example-card" appearance="outlined">
+      <mat-card-content class="user-form">
+        <p class="form-title">
+          <i class="fa-duotone fa-solid fa-user"></i>&nbsp;Account
+        </p>
+
+        <!-- Email -->
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Email</mat-label>
           <input
             matInput
             type="email"
             formControlName="email"
-
             (blur)="errorMessage()"
             required
           />
-          @if (email.invalid) {
-            <mat-error>
-              {{errorMessage()}}
-            </mat-error>
-
-          }
+          <mat-error *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+            {{ errorMessage() }}
+          </mat-error>
         </mat-form-field>
 
-      </div>
-      <div class="example-container-password">
-        <mat-form-field>
-          <mat-label>Enter your password</mat-label>
+        <!-- Password -->
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Password</mat-label>
           <input
-          type="password"
-          formControlName="password"
-          matInput [type]="hide() ? '
-          password' : 'text'" />
+            matInput
+            [type]="hide() ? 'password' : 'text'"
+            formControlName="password"
+            required
+          />
           <button
             mat-icon-button
             matSuffix
+            type="button"
             (click)="clickEvent($event)"
-            [attr.aria-label]="'Hide password'"
-            [attr.aria-pressed]="hide()"
           >
-            <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+            <mat-icon>{{ hide() ? 'visibility_off' : 'visibility' }}</mat-icon>
           </button>
+          <mat-error *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+            Password is required
+          </mat-error>
         </mat-form-field>
-      </div>
-      <section>
-        <div class="example-button-row">
-          <button mat-raised-button>Sign in</button>
+
+        <!-- Remember me + Forgot password -->
+        <div class="form-options">
+          <mat-checkbox formControlName="rememberMe">Remember me</mat-checkbox>
+          <a href="#" class="forgot-link">Forgot password?</a>
         </div>
-      </section>
-    </mat-card-content>
-  </mat-card>
-</form>
+        
+
+        <!-- Submit Button -->
+        <div class="form-actions">
+          <button mat-raised-button color="primary" type="submit" class="full-width-btn">
+            Sign in
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </form>
+</div>
+
