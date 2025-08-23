@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { threadId } from 'node:worker_threads';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 
@@ -28,23 +29,20 @@ import { threadId } from 'node:worker_threads';
     MatIconModule,
     MatDividerModule,
     MatError,
+    MatCheckboxModule
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']   // ✅ düzelttim
+  styleUrls: ['./login.component.css']   
 })
 export class LoginComponent {
   loginForm: FormGroup;
-  hidePassword: boolean = true;  // Başlangıç değeri true (password gizli)
-
-
+  hidePassword: boolean = true;  
   readonly email = new FormControl('', [Validators.required, Validators.email]);
   errorMessage = signal('');
 
   constructor(private fb: FormBuilder) {
-    merge(this.email.statusChanges, this.email.valueChanges)
-      .pipe(takeUntilDestroyed())
-      .subscribe(() => this.updateErrorMessage());
+    merge(this.email.statusChanges, this.email.valueChanges) .pipe(takeUntilDestroyed()).subscribe(() => this.updateErrorMessage());
 
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],

@@ -5,7 +5,6 @@
         <p class="form-title">
           <i class="fa-duotone fa-solid fa-user"></i>&nbsp;Account
         </p>
-
         <!-- Email -->
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Email</mat-label>
@@ -20,7 +19,6 @@
             {{ errorMessage() }}
           </mat-error>
         </mat-form-field>
-
         <!-- Password -->
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Password</mat-label>
@@ -42,14 +40,11 @@
             Password is required
           </mat-error>
         </mat-form-field>
-
         <!-- Remember me + Forgot password -->
         <div class="form-options">
           <mat-checkbox formControlName="rememberMe">Remember me</mat-checkbox>
           <a href="#" class="forgot-link">Forgot password?</a>
         </div>
-        
-
         <!-- Submit Button -->
         <div class="form-actions">
           <button mat-raised-button color="primary" type="submit" class="full-width-btn">
