@@ -12,11 +12,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { threadId } from 'node:worker_threads';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-
-
-
-@Component({
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+ @Component({
   selector: 'app-login',
+  standalone: true,
   imports: [
     CommonModule,
     RouterModule,
@@ -29,7 +29,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatIconModule,
     MatDividerModule,
     MatError,
-    MatCheckboxModule
+    MatCheckboxModule,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './login.component.html',
@@ -41,7 +41,7 @@ export class LoginComponent {
   readonly email = new FormControl('', [Validators.required, Validators.email]);
   errorMessage = signal('');
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {
     merge(this.email.statusChanges, this.email.valueChanges) .pipe(takeUntilDestroyed()).subscribe(() => this.updateErrorMessage());
 
     this.loginForm = this.fb.group({
@@ -72,13 +72,26 @@ export class LoginComponent {
   onSubmit() {
     if (this.loginForm.valid) {
       const { email, password, rememberMe } = this.loginForm.value;
-      console.log('Email:', email);
-      console.log('Password:', password);
-      console.log('Remember Me:', rememberMe);
-    } else {
-      console.log('Form is invalid, gerekli alanları doldurunuz.');
+      const apiData={
+        username: email,
+        password,
+        rememberMe,
+        expiresInMins: 60
+      };
+      this.http.post('https://dummyjson.com/auth/login', apiData).subscribe({
+        next: (res: any) => {
+          console.log('Login successful:', res);
+          localStorage.setItem('token', res.accessToken);
+          this.router.navigate(['/home']);
+        },
+        error: err => {
+          console.error('Login failed:', err);
+          alert('Login failed, check credentials.');
+        }
+      });
+ 
+  
     }
-   
-  }
+  } 
 }
 
