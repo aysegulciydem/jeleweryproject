@@ -5,6 +5,7 @@ import { RingsComponent } from './pages/rings/rings.component';
 import { routes } from './app.routes';
 import { CommonModule } from '@angular/common';
 import { InformationComponent } from './component/information/information.component';
+import { AuthGuard } from './component/login/auth/auth.guard';
 
 @Component({
     schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
@@ -16,7 +17,8 @@ import { InformationComponent } from './component/information/information.compon
         RouterModule,
         NavbarComponent,
         CommonModule,
-        InformationComponent
+        InformationComponent,
+        
     ]
 })
 

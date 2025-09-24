@@ -8,6 +8,7 @@ import { FavoritePageComponent } from "./pages/favorite-page/favorite-page.compo
 import { AccountComponent } from "./pages/favorite-page/account/account.component";
 import { PersonelinformationComponent } from "./pages/favorite-page/personelinformation/personelinformation.component";
 import { MessageComponent } from "./pages/favorite-page/message/message.component";
+import { AuthGuard } from "./component/login/auth/auth.guard";
 
 export const routes: Routes = [
     {
@@ -30,7 +31,9 @@ export const routes: Routes = [
     },
     {
         'path': 'rings',
-         component: RingsComponent,
+        component: RingsComponent,
+        canActivate: [AuthGuard],
+
     },
     {
         'path': 'necklaces',
@@ -61,8 +64,8 @@ export const routes: Routes = [
         component:FavoritePageComponent,
         children: [
             {
-                'path': '', // Boş path
-                redirectTo: 'favorite', // favorite'a yönlendir
+                'path': '', 
+                redirectTo: 'favorite', 
                 pathMatch: 'full'
             },
             {
@@ -86,7 +89,8 @@ export const routes: Routes = [
             },
 
             
-        ]
+        ],
+        canActivate: [AuthGuard]
 
     },
     

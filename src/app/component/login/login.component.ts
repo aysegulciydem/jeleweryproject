@@ -13,7 +13,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { threadId } from 'node:worker_threads';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, } from '@angular/router';
  @Component({
   selector: 'app-login',
   standalone: true,
@@ -40,9 +40,11 @@ export class LoginComponent {
   hidePassword: boolean = true;  
   readonly email = new FormControl('', [Validators.required, Validators.email]);
   errorMessage = signal('');
-
-  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {
-    merge(this.email.statusChanges, this.email.valueChanges) .pipe(takeUntilDestroyed()).subscribe(() => this.updateErrorMessage());
+  returnUrl: string;
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router, private route: ActivatedRoute) {
+    merge(this.email.statusChanges, this.email.valueChanges) 
+    .pipe(takeUntilDestroyed())
+    .subscribe(() => this.updateErrorMessage());
 
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -68,30 +70,27 @@ export class LoginComponent {
       this.errorMessage.set('');
     }
   }
-
+  
+  ngOnInit() {
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+  }
   onSubmit() {
     if (this.loginForm.valid) {
       const { email, password, rememberMe } = this.loginForm.value;
-      const apiData={
-        username: email,
-        password,
-        rememberMe,
-        expiresInMins: 60
-      };
-      this.http.post('https://dummyjson.com/auth/login', apiData).subscribe({
-        next: (res: any) => {
-          console.log('Login successful:', res);
-          localStorage.setItem('token', res.accessToken);
-          this.router.navigate(['/home']);
-        },
-        error: err => {
-          console.error('Login failed:', err);
-          alert('Login failed, check credentials.');
+      if (email === 'aysegulciydem@gmail.com' && password === '123456') {
+        if (rememberMe) {
+          localStorage.setItem('isLoggedIn', 'true');
+        } else {
+          sessionStorage.setItem('isLoggedIn', 'true');
         }
-      });
- 
-  
+
+        this.router.navigate([this.returnUrl]);
+      } else {
+        alert('Invalid email or password');
+      }
     }
   } 
+  
 }
+
 

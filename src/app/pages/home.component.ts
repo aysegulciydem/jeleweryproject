@@ -19,7 +19,7 @@ import { InformationComponent } from '../component/information/information.compo
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
     imports: [RouterModule, MatCardModule, MatButtonModule, MatDividerModule,
-        CommonModule, CarouselComponent, DiscountcarouselComponent]
+        CommonModule, CarouselComponent, DiscountcarouselComponent, ]
 })
 export class HomeComponent {
   
