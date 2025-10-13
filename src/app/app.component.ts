@@ -6,6 +6,7 @@ import { routes } from './app.routes';
 import { CommonModule } from '@angular/common';
 import { InformationComponent } from './component/information/information.component';
 import { AuthGuard } from './component/login/auth/auth.guard';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
     schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
@@ -18,6 +19,7 @@ import { AuthGuard } from './component/login/auth/auth.guard';
         NavbarComponent,
         CommonModule,
         InformationComponent,
+        
         
     ]
 })

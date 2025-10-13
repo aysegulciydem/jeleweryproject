@@ -62,6 +62,7 @@ export const routes: Routes = [
     {
         'path': 'favorite-page',
         component:FavoritePageComponent,
+        canActivate: [AuthGuard],
         children: [
             {
                 'path': '', 
@@ -90,7 +91,7 @@ export const routes: Routes = [
 
             
         ],
-        canActivate: [AuthGuard]
+    
 
     },
     

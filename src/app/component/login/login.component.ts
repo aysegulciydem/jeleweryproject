@@ -28,8 +28,8 @@ import { Router, ActivatedRoute, } from '@angular/router';
     ReactiveFormsModule,
     MatIconModule,
     MatDividerModule,
-    MatError,
     MatCheckboxModule,
+   
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './login.component.html',
@@ -40,8 +40,14 @@ export class LoginComponent {
   hidePassword: boolean = true;  
   readonly email = new FormControl('', [Validators.required, Validators.email]);
   errorMessage = signal('');
-  returnUrl: string;
-  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router, private route: ActivatedRoute) {
+  private returnUrl: string = '/';
+  
+  constructor(
+    private fb: FormBuilder, 
+    private http: HttpClient, 
+    private router: Router, 
+    private route: ActivatedRoute
+  ) {
     merge(this.email.statusChanges, this.email.valueChanges) 
     .pipe(takeUntilDestroyed())
     .subscribe(() => this.updateErrorMessage());
@@ -84,7 +90,7 @@ export class LoginComponent {
           sessionStorage.setItem('isLoggedIn', 'true');
         }
 
-        this.router.navigate([this.returnUrl]);
+        this.router.navigateByUrl(this.returnUrl);
       } else {
         alert('Invalid email or password');
       }
