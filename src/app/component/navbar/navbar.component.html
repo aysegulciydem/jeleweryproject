@@ -16,7 +16,25 @@
         <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
       </div>
       <button mat-button routerLink="/favorite-page" (click)="redirectFavoritePage()"><i class="fa-regular fa-heart"></i></button>
-      <button mat-button (click)="redirectShoppingCardPage()"><i class="fa-solid fa-bag-shopping"></i></button>
+
+
+
+      <div class="demo-section">
+        <mat-icon 
+          [matBadge]="(productListService.itemCount$ | async) || 0" 
+          [matBadgeHidden]="((productListService.itemCount$ | async) || 0) === 0"
+          matBadgeColor="primary" 
+          aria-hidden="false" 
+          (click)="redirectShoppingCardPage()"
+        >
+          <i class="fa-solid fa-bag-shopping"></i>
+        </mat-icon>
+      </div>
+
+
+
+
+
       <button mat-button (click)="goToLoginPage()">{{Constant.titles.logout}}</button>
     </div>
   </mat-toolbar>

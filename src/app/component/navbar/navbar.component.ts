@@ -13,7 +13,8 @@ import { ProductlistserviceService } from '../../services/productlistservice.ser
 import {MatBadgeModule} from '@angular/material/badge';
 import{MatMenuModule, MatMenuTrigger} from '@angular/material/menu';
 import {MatTab, MatTabGroup} from "@angular/material/tabs";
-import {RingsComponent} from "../../pages/rings/rings.component";
+import { RingsComponent } from '../../pages/rings/rings.component';
+
 @Component({
     schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
     selector: 'app-navbar',
@@ -25,9 +26,12 @@ export class NavbarComponent implements OnInit {
   protected readonly Constant = Constant;
   value = '';
   itemCount:number = 0;
+  hidden = false;
+  currentProductsCount = 0;
+
   constructor(
     private router:Router,
-    private productListService: ProductlistserviceService,
+    public productListService: ProductlistserviceService,
   ){}
   ngOnInit(): void {
     this.productListService.itemCount$.subscribe(count => {
@@ -88,5 +92,9 @@ cancelCloseTimer() {
     }
 
 
+  }
+
+  toggleBadgeVisibility() {
+    this.hidden = !this.hidden;
   }
 }
