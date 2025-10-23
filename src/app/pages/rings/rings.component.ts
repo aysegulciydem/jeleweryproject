@@ -31,7 +31,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import{MatDrawer, MatSidenav} from '@angular/material/sidenav';
 import { MultiCheckboxComponent } from '../../component/multi-checkbox/multi-checkbox.component';
-/** Error when invalid control is dirty, touched, or submitted. */
+import { MatSnackBar } from '@angular/material/snack-bar';
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
@@ -94,6 +94,7 @@ export class RingsComponent{
     private readonly matDialog: MatDialog,
     private readonly router: Router,
     private readonly productlistservice: ProductlistserviceService,
+    private snackBar: MatSnackBar,
   )
   {
     this.products.forEach(product => {
@@ -102,10 +103,12 @@ export class RingsComponent{
   }
   addToCard(product: Product): void {
     this.productlistservice.addToBasket(product);
-    const goToCart = confirm("Product added to basket! Would you like to go to basket?");
-    if(goToCart) {
-      this.router.navigate(['/productList']);
-    }
+    this.snackBar.open('Product added to shopping list!', 'Close', {
+      duration: 2000,
+      verticalPosition: 'top',          
+      horizontalPosition: 'center',
+      panelClass: ['custom-snackbar']
+    });
   }
   @ViewChild('drawer') drawer!: MatDrawer;
   toggleFavorite(product: Product): void {

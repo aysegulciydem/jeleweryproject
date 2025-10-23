@@ -89,7 +89,6 @@ export class LoginComponent {
         } else {
           sessionStorage.setItem('isLoggedIn', 'true');
         }
-
         this.router.navigateByUrl(this.returnUrl);
       } else {
         alert('Invalid email or password');

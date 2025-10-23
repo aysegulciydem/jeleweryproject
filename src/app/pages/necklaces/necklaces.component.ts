@@ -32,6 +32,7 @@ import{MatDrawer} from '@angular/material/sidenav';
 import { ProductlistserviceService } from '../../services/productlistservice.service';
 import { MultiCheckboxComponent } from '../../component/multi-checkbox/multi-checkbox.component';
 import { NecklacesDetailDialogComponent } from './necklaces-detail-dialog/necklaces-detail-dialog.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -91,6 +92,7 @@ protected readonly Constant = Constant;
     private readonly matDialog: MatDialog,
     private readonly router: Router,
     private readonly productListservice: ProductlistserviceService,
+    private snackBar: MatSnackBar,
   ){
     this.necklaces = []; // diziyi tanımla
     this.productListservice.getNecklaces().subscribe((data: Product[]) => {
@@ -100,14 +102,17 @@ protected readonly Constant = Constant;
     });
   });
 }
-  ngOnInit(): void {}
+ngOnInit(): void {}
   addToCard(product: Product): void {
     this.productListservice.addToBasket(product);
-    const goToCart = confirm("Product added to basket! Would you like to go to basket?");
-    if(goToCart) {
-      this.router.navigate(['/productList']);
-    }
+    this.snackBar.open('Product added to shopping list!', 'Close', {
+      duration: 2000,
+      verticalPosition: 'top',          
+      horizontalPosition: 'center',
+      panelClass: ['custom-snackbar']
+    });
   }
+
   openProductDetailDialogComponent(product: Product): void {
     this.matDialog.open(NecklacesDetailDialogComponent,
       {

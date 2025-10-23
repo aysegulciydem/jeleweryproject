@@ -6,7 +6,8 @@
     "types": [
       "node",
       "@angular/localize"
-    ]
+    ],
+    "lib": ["es2018", "dom"]
   },
   "files": [
     "src/main.ts",

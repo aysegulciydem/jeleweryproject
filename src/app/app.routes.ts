@@ -72,6 +72,7 @@ export const routes: Routes = [
             {
                 'path': 'favorite',
                 component: FavoriteComponent,
+                canActivate: [AuthGuard],
             },
             {
                 'path': 'account',
@@ -87,12 +88,8 @@ export const routes: Routes = [
                 'path': 'message',
                 component: MessageComponent,
                 
-            },
-
-            
+            },            
         ],
-    
-
     },
     
 
