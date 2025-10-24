@@ -32,6 +32,7 @@ import{MatDrawer} from '@angular/material/sidenav';
 import { EarringsDetailDialogComponent } from './earrings-detail-dialog/earrings-detail-dialog.component';
 import { ProductlistserviceService } from '../../services/productlistservice.service';
 import { MultiCheckboxComponent } from '../../component/multi-checkbox/multi-checkbox.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
@@ -85,15 +86,13 @@ export class EarringsComponent implements OnInit {
   selected = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
   selectFormControl = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
   matcher = new MyErrorStateMatcher();
-  earrings: Product[] = [];
- 
-
-  
+  earrings: Product[] = [];  
   products: any;
   constructor(
     private readonly matDialog: MatDialog,
     private readonly router: Router,
     private readonly productListservice: ProductlistserviceService,
+    private snackBar: MatSnackBar,
   ){
     this.earrings = []; // diziyi tanımla
     this.productListservice.getEarrings().subscribe((data: Product[]) => {
@@ -106,10 +105,12 @@ export class EarringsComponent implements OnInit {
   ngOnInit(): void {}
   addToCard(product: Product): void {
     this.productListservice.addToBasket(product);
-    const goToCart = confirm("Product added to basket! Would you like to go to basket?");
-    if(goToCart) {
-      this.router.navigate(['/productList']);
-    }
+    this.snackBar.open('Product added to shopping list!', 'Close', {
+      duration: 2000,
+      verticalPosition: 'top',          
+      horizontalPosition: 'center',
+      panelClass: ['custom-snackbar']
+    });
   }
   openProductDetailDialogComponent(product: Product): void {
     this.matDialog.open(EarringsDetailDialogComponent,

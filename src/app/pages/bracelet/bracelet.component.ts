@@ -34,6 +34,7 @@ import { BraceletDetailDialogComponent } from './bracelet-detail-dialog/bracelet
 import { ProductlistserviceService } from '../../services/productlistservice.service';
 import { MultiCheckboxComponent } from '../../component/multi-checkbox/multi-checkbox.component';
 import { BehaviorSubject } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
@@ -93,6 +94,7 @@ export class BraceletComponent {
     private readonly matDialog: MatDialog,
     private readonly router: Router,
     private readonly productListservice: ProductlistserviceService,
+    private snackBar: MatSnackBar,
   ){
     this.bracelets = [];
     this.productListservice.getBracelets().subscribe((data: Product[]) => {
@@ -107,10 +109,12 @@ export class BraceletComponent {
 
   addToCard(product: Product): void {
     this.productListservice.addToBasket(product);
-    const goToCart = confirm("Product added to basket! Would you like to go to basket?");
-    if(goToCart) {
-      this.router.navigate(['/productList']);
-    }
+    this.snackBar.open('Product added to shopping list!', 'Close', {
+      duration: 2000,
+      verticalPosition: 'top',          
+      horizontalPosition: 'center',
+      panelClass: ['custom-snackbar']
+    });
   }
   openProductDetailDialogComponent(product: Product): void {
     this.matDialog.open(BraceletDetailDialogComponent,
