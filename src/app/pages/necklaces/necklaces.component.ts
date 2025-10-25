@@ -105,14 +105,13 @@ protected readonly Constant = Constant;
 ngOnInit(): void {}
   addToCard(product: Product): void {
     this.productListservice.addToBasket(product);
-    this.snackBar.open('Product added to shopping list!', 'Close', {
+    this.snackBar.open('Product added to favorite list!', 'Close', {
       duration: 2000,
       verticalPosition: 'top',          
       horizontalPosition: 'center',
       panelClass: ['custom-snackbar']
     });
   }
-
   openProductDetailDialogComponent(product: Product): void {
     this.matDialog.open(NecklacesDetailDialogComponent,
       {
@@ -121,11 +120,15 @@ ngOnInit(): void {}
       }
     );
   }
-
   @ViewChild('drawer') drawer!: MatDrawer;
   toggleFavorite(product: Product): void {
-    console.log('Favoriye ekleniyor:', product);
     this.productListservice.addToFavorite(product);
+     this.snackBar.open('Product added to favorite list!', 'Close', {
+      duration: 2000,
+      verticalPosition: 'top',          
+      horizontalPosition: 'center',
+      panelClass: ['custom-snackbar']
+    });
     this.router.navigate(['favorite-page', 'favorite']);
   }
   toggleDrawer() {

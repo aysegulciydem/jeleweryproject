@@ -94,8 +94,8 @@ export const  products: Product[] = [
       description: '0.55 CT Multicolor Sapphire and Brown Diamond Ring',
       price: 175,
       imageUrl: [
-        'https://www.nevjewellery.com/055-ct-multicolor-sap…lored-gemstone-rings-nev-jewellery-14374-46-B.jpg',
-        'https://www.nevjewellery.com/055-ct-multicolor-saf…k-renkli-tasli-yuzuk-nev-jewellery-14370-46-O.jpg'
+        'https://optimage.nevjewellery.com/product/cache/1000x1000_055-ct-multicolor-sapphire-and-brown-diamond-ring-colored-gemstone-rings-nev-jewellery-28182-46-B.webp?461',
+        'https://optimage.nevjewellery.com/product/cache/1000x1000_055-ct-multicolor-sapphire-and-brown-diamond-ring-colored-gemstone-rings-nev-jewellery-14372-46-B.webp?461'
       ],
       quantity: 0,
       count: 0,

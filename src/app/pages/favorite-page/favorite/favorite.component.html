@@ -1,11 +1,21 @@
 <div class="main-container">
   <mat-toolbar class="back">
-    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#0e0e0f"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"/></svg>
-    <span>{{Constant.head.myfavourties}}</span>
-    <button (click)="backToPage()" >
-      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#0e0e0f"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
-      <p>BACK</p>
-    </button>
+    <div class="back-first">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px"  viewBox="0 -960 960 960" width="30px" fill="#0e0e0f"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"/></svg>
+      <span>{{Constant.head.myfavourties}}</span>
+    </div>
+    <section (click)="backToPage()">
+      <div class="example-button-row">
+        <div class="example-flex-container">
+          <a matFab extended routerLink=".">
+            <mat-icon>
+              <svg xmlns="http://www.w3.org/2000/svg" height="70x" top="0" viewBox="0 -960 960 960" width="20px" fill="#0e0e0f"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
+            </mat-icon>
+            BACK
+          </a>
+        </div>
+      </div>
+    </section>
   </mat-toolbar>
   <hr>
   <div class="add-product" *ngIf="favoriteItems.length > 0; else noFavorites" >
@@ -18,10 +28,10 @@
       </div>
 
       <div class="info-container">
-        <p style="font-weight: 500">{{product.name}}</p>
-        <p style="color: #005cbb; font-weight: 500">{{product.price}} $</p>
+        <p class="product-name">{{product.name}}</p>
+        <p class="product-price">{{product.price}} $</p>
       </div>
-      <button class="trash" mat-icon-button (click)="removeProductFromFavorite(product)">
+      <button class="trash" mat-icon-button (click)="removeProductFromFavorite(product)" >
        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 32 32" style="padding-top: 2px;">
           <path d="M 15 4 C 14.476563 4 13.941406 4.183594 13.5625 4.5625 C 13.183594 4.941406 13 5.476563 13 6 L 13 7 L 7 7 L 7 9 L 8 9 L 8 25 C 8 26.644531 9.355469 28 11 28 L 23 28 C 24.644531 28 26 26.644531 26 25 L 26 9 L 27 9 L 27 7 L 21 7 L 21 6 C 21 5.476563 20.816406 4.941406 20.4375 4.5625 C 20.058594 4.183594 19.523438 4 19 4 Z M 15 6 L 19 6 L 19 7 L 15 7 Z M 10 9 L 24 9 L 24 25 C 24 25.554688 23.554688 26 23 26 L 11 26 C 10.445313 26 10 25.554688 10 25 Z M 12 12 L 12 23 L 14 23 L 14 12 Z M 16 12 L 16 23 L 18 23 L 18 12 Z M 20 12 L 20 23 L 22 23 L 22 12 Z"></path>
         </svg> 

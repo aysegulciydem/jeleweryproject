@@ -19,22 +19,16 @@
 
 
 
-      <div class="demo-section">
+      <div class="shoppingcard">
         <mat-icon 
           [matBadge]="(productListService.itemCount$ | async) || 0" 
           [matBadgeHidden]="((productListService.itemCount$ | async) || 0) === 0"
           matBadgeColor="primary" 
           aria-hidden="false" 
-          (click)="redirectShoppingCardPage()"
-        >
+          (click)="redirectShoppingCardPage()">
           <i class="fa-solid fa-bag-shopping"></i>
         </mat-icon>
       </div>
-
-
-
-
-
       <button mat-button (click)="goToLoginPage()">{{Constant.titles.logout}}</button>
     </div>
   </mat-toolbar>

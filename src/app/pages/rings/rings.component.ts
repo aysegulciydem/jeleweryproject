@@ -101,6 +101,9 @@ export class RingsComponent{
       product.currentImage = product.imageUrl[0];
     });
   }
+  ngOnInit(): void {
+    this.productlistservice.initFavorites();
+  }
   addToCard(product: Product): void {
     this.productlistservice.addToBasket(product);
     this.snackBar.open('Product added to shopping list!', 'Close', {
@@ -112,9 +115,26 @@ export class RingsComponent{
   }
   @ViewChild('drawer') drawer!: MatDrawer;
   toggleFavorite(product: Product): void {
-    console.log('Favoriye ekleniyor:', product);
-    this.productlistservice.addToFavorite(product);
-    this.router.navigate(['favorite-page', 'favorite']);
+    const wasFavorite = this.productlistservice.isProductInFavorites(product);
+    this.productlistservice.toggleFavorite(product);
+      if (wasFavorite) {
+        this.snackBar.open('Product removed from favorite list!', 'Close', {
+          duration: 2000,
+          verticalPosition: 'top',
+          horizontalPosition: 'center',
+          panelClass: ['custom-snackbar']
+        });
+      } else {
+        this.snackBar.open('Product added to favorite list!', 'Close', {
+          duration: 2000,
+          verticalPosition: 'top',
+          horizontalPosition: 'center',
+          panelClass: ['custom-snackbar']
+        });
+      }
+  }
+  isFavorite(product: Product): boolean {
+   return this.productlistservice.isProductInFavorites(product);
   }
   toggleDrawer() {
     this.drawer.toggle();

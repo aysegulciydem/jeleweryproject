@@ -30,10 +30,10 @@
       .trash{
         border: none;
         background-color: transparent;
-         &:hover{
-          background-color: #dfe4e6;
+        &:hover{
+          background-color: none;
           border-radius: 12px;
-         }
+        }
       }
     }
 

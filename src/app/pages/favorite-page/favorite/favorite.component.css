@@ -5,34 +5,53 @@
     padding-left: 4%;
     padding-right: 4%;
     height: 100%;
-}
-.back{
-    height: 8%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 2%;
-    span{
-        padding-left: 2%;
-        font-size: x-large;
-        margin-right: 80%;
+    hr{
+      position: relative;
+      top: 1rem;
     }
-    button{
-        padding-top: 0.5%;
-        width: 6%;
-        height: 80%;
-        display: flex;
-        flex-direction: row;
-        padding-left: 25px;
-        background-color: transparent;
-        box-shadow: var(--mat-card-elevated-container-elevation);
-        &:hover{
-            background-color: #e5e8e8;
+}
+
+
+section {
+  display: flex;
+  align-items: center;
+}
+
+.back{
+  height: 12%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .back-first{
+    display: flex;
+      font-size: x-large;
+    }
+    .example-button-row {
+    max-width: 300%;
+        .example-flex-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            a{
+                font-size: medium;
+                color: black;
+                background-color: transparent;
+                border-radius: 8%;
+                &:hover{
+                background-color: #e5e8e8;
+                } 
+            }
+            mat-icon{
+                margin: 0 !important;
+            }
+            
         }
         
     }
 }
-    
+
+
+
 .add-product{
     flex-direction: row;
     width: 70%;
@@ -69,12 +88,23 @@
     }
     
     section{
-        padding-top: 5%;
+        padding-top: 3.5%;
     }
     button{
         background-color: transparent;
         border: none;
     }
+    .trash{
+        border: none;
+        background-color: transparent;
+        &:hover{
+          background-color: #dfe4e6;
+          border-radius: 12px;
+        }
+    }
+    
+
+
 }
 .info-container{
     width: 100%;
@@ -84,6 +114,18 @@
     gap: 4rem;
     p{
         padding-top: 4%;
+    }
+    .product-name {
+        font-weight: 500;
+        flex: 1; 
+        margin-right: 2rem; 
+    }
+
+    .product-price {
+        color: #005cbb;
+        font-weight: 500;
+        width: 80px; 
+        text-align: right;
     }
     .mat-ripple mat-mdc-button-ripple{
         position: inherit;
@@ -111,4 +153,9 @@
             padding-top: 1.5%
         }
     }
+}
+.no-products-text{
+    position: relative;
+    top: 20%;
+    font-size: large;
 }

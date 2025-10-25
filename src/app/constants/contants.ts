@@ -1,4 +1,3 @@
-import { subscribe } from "node:diagnostics_channel";
 
 export const Constant = {
   titles: {

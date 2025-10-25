@@ -130,9 +130,13 @@ export class BraceletComponent {
     this.drawer.toggle();
   }
   toggleFavorite(product: Product): void {
-    console.log('Favoriye ekleniyor:', product);
     this.productListservice.addToFavorite(product);
-    this.router.navigate(['favorite-page', 'favorite']);
+    this.snackBar.open('Product added to favorite list!', 'Close', {
+      duration: 2000,
+      verticalPosition: 'top',          
+      horizontalPosition: 'center',
+      panelClass: ['custom-snackbar']
+    });
   }
   onMouseEnter(product: Product): void {
     product.currentImage = product.imageUrl[1];
