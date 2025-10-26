@@ -5,7 +5,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
-import {Router} from '@angular/router';
+import {Router, RouterModule} from '@angular/router';
 import { CommonModule } from '@angular/common';
 import {MatToolbar} from "@angular/material/toolbar";
 import {Constant} from "../../constants/contants";
@@ -14,11 +14,12 @@ import {MatBadgeModule} from '@angular/material/badge';
 import{MatMenuModule, MatMenuTrigger} from '@angular/material/menu';
 import {MatTab, MatTabGroup} from "@angular/material/tabs";
 import { RingsComponent } from '../../pages/rings/rings.component';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
     schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
     selector: 'app-navbar',
-    imports: [MatButtonModule, MatDividerModule, MatIconModule, FormsModule, MatFormFieldModule, MatInputModule, CommonModule, MatToolbar, MatBadgeModule, MatMenuModule],
+    imports: [MatButtonModule, MatDividerModule, MatIconModule, FormsModule, MatFormFieldModule, LoginComponent, MatInputModule, CommonModule, MatToolbar, MatBadgeModule, MatMenuModule, RouterModule],
     templateUrl: './navbar.component.html',
     styleUrl: './navbar.component.css'
 })
@@ -40,19 +41,19 @@ export class NavbarComponent implements OnInit {
   }
   closeMenuTimeout: any;
 
-openMenu(trigger: MatMenuTrigger) {
-  trigger.openMenu();
-}
+  openMenu(trigger: MatMenuTrigger) {
+    trigger.openMenu();
+  }
 
-startCloseTimer(trigger: MatMenuTrigger) {
-  this.closeMenuTimeout = setTimeout(() => {
-    trigger.closeMenu();
-  }, 1500); // 300ms sonra kapatır
-}
+  startCloseTimer(trigger: MatMenuTrigger) {
+    this.closeMenuTimeout = setTimeout(() => {
+      trigger.closeMenu();
+    }, 1500); // 300ms sonra kapatır
+  }
 
-cancelCloseTimer() {
-  clearTimeout(this.closeMenuTimeout);
-}
+  cancelCloseTimer() {
+    clearTimeout(this.closeMenuTimeout);
+  }
 
   goToLoginPage(){
     this.router.navigate(['/login']);
@@ -63,9 +64,7 @@ cancelCloseTimer() {
   redirectShoppingCardPage(){
     this.router.navigate(['/productList']);
   }
-  redirectFavoritePage(){
-    this.router.navigate(['/favorite-page']);
-  }
+  
 
   redirectRingsPage(event: Event): void{
     this.router.navigate(['/rings']);
@@ -96,5 +95,8 @@ cancelCloseTimer() {
 
   toggleBadgeVisibility() {
     this.hidden = !this.hidden;
+  }
+  logout() {
+    this.productListService.logout();
   }
 }

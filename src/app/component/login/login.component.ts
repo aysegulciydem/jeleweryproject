@@ -83,7 +83,7 @@ export class LoginComponent {
   onSubmit() {
     if (this.loginForm.valid) {
       const { email, password, rememberMe } = this.loginForm.value;
-      if (email === 'aysegulciydem@gmail.com' && password === '123456') {
+      if (email === 'kendrascott@gmail.com' && password === '123456') {
         if (rememberMe) {
           localStorage.setItem('isLoggedIn', 'true');
         } else {

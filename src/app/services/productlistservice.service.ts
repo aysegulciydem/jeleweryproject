@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map, Observable, of } from 'rxjs';
 import { bracelets, earrings, necklaces, Product } from '../model/products';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,9 @@ export class ProductlistserviceService {
   itemCount$ = this.basketItems.asObservable().pipe(
     map(items => items.reduce((total, item) => total + item.quantity, 0))
   );
-  constructor() {}
+  constructor(
+    private router: Router
+  ) {}
   initFavorites(): void {
     if (typeof window !== 'undefined' && window.localStorage) {
       const stored = localStorage.getItem('favorites');
@@ -116,5 +119,10 @@ export class ProductlistserviceService {
   isProductInFavorites(product: Product): boolean {
     const favorites = this.favoriteItems.getValue();
     return favorites.some((p: Product) => p.id === product.id);
+  }
+  logout(): void {
+    localStorage.removeItem('isLoggedIn');
+    sessionStorage.removeItem('isLoggedIn');
+    this.router.navigate(['/login']);
   }
 }
